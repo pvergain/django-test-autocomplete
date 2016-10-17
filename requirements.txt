@@ -1,0 +1,2 @@
+Django==1.10.2
+django-ajax-selects==1.5.1
