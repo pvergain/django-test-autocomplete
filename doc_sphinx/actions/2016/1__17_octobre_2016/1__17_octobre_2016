@@ -1,0 +1,44 @@
+
+
+.. index::
+   pair: Actions ; 2016-10-17
+   pair: Django ; makemigrations
+
+.. _action_17_october_2016:
+
+============================================================================
+2016-10-17 create singers SQL tables
+============================================================================
+
+.. contents::
+   :depth: 3
+
+
+The 
+
+
+
+makemigrations
+==============
+
+
+::
+
+    (ajax_django_35) C:\projects_id3\django_ajax_select\projet_ajax>python manage.py makemigrations singers
+    Migrations for 'singers':
+      singers\migrations\0001_initial.py:
+        - Create model Author
+        - Create model Book
+        - Create model Group
+        - Create model Label
+        - Create model Person
+        - Create model Release
+        - Create model Song
+        - Add field songs to release
+        - Add field owner to label
+        - Add field members to group
+        - Add field about_group to book
+        - Add field author to book
+        - Add field mentions_persons to book
+
+
