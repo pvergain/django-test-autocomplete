@@ -18,13 +18,16 @@ The
 
 
 
-makemigrations
-==============
+makemigrations singers
+=======================
 
 
 ::
 
     (ajax_django_35) C:\projects_id3\django_ajax_select\projet_ajax>python manage.py makemigrations singers
+    
+::
+    
     Migrations for 'singers':
       singers\migrations\0001_initial.py:
         - Create model Author
@@ -42,3 +45,20 @@ makemigrations
         - Add field mentions_persons to book
 
 
+
+migrate singers
+================
+
+::
+
+    (ajax_django_35) C:\projects_id3\django_ajax_select\projet_ajax>python manage.py migrate singers
+    
+::
+    
+    Operations to perform:
+      Apply all migrations: singers
+    Running migrations:
+      Applying singers.0001_initial... OK
+      
+  
+  
