@@ -40,6 +40,7 @@ class PersonLookup(LookupChannel):
         return "%s<div><i>%s</i></div>" % (escape(obj.name), escape(obj.email))
 
 
+@register('group')
 class GroupLookup(LookupChannel):
 
     model = Group
@@ -64,6 +65,7 @@ class GroupLookup(LookupChannel):
         return True
 
 
+@register('song')
 class SongLookup(LookupChannel):
 
     model = Song
@@ -82,7 +84,7 @@ class SongLookup(LookupChannel):
 
 
 # Here using decorator syntax rather than settings.AJAX_LOOKUP_CHANNELS
-@ajax_select.register('cliche')
+@register('cliche')
 class ClicheLookup(LookupChannel):
 
     """ an autocomplete lookup does not need to search models

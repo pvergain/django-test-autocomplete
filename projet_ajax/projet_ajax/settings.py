@@ -133,8 +133,8 @@ AJAX_LOOKUP_CHANNELS = {
     # Custom channels are specified with a tuple
     # channel: ( module.where_lookup_is, ClassNameOfLookup )
     # 'person': ('singers.lookups', 'PersonLookup'),
-    'group': ('singers.lookups', 'GroupLookup'),
-    'song': ('singers.lookups', 'SongLookup'),
+    # 'group': ('singers.lookups', 'GroupLookup'),
+    # 'song': ('singers.lookups', 'SongLookup'),
 }
 
 # voir https://github.com/jordij/bctt.nz/blob/master/ttwellington/settings/base.py
