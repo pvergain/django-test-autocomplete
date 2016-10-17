@@ -71,7 +71,9 @@ class SongLookup(LookupChannel):
     model = Song
 
     def get_query(self, q, request):
-        return Song.objects.filter(title__icontains=q).select_related('group').order_by('title')
+        return Song.objects.filter(title__icontains=q).\
+                            select_related('group').\
+                            order_by('title')
 
     def get_result(self, obj):
         return text_type(obj.title)

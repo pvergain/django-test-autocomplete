@@ -66,7 +66,9 @@ admin.site.register(Group, GroupAdmin)
 
 class SongAdmin(AjaxSelectAdmin):
 
-    form = make_ajax_form(Song, {'group': 'group', 'title': 'cliche'})
+    form = make_ajax_form(Song,
+                          {'group': 'group',
+                           'title': 'cliche'})
     # django bug:
     # readonly_fields = ('group',)
     # django displays group twice if its listed as a readonly_field

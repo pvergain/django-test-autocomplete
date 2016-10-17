@@ -4,7 +4,9 @@ from __future__ import unicode_literals
 
 from django.forms.models import ModelForm
 from ajax_select import make_ajax_field
-from singers.models import Release
+
+from .models import (Release,
+                     Song)
 
 class ReleaseForm(ModelForm):
 
@@ -25,3 +27,16 @@ class ReleaseForm(ModelForm):
 
     # these are from a fixed array defined in lookups.py
     title = make_ajax_field(Release, 'title', 'cliche', help_text="Autocomplete will suggest clichés about cats.")
+
+
+class SongForm(ModelForm):
+
+    class Meta:
+        model = Song
+        exclude = []
+
+    # args:  this model, fieldname on this model, lookup_channel_name
+    group = make_ajax_field(Song, # this model
+                            'group', # fieldname on this model
+                            'group', # lookup_channel_name
+                            help_text="Select the group")
