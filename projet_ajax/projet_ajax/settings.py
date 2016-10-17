@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 
+from os.path import join
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -125,11 +127,17 @@ STATIC_URL = '/static/'
 
 AJAX_LOOKUP_CHANNELS = {
     # simplest way, automatically construct a search channel by passing a dict
-    'label': {'model': 'example.label', 'search_field': 'name'},
+    'label': {'model': 'singers.label'
+            , 'search_field': 'name'},
 
     # Custom channels are specified with a tuple
     # channel: ( module.where_lookup_is, ClassNameOfLookup )
-    'person': ('example.lookups', 'PersonLookup'),
-    'group': ('example.lookups', 'GroupLookup'),
-    'song': ('example.lookups', 'SongLookup'),
+    'person': ('singers.lookups', 'PersonLookup'),
+    'group': ('singers.lookups', 'GroupLookup'),
+    'song': ('singers.lookups', 'SongLookup'),
 }
+
+# voir https://github.com/jordij/bctt.nz/blob/master/ttwellington/settings/base.py
+MEDIA_ROOT = join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+

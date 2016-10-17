@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf8 -*-
 """projet_ajax URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -13,9 +15,35 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+
+from django.conf import settings
+from django.conf.urls import (include,
+                              url)
+
 from django.contrib import admin
+
+from ajax_select import urls as ajax_select_urls
+from singers import views
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+
+    url(r'^search',
+        view=views.search_form,
+        name='search_form'),
+    url(r'^admin/lookups/', include(ajax_select_urls)),
+
+
+    url(r'^singers/', include('singers.urls', namespace='singers')),
 ]
+
+
+if settings.DEBUG:
+    from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+    from django.conf.urls.static import static
+    urlpatterns += staticfiles_urlpatterns()
+    # voir p.405 "Django By Example"
+    # https://docs.djangoproject.com/en/dev/howto/static-files/#serving-files-uploaded-by-a-user-during-development
+    urlpatterns += static(settings.MEDIA_URL ,
+                          document_root=settings.MEDIA_ROOT)

@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals
+
 from django.forms.models import ModelForm
 from ajax_select import make_ajax_field
 from singers.models import Release
-
 
 class ReleaseForm(ModelForm):
 
