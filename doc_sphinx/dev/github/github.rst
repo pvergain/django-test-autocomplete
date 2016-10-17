@@ -1,6 +1,7 @@
 
 .. index::
    pair: Github ; singers 
+   pair: Github ; swcarpentry 
 
 
 .. _github_singers:
@@ -36,6 +37,8 @@ Create singers project
 
 Git remote
 ===========
+
+.. seealso:: https://swcarpentry.github.io/git-novice/07-github/
 
 .. figure:: git_remote.png
    :align: center

@@ -17,7 +17,7 @@ from ajax_select import (register,
                          LookupChannel)
 import ajax_select
 
-
+@register('person')
 class PersonLookup(LookupChannel):
 
     model = Person
