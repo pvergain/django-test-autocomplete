@@ -1,8 +1,14 @@
+"""
+
+https://github.com/crucialfelix/django-ajax-selects
+"""
+
 from __future__ import unicode_literals
+
 from django.utils.six import text_type
 from django.db.models import Q
 from django.utils.html import escape
-from example.models import Person, Group, Song
+from singers.models import Person, Group, Song
 from ajax_select import LookupChannel
 import ajax_select
 

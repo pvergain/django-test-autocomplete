@@ -1,13 +1,23 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
 
 from django.contrib import admin
 from ajax_select import make_ajax_form
-from ajax_select.admin import AjaxSelectAdmin, AjaxSelectAdminTabularInline, AjaxSelectAdminStackedInline
-from example.forms import ReleaseForm
-from example.models import Person, Label, Group, Song, Release, Book, Author
+from ajax_select.admin import (AjaxSelectAdmin,
+                               AjaxSelectAdminTabularInline,
+                               AjaxSelectAdminStackedInline)
+from singers.forms import ReleaseForm
+from singers.models import (Person,
+                            Label,
+                            Group,
+                            Song,
+                            Release,
+                            Book,
+                            Author)
 
 
 class PersonAdmin(AjaxSelectAdmin):
-
     pass
 
 admin.site.register(Person, PersonAdmin)

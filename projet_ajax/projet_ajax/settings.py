@@ -28,8 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
-
+# Applications definition
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,6 +36,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # http://django-ajax-selects.readthedocs.io/en/latest/index.html
+    'ajax_select',
+
+    # # https://docs.djangoproject.com/en/dev/ref/applications/#django.apps.AppConfig
+    'singers.apps.SingersConfig'
 ]
 
 MIDDLEWARE = [
@@ -48,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'projet_ajax.urls'
 
@@ -72,14 +78,12 @@ WSGI_APPLICATION = 'projet_ajax.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR,'ajax_selects_singers_db')
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -118,3 +122,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+AJAX_LOOKUP_CHANNELS = {
+    # simplest way, automatically construct a search channel by passing a dict
+    'label': {'model': 'example.label', 'search_field': 'name'},
+
+    # Custom channels are specified with a tuple
+    # channel: ( module.where_lookup_is, ClassNameOfLookup )
+    'person': ('example.lookups', 'PersonLookup'),
+    'group': ('example.lookups', 'GroupLookup'),
+    'song': ('example.lookups', 'SongLookup'),
+}
