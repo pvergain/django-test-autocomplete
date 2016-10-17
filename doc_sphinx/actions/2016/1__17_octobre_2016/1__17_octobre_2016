@@ -221,7 +221,10 @@ Connect to the admin interface
 .. seealso:: http://127.0.0.1:8000/admin/
 
 
-
+.. figure:: singers_admin.png
+   :align: center
+   
+   
 
 
   
