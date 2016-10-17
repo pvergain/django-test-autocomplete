@@ -24,4 +24,6 @@ def search_form(request):
     initial = {'q': "\"This is an initial value,\" said O'Leary."}
     form = SearchForm(initial=initial)
     dd['form'] = form
-    return render_to_response('search_form.html', dd, context_instance=RequestContext(request))
+    return render_to_response('search_form.html',
+                              dd,
+                              context_instance=RequestContext(request))

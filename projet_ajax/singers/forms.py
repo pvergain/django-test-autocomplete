@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 from django.forms.models import ModelForm
 from ajax_select import make_ajax_field
-from example.models import Release
+from singers.models import Release
 
 
 class ReleaseForm(ModelForm):
@@ -12,7 +12,7 @@ class ReleaseForm(ModelForm):
         model = Release
         exclude = []
 
-    #           args:  this model, fieldname on this model, lookup_channel_name
+    # args:  this model, fieldname on this model, lookup_channel_name
     group = make_ajax_field(Release, 'group', 'group', show_help_text=True)
 
     label = make_ajax_field(Release, 'label', 'label', help_text="Search for label by name")

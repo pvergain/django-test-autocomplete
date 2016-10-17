@@ -3,7 +3,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.conf import settings
 from ajax_select import urls as ajax_select_urls
-from example import views
+from singers import views
 
 
 admin.autodiscover()
