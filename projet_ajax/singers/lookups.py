@@ -8,7 +8,9 @@ from __future__ import unicode_literals
 from django.utils.six import text_type
 from django.db.models import Q
 from django.utils.html import escape
-from singers.models import Person, Group, Song
+from singers.models import (Person,
+                            Group,
+                            Song)
 from ajax_select import LookupChannel
 import ajax_select
 
@@ -18,7 +20,8 @@ class PersonLookup(LookupChannel):
     model = Person
 
     def get_query(self, q, request):
-        return Person.objects.filter(Q(name__icontains=q) | Q(email__istartswith=q)).order_by('name')
+        return Person.objects.filter(Q(name__icontains=q) |
+                                     Q(email__istartswith=q)).order_by('name')
 
     def get_result(self, obj):
         """ result is the simple text that is the completion of what the person typed """

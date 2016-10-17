@@ -2,7 +2,10 @@
 
 from __future__ import unicode_literals
 from django import forms
+
 from django.shortcuts import render_to_response
+
+# https://docs.djangoproject.com/en/dev/ref/templates/api/
 from django.template import RequestContext
 from ajax_select.fields import AutoCompleteField
 
@@ -26,4 +29,4 @@ def search_form(request):
     dd['form'] = form
     return render_to_response('search_form.html',
                               dd,
-                              context_instance=RequestContext(request))
+                              context=RequestContext(request))
