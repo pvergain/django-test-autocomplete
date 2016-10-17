@@ -3,7 +3,7 @@
    pair: Project ; singers 
 
 
-.. singers_project:
+.. _singers_project:
 
 ===================================================
 Singers's Dango project (testing Django AJAX query)

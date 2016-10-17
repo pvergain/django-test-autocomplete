@@ -8,10 +8,13 @@ from __future__ import unicode_literals
 from django.utils.six import text_type
 from django.db.models import Q
 from django.utils.html import escape
+
 from singers.models import (Person,
                             Group,
                             Song)
-from ajax_select import LookupChannel
+
+from ajax_select import (register,
+                         LookupChannel)
 import ajax_select
 
 

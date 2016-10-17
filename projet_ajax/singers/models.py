@@ -21,7 +21,9 @@ class Person(models.Model):
 @python_2_unicode_compatible
 class Group(models.Model):
     """ a music group """
-    name = models.CharField(max_length=200, unique=True, help_text="Name of the group")
+    name = models.CharField(max_length=200,
+                            unique=True,
+                            help_text="Name of the group")
     members = models.ManyToManyField(Person,
         blank=True,
         help_text="Enter text to search for and add each member of the group.")
@@ -34,8 +36,13 @@ class Group(models.Model):
 @python_2_unicode_compatible
 class Label(models.Model):
     """ a record label """
-    name = models.CharField(max_length=200, unique=True)
-    owner = models.ForeignKey(Person, blank=True, null=True)
+    name = models.CharField(max_length=200,
+                            unique=True)
+
+    owner = models.ForeignKey(Person,
+                              blank=True,
+                              null=True)
+
     url = models.URLField(blank=True)
 
     def __str__(self):
@@ -55,11 +62,19 @@ class Song(models.Model):
 class Release(models.Model):
     """ a music release/product """
     title = models.CharField(max_length=100)
-    catalog = models.CharField(blank=True, max_length=100)
 
-    group = models.ForeignKey(Group, blank=True, null=True, verbose_name="Русский текст (group)")
-    label = models.ForeignKey(Label, blank=False, null=False)
-    songs = models.ManyToManyField(Song, blank=True)
+    catalog = models.CharField(blank=True,
+                               max_length=100)
+
+    group = models.ForeignKey(Group, blank=True, null=True,
+                              verbose_name="Русский текст (group)")
+
+    label = models.ForeignKey(Label,
+                              blank=False,
+                              null=False)
+
+    songs = models.ManyToManyField(Song,
+                                   blank=True)
 
     def __str__(self):
         return self.title
@@ -82,7 +97,8 @@ class Book(models.Model):
     author = models.ForeignKey(Author)
     title = models.CharField(max_length=100)
     about_group = models.ForeignKey(Group)
-    mentions_persons = models.ManyToManyField(Person, help_text="Person lookup renders html in menu")
+    mentions_persons = models.ManyToManyField(Person,
+                                              help_text="Person lookup renders html in menu")
 
     def __str__(self):
         return self.title
