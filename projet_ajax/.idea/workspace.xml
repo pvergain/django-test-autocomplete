@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95de8ca0-205c-4e84-8f06-b3529b27faea" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.gitignore" afterPath="$PROJECT_DIR$/../.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/singers/admin.py" afterPath="$PROJECT_DIR$/singers/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/singers/lookups.py" afterPath="$PROJECT_DIR$/singers/lookups.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/singers/models.py" afterPath="$PROJECT_DIR$/singers/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/singers/views.py" afterPath="$PROJECT_DIR$/singers/views.py" />
-    </list>
+    <list default="true" id="95de8ca0-205c-4e84-8f06-b3529b27faea" name="Default" comment="" />
     <ignored path="projet_ajax.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

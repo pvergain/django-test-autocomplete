@@ -1,3 +1,6 @@
 _build/
-projet_ajax/.idea/
-.pyc
+*.pyc
+# User-specific stuff:
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/*
