@@ -186,6 +186,29 @@ Not very nice and not very easy to use.
    
       
    
+Compared to the django admin interface
+=======================================
+
+.. seealso:: 
+
+   - http://127.0.0.1:8000/admin/singers/song/1/change/
+
+
+More nice but not very easy to use. 
+
+
+.. figure:: admin_song.png
+   :align: center
+   
+   
+Conclusion
+============
+
+Try the django-autocomplete-light module.
+
+
+
+
 
 
 

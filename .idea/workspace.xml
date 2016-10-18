@@ -5,11 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/ajax_selects_singers_db" afterPath="$PROJECT_DIR$/projet_ajax/ajax_selects_singers_db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/actions/2016/3__18_octobre_2016/3__18_octobre_2016.rst" afterPath="$PROJECT_DIR$/doc_sphinx/actions/2016/3__18_octobre_2016/3__18_octobre_2016.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/projet_ajax/settings.py" afterPath="$PROJECT_DIR$/projet_ajax/projet_ajax/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/singers/forms.py" afterPath="$PROJECT_DIR$/projet_ajax/singers/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/singers/models.py" afterPath="$PROJECT_DIR$/projet_ajax/singers/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/singers/views.py" afterPath="$PROJECT_DIR$/projet_ajax/singers/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/singers/templates/singers/song/update.html" afterPath="$PROJECT_DIR$/projet_ajax/singers/templates/singers/song/update.html" />
     </list>
     <ignored path="django_ajax_select.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,8 +75,8 @@
       <file leaf-file-name="update.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projet_ajax/singers/templates/singers/song/update.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="119">
+              <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -419,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1476774067671</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Try the non-admin form.">
+      <created>1476779894826</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1476779894826</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -482,7 +485,8 @@
     <MESSAGE value="adding @register('person')" />
     <MESSAGE value="update .gitignore wirh https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore" />
     <MESSAGE value="Create the templates/base.html file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create the templates/base.html file" />
+    <MESSAGE value="Try the non-admin form." />
+    <option name="LAST_COMMIT_MESSAGE" value="Try the non-admin form." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -707,8 +711,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projet_ajax/singers/templates/singers/song/update.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="119">
+          <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
           <folding />
         </state>
       </provider>
