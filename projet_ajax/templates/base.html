@@ -1,0 +1,83 @@
+{# https://docs.djangoproject.com/en/dev/ref/templates/builtins/#std:templatetag-static #}
+{% load static %}
+{# https://docs.djangoproject.com/en/dev/ref/templates/builtins/#tz #}
+{% load tz %}
+
+<!DOCTYPE html>
+{# https://www.w3.org/TR/2014/REC-html5-20141028/syntax.html#the-doctype #}
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+{# https://www.w3.org/TR/html5/semantics.html#the-html-element #}
+    <head>
+        {# https://www.w3.org/TR/html5/document-metadata.html#attr-meta-charset #}
+        <meta charset="utf-8">
+        {# https://n.survol.fr/n/x-ua-compatible-ieedge #}
+        <!-- meta http-equiv="X-UA-Compatible" content="IE=edge" -->
+        {# https://www.w3.org/TR/html5/dom.html#the-title-attribute #}
+        {# https://www.w3.org/TR/html5/document-metadata.html#the-title-element #}
+        <title>
+            {% block head_title %}
+            {% endblock %}
+        </title>
+
+        {# https://www.w3.org/TR/html5/document-metadata.html#attr-meta-name #}                                                                 
+                        
+        {# https://developer.mozilla.org/fr/docs/Mozilla/Mobile/Balise_meta_viewport #}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        
+        {# CSS #}
+        {% block stylesheet %}
+            {# {{ block.super }} #}
+            
+            {# https://blog.getbootstrap.com/2016/07/25/bootstrap-3-3-7-released (2016-07-25) Added support for jQuery 3 #}
+            {# https://www.bootstrapcdn.com/ #}
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+                
+        {% endblock  %}
+
+        {# Javascript #}
+        {% block javascript %}
+
+            {# a employer dans les templates fils->{{ block.super }} #}
+            <!-- Liaison aux scripts Javascript -->
+            <!-- CDN JQuery Placer jquery avant bootstrap, select2 -->
+            {# https://github.com/jquery/jquery-migrate/#README #}
+            {# https://blog.jquery.com/2016/09/22/jquery-3-1-1-released/ #}
+            {# https://code.jquery.com/ #}
+            <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+            <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+
+            <!-- Code javascript pour bootstrap 3.3.7 (2016-07-25) -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
+
+        {% endblock javascript %}
+        
+        {# p.155 Adding AJAX actions with jQuery, Django By Example from Antonio Melé #}
+        {# https://www.amazon.com/Django-Example-Antonio-Mele/dp/1784391913/ #}
+        <script>
+            $(document).ready(function(){
+                {% block domready %}
+                {% endblock %}
+            });
+        </script>
+
+    </head>
+    <body class="{% block bodyclass %} {% endblock %}">  
+          
+                
+        <div id="conteneur" class="container">                  
+            {% block content %} 
+            {% endblock %}
+
+            {% block footer %}
+            {% endblock %}
+                            
+        </div> <!-- id conteneur -->   
+                      
+       
+    </body>
+</html>

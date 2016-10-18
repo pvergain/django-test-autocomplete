@@ -1,0 +1,22 @@
+
+
+.. index::
+   pair: Django ; base.html
+
+.. _base_template:
+
+============================================================================
+2016-10-17 create a Django base.html Template 
+============================================================================
+
+
+.. contents::
+   :depth: 3
+
+
+The Django Template templates/base.html
+========================================
+
+.. literalinclude:: ../../../../projet_ajax/templates/base.html
+   :linenos:
+   
