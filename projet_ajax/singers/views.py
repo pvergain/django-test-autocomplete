@@ -11,11 +11,10 @@ from django.http import HttpResponseRedirect
 
 from django.views.generic.edit import UpdateView
 
-from django.core.urlresolvers import reverse
-
 from ajax_select.fields import AutoCompleteField
 
 from .models import Song
+from .forms import SongForm
 
 class SearchForm(forms.Form):
 
@@ -43,8 +42,14 @@ def search_form(request):
 class SongUpdate(UpdateView):
     """
             url(r'^singers/song/(?P<pk>\d+)/update/$', SongUpdate.as_view(), name='song_update'),
+
+    Documentation:
+
+    - http://ccbv.co.uk/projects/Django/1.9/django.views.generic.edit/UpdateView/
+
     """
     model = Song
+    form_class = SongForm
     context_object_name = 'song'
     template_name = 'singers/song/update.html'
 
@@ -60,6 +65,3 @@ class SongUpdate(UpdateView):
         else:
             return super(SongUpdate, self).post(request, *args, **kwargs)
 
-    #def get_success_url(self):
-    #    return reverse('article:demande_codif_article_articles_update',
-    #                   kwargs={'pk': self.demande_article.pk})

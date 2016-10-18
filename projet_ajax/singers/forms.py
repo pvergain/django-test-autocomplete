@@ -30,10 +30,11 @@ class ReleaseForm(ModelForm):
 
 
 class SongForm(ModelForm):
+    """The Django form"""
 
     class Meta:
         model = Song
-        exclude = []
+        fields = ['title', 'group']
 
     # args:  this model, fieldname on this model, lookup_channel_name
     group = make_ajax_field(Song, # this model

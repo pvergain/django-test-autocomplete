@@ -39,8 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # https://django-extensions.readthedocs.org/en/latest
+    'django_extensions',
+
     # http://django-ajax-selects.readthedocs.io/en/latest/index.html
     'ajax_select',
+    # http://django-crispy-forms.readthedocs.io/en/latest/install.html#installing-django-crispy-forms
+    'crispy_forms',
 
     # # https://docs.djangoproject.com/en/dev/ref/applications/#django.apps.AppConfig
     'singers.apps.SingersConfig'
@@ -62,7 +67,7 @@ ROOT_URLCONF = 'projet_ajax.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
