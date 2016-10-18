@@ -6,7 +6,7 @@
 .. _singers_project:
 
 =======================================================================
-Singers's Dango project for testing the jqueru-ui autocomplete widget 
+Singers's Dango project for testing the jQuery-ui autocomplete widget 
 =======================================================================
 
 

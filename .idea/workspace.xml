@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bec87bc6-1c5b-407a-b76d-4209ea688555" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/ajax_selects_singers_db" afterPath="$PROJECT_DIR$/projet_ajax/ajax_selects_singers_db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/actions/2016/2016.rst" afterPath="$PROJECT_DIR$/doc_sphinx/actions/2016/2016.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/actions/2016/4__18_octobre_2016/4__18_octobre_2016.rst" afterPath="$PROJECT_DIR$/doc_sphinx/actions/2016/4__18_octobre_2016/4__18_octobre_2016.rst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/index.rst" afterPath="$PROJECT_DIR$/doc_sphinx/index.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/projects/forms.py" afterPath="$PROJECT_DIR$/projet_ajax/projects/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update.html" afterPath="$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/projects/views.py" afterPath="$PROJECT_DIR$/projet_ajax/projects/views.py" />
     </list>
     <ignored path="django_ajax_select.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -641,7 +639,14 @@
       <option name="project" value="LOCAL" />
       <updated>1476797460965</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add the introduction.">
+      <created>1476799268903</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1476799268903</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -652,7 +657,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32998884" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32998884" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32998884" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -710,7 +715,8 @@
     <MESSAGE value="prepare jquery-ui autocomplete example." />
     <MESSAGE value="OK, with the jquery-ui autocomplete example." />
     <MESSAGE value="Add the documentation about adding the jquery-ui widget." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add the documentation about adding the jquery-ui widget." />
+    <MESSAGE value="Add the introduction." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add the introduction." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

@@ -327,11 +327,13 @@ helper function:
 
 
 
+.. _last_look:
+
 Try the URL : http://127.0.0.1:8000/projects/project/1/update
 ===============================================================
 
 
-OK, this time this works fine ! 
+**OK, this time this works fine !**
 
 .. warning:: La saisie est agréable, il faut améliorer le look.
 
