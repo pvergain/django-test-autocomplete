@@ -7,10 +7,12 @@ from django.views.generic.edit import UpdateView
 from django.http import (HttpResponseRedirect,
                          HttpResponse)
 
+from django.db.models import Q
+
 from django.views.generic import FormView
 
 from .models import Project
-from .forms import ProjectForm
+from .forms import ProjectChampionForm
 
 
 class ChampionAutoCompleteView(FormView):
@@ -21,14 +23,32 @@ class ChampionAutoCompleteView(FormView):
     - https://ccbv.co.uk/projects/Django/1.9/django.views.generic.edit/FormView/
 
     """
-    def get(self,request,*args,**kwargs):
-        data = request.GET
-        # term is sent by the jquery-ui autocomplete widget
-        username = data.get("term")
-        if username:
-            users = User.objects.filter(username__icontains= username)
+    def get(self, request, *args, **kwargs):
+        """term is sent by the jquery-ui autocomplete widget.
+
+        The filter is on the username and the user email.
+
+         Documentation
+         =============
+
+         - http://api.jqueryui.com/autocomplete/#option-source
+
+         String: When a string is used, the Autocomplete plugin expects that string to point to a URL resource that
+         will return JSON data. It can be on the same host or on a different one (must provide JSONP).
+
+         The Autocomplete plugin does not filter the results, instead a query string is added with a term field, which
+         the server-side script should use for filtering the results.
+         For example, if the source option is set to "http://example.com" and the user types foo, a GET request would
+         be made to http://example.com?term=foo. The data itself can be in the same format as the local data
+         described above.
+
+        """
+        term = request.GET.get("term")
+        if term:
+            users = User.objects.filter(Q(username__icontains=term)
+                                        | Q(email__icontains=term)).order_by('username')
         else:
-            users = User.objects.all()
+            users = User.objects.all()[:50]
 
         results = []
         for user in users:
@@ -53,7 +73,7 @@ class ProjectUpdateView(UpdateView):
 
     """
     model = Project
-    form_class = ProjectForm
+    form_class = ProjectChampionForm
     context_object_name = 'project'
     template_name = 'projects/project/update.html'
 

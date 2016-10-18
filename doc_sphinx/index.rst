@@ -6,14 +6,15 @@
 .. _singers_project:
 
 =======================================================================
-Singers's Dango project for testing the ``Django AJAX selects`` module 
+Singers's Dango project for testing the jqueru-ui autocomplete widget 
 =======================================================================
 
 
 .. seealso::
 
-   - https://github.com/crucialfelix/django-ajax-selects
-   - http://django-ajax-selects.readthedocs.io/en/latest/
+   - http://blog.appliedinformaticsinc.com/autocomplete-input-field-in-django-template-with-jquery-ui/
+   - http://guiqinqian.blogspot.fr/2012/01/using-jquery-auto-complete-in-django.html
+
 
 
 .. sidebar:: Singers's Dango project
@@ -25,12 +26,13 @@ Singers's Dango project for testing the ``Django AJAX selects`` module
     
     - :ref:`genindex`
     - :ref:`search` 
-    
-    - https://github.com/crucialfelix/django-ajax-selects
+ 
+
 
 .. toctree::
    :maxdepth: 5
    
+   introduction/introduction
    actions/actions
    dev/dev
 
