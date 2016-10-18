@@ -2,18 +2,26 @@
 
 .. index::
    pair: Django ; base.html
+   pair: jQuery ; UI
+   pair: jQuery-ui ; autocomplete
+
 
 .. _autocomplete:
 
 ============================================================================
-2016-10-18 try a more simple approach with jquery-ui 
+2016-10-18 try a more simple approach with jquery-ui autocomplete widget
 ============================================================================
 
 .. seealso::
 
+    - https://jqueryui.com/autocomplete/
    - http://guiqinqian.blogspot.fr/2012/01/using-jquery-auto-complete-in-django.html
    - https://github.com/jquery/jquery-ui
    
+
+.. figure:: autocomplete_widget.png
+   :align: center
+     
    
 .. contents::
    :depth: 3
@@ -25,6 +33,10 @@ Installation
 .. figure:: jenny_qian_solution.png
    :align: center
    
+Other source:
+
+- http://blog.appliedinformaticsinc.com/autocomplete-input-field-in-django-template-with-jquery-ui/
+
 
 Create a ``projects`` application
 ==================================   
@@ -135,7 +147,7 @@ migrate
         
 
 
-Create the projects/forms.py file and add a form
+Create the projects/forms.py file and add 2 forms
 =================================================
 
 
@@ -151,6 +163,68 @@ Create the projects/urls.py file and add the champion auto complete URL
    :linenos:
 
 
+Add the ProjectUpdateView 
+==========================
+
+
+.. literalinclude:: ../../../../projet_ajax/projects/views.py
+   :linenos:
+   
+   
+Create the templates/projects/project/update.html django template
+==================================================================
+
+.. seealso::
+
+   - http://code.jquery.com/ui/
+
+
+This template file is used by the ProjectUpdateView.
+
+
+.. figure:: jquery_ui.png
+   :align: center
+   
+
+.. literalinclude:: ../../../../projet_ajax/projects/templates/projects/project/update.html
+   :linenos:
+   
+   
+Add the jquery-ui javascript code
+==================================
+
+.. seealso::
+
+   - http://api.jqueryui.com/autocomplete/
+
+   
+
+
+::
+
+   $( "#id_champion_display" ).autocomplete({
+          source: "{% url champion_auto_complete %}",
+          selectFirst:true,
+          minLength:2,
+          select:function(event,ui) {
+            $("#id_champion").val(ui.item.id)
+          }
+    });   
+   
+   
+   
+   
+   
+   
+
+
+
+
+   
+
+
+
+ 
 
 
     

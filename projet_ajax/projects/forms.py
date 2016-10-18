@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from __future__ import unicode_literals
 
 from django import forms
 
@@ -13,8 +12,7 @@ class ProjectForm(forms.ModelForm):
         model = Project
         fields = ('title', 'champion_display', 'champion',)
 
-
-def __init__(self, *args, **kwargs):
-    super(ProjectForm, self).__init__(*args, **kwargs)
-    self.field['champion_display'].label = "Add a Champion"
-    self.fields['champion'].widget = forms.HiddenInput()
+    def __init__(self, *args, **kwargs):
+        super(ProjectForm, self).__init__(*args, **kwargs)
+        self.field['champion_display'].label = "Add a Champion"
+        self.fields['champion'].widget = forms.HiddenInput()

@@ -30,6 +30,8 @@
         
         {# CSS #}
         {% block stylesheet %}
+            {# https://docs.djangoproject.com/en/dev/ref/templates/language/#template-inheritance #}
+            {# If you need to get the content of the block from the parent template, the {{ block.super }} variable will do the trick #}
             {# {{ block.super }} #}
             
             {# https://blog.getbootstrap.com/2016/07/25/bootstrap-3-3-7-released (2016-07-25) Added support for jQuery 3 #}
@@ -43,6 +45,8 @@
         {% block javascript %}
 
             {# a employer dans les templates fils->{{ block.super }} #}
+            {# https://docs.djangoproject.com/en/dev/ref/templates/language/#template-inheritance #}
+            {# If you need to get the content of the block from the parent template, the {{ block.super }} variable will do the trick #}
             <!-- Liaison aux scripts Javascript -->
             <!-- CDN JQuery Placer jquery avant bootstrap, select2 -->
             {# https://github.com/jquery/jquery-migrate/#README #}
