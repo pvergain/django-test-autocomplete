@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bec87bc6-1c5b-407a-b76d-4209ea688555" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/ajax_selects_singers_db" afterPath="$PROJECT_DIR$/projet_ajax/ajax_selects_singers_db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/actions/2016/4__18_octobre_2016/4__18_octobre_2016.rst" afterPath="$PROJECT_DIR$/doc_sphinx/actions/2016/4__18_octobre_2016/4__18_octobre_2016.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/projects/admin.py" afterPath="$PROJECT_DIR$/projet_ajax/projects/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/projects/forms.py" afterPath="$PROJECT_DIR$/projet_ajax/projects/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/projects/models.py" afterPath="$PROJECT_DIR$/projet_ajax/projects/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update.html" afterPath="$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/projects/urls.py" afterPath="$PROJECT_DIR$/projet_ajax/projects/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/projects/views.py" afterPath="$PROJECT_DIR$/projet_ajax/projects/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/projet_ajax/urls.py" afterPath="$PROJECT_DIR$/projet_ajax/projet_ajax/urls.py" />
     </list>
     <ignored path="django_ajax_select.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projet_ajax/projects/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+            <state relative-caret-position="272">
+              <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
               <folding>
                 <element signature="e#26#50#0" expanded="true" />
               </folding>
@@ -122,7 +113,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="update.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="411">
@@ -629,7 +620,14 @@
       <option name="project" value="LOCAL" />
       <updated>1476792409554</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="OK, with the jquery-ui autocomplete example.">
+      <created>1476797341966</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1476797341966</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -696,7 +694,8 @@
     <MESSAGE value="Try the admin form." />
     <MESSAGE value="Add the projects application." />
     <MESSAGE value="prepare jquery-ui autocomplete example." />
-    <option name="LAST_COMMIT_MESSAGE" value="prepare jquery-ui autocomplete example." />
+    <MESSAGE value="OK, with the jquery-ui autocomplete example." />
+    <option name="LAST_COMMIT_MESSAGE" value="OK, with the jquery-ui autocomplete example." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -935,16 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projet_ajax/projects/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-          <folding>
-            <element signature="e#26#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projet_ajax/projects/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -980,6 +969,16 @@
         <state relative-caret-position="411">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projet_ajax/projects/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+          <folding>
+            <element signature="e#26#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
