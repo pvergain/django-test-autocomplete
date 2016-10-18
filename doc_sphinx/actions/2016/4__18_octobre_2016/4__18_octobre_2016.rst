@@ -14,7 +14,7 @@
 
 .. seealso::
 
-    - https://jqueryui.com/autocomplete/
+   - https://jqueryui.com/autocomplete/
    - http://guiqinqian.blogspot.fr/2012/01/using-jquery-auto-complete-in-django.html
    - https://github.com/jquery/jquery-ui
    
@@ -33,9 +33,10 @@ Installation
 .. figure:: jenny_qian_solution.png
    :align: center
    
-Other source:
+Other sources:
 
 - http://blog.appliedinformaticsinc.com/autocomplete-input-field-in-django-template-with-jquery-ui/
+- https://openclassrooms.com/courses/decouvrez-la-puissance-de-jquery-ui/l-autocompletion-1
 
 
 Create a ``projects`` application
@@ -163,6 +164,21 @@ Create the projects/urls.py file and add the champion auto complete URL
    :linenos:
 
 
+
+Add the projects.urls file to the root urls.py
+================================================
+
+::
+
+    url(r'^projects/', include('projects.urls', namespace='projects')),
+
+
+.. literalinclude:: ../../../../projet_ajax/projet_ajax/urls.py
+   :linenos:
+
+
+
+
 Add the ProjectUpdateView 
 ==========================
 
@@ -196,15 +212,17 @@ Add the jquery-ui javascript code
 .. seealso::
 
    - http://api.jqueryui.com/autocomplete/
+   - http://api.jqueryui.com/autocomplete/#option-source
+   - http://api.jqueryui.com/autocomplete/#option-minLength
+   - http://api.jqueryui.com/autocomplete/#event-select
 
    
 
 
 ::
 
-   $( "#id_champion_display" ).autocomplete({
+    $( "#id_champion_display" ).autocomplete({
           source: "{% url champion_auto_complete %}",
-          selectFirst:true,
           minLength:2,
           select:function(event,ui) {
             $("#id_champion").val(ui.item.id)
@@ -212,8 +230,133 @@ Add the jquery-ui javascript code
     });   
    
    
+Add the admin interface
+=======================
+
+
+.. literalinclude:: ../../../../projet_ajax/projects/admin.py
+   :linenos:
+
+
+Create some projects with the admin interface
+=============================================
+
+.. figure:: projects_admin.png
+   :align: center
+   
+
+.. figure:: add_project.png
+   :align: center
+   
+
+Reading Project record from the commande line
+=============================================
+
+
+::
+
+    python manage.py shell_plus
+    
+    
+    (ajax_django_35) C:\projects_id3\django_ajax_select\projet_ajax>python manage.py shell_plus
+    # Shell Plus Model Imports
+    from django.contrib.admin.models import LogEntry
+    from django.contrib.auth.models import Group, Permission, User
+    from django.contrib.contenttypes.models import ContentType
+    from django.contrib.sessions.models import Session
+    from projects.models import Project
+    from singers.models import Author, Book, Group, Label, Person, Release, Song
+    # Shell Plus Django Imports
+    from django.db.models import Avg, Case, Count, F, Max, Min, Prefetch, Q, Sum, When
+    from django.db import transaction
+    from django.conf import settings
+    from django.utils import timezone
+    from django.urls import reverse
+    from django.core.cache import cache
+    Python 3.5.2 (v3.5.2:4def2a2901a5, Jun 25 2016, 22:18:55) [MSC v.1900 64 bit (AMD64)]
+    Type "copyright", "credits" or "license" for more information.
+
+    IPython 5.1.0 -- An enhanced Interactive Python.
+    ?         -> Introduction and overview of IPython's features.
+    %quickref -> Quick reference.
+    help      -> Python's own help system.
+    object?   -> Details about 'object', use 'object??' for extra details.
+
+    In [1]: p1=Project.objects.first()
+
+    In [2]: p1
+    Out[2]: <Project: project_0001 champion_0001>
+
+    In [3]: p1.id
+    Out[3]: 1
+    
+
+Add some users with the admin interface
+========================================
+
+.. figure:: add_some_users_with_admin.png
+   :align: center
+ 
+ 
+Add some users with the command line interface
+===============================================   
+   
+.. seealso::
+
+   - https://docs.djangoproject.com/en/dev/topics/auth/default/#user-objects   
    
    
+The most direct way to create users is to use the included create_user() 
+helper function:   
+
+::
+
+    In [4]: user = User.objects.create_user('john', 'lennon@thebeatles.com', 'johnpassword')
+
+    In [5]: user = User.objects.create_user('albert', 'albert@thebeatles.com', 'albertpassword')
+
+    In [6]: user = User.objects.create_user('zoya', 'zoya@thebeatles.com', 'zoyapassword')
+
+    In [7]: user = User.objects.create_user('nigel', 'nigel@thebeatles.com', 'nigelpassword')
+
+    In [8]: users=User.objects.all()
+
+    In [9]: users
+    Out[9]: <QuerySet [<User: admin>, <User: champion_0001>, <User: user_0002>, <User: user_0003>, <User: user_0004>, <User: aaaa>, <User: john>, <User: albert>, <User: zoya>, <User: nigel>]>
+
+
+
+
+Try the URL : http://127.0.0.1:8000/projects/project/1/update
+===============================================================
+
+
+OK, this time this works fine ! 
+
+.. warning:: La saisie est agréable, il faut améliorer le look.
+
+
+.. figure:: ok_saisie_champion.png
+   :align: center
+   
+   
+
+::
+
+    [18/Oct/2016 15:17:26] "GET /projects/project/1/update/ HTTP/1.1" 200 3423
+    [18/Oct/2016 15:17:44] "GET /projects/champion_auto_complete/?term=zo HTTP/1.1" 200 45
+    [18/Oct/2016 15:17:51] "POST /projects/project/1/update/ HTTP/1.1" 302 0
+    [18/Oct/2016 15:17:51] "GET /projects/project/1/update/ HTTP/1.1" 200 3418
+    [18/Oct/2016 15:18:47] "GET /projects/champion_auto_complete/?term=ni HTTP/1.1" 200 48
+    [18/Oct/2016 15:19:00] "POST /projects/project/1/update/ HTTP/1.1" 302 0
+    [18/Oct/2016 15:19:00] "GET /projects/project/1/update/ HTTP/1.1" 200 3420
+
+
+    
+
+    
+
+      
    
    
 

@@ -14,5 +14,5 @@ class ProjectForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(ProjectForm, self).__init__(*args, **kwargs)
-        self.field['champion_display'].label = "Add a Champion"
+        self.fields['champion_display'].label = "Add a Champion"
         self.fields['champion'].widget = forms.HiddenInput()

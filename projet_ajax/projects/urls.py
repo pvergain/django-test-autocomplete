@@ -2,7 +2,9 @@
 
 from django.conf.urls import url
 
-from .views import ProjectUpdateView
+from .views import (ProjectUpdateView,
+                    ChampionAutoCompleteView)
+
 
 urlpatterns = [
      url(r'^project/(?P<pk>\d+)/update/$',
@@ -11,6 +13,6 @@ urlpatterns = [
 
      # calls by jquery-ui autocomplete (AJAX calls)
      url(r'^champion_auto_complete/$',
-         'champion_auto_complete',
+         ChampionAutoCompleteView.as_view(),
          name='champion_auto_complete'),
 ]

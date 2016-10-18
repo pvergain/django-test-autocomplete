@@ -1,30 +1,46 @@
 
 import json
 
-from django.http import HttpResponse
 from django.contrib.auth.models import User
 
 from django.views.generic.edit import UpdateView
-from django.http import HttpResponseRedirect
+from django.http import (HttpResponseRedirect,
+                         HttpResponse)
+
+from django.views.generic import FormView
 
 from .models import Project
 from .forms import ProjectForm
 
-def champion_auto_complete(request):
-    q = request.REQUEST('term')
-    users = User.objects.filter(is_active=True)
-    users_list = []
 
-    for u in users:
-        value = '{}, {} ({}) - {}'.format(u.last_name,
-                                          u.first_name,
-                                          u.username,
-                                          u.email)
-        u_dict = {'id': u.id, 'label': value, 'value': value}
-        users_list.append[u_dict]
+class ChampionAutoCompleteView(FormView):
+    """
+    Documentation
+    =============
 
-    return HttpResponse(json.dumps(users_list), mimetype='application/json')
+    - https://ccbv.co.uk/projects/Django/1.9/django.views.generic.edit/FormView/
 
+    """
+    def get(self,request,*args,**kwargs):
+        data = request.GET
+        # term is sent by the jquery-ui autocomplete widget
+        username = data.get("term")
+        if username:
+            users = User.objects.filter(username__icontains= username)
+        else:
+            users = User.objects.all()
+
+        results = []
+        for user in users:
+            user_json = {}
+            user_json['id'] = user.id
+            user_json['label'] = user.username
+            user_json['value'] = user.username
+            results.append(user_json)
+
+        data = json.dumps(results)
+        mimetype = 'application/json'
+        return HttpResponse(data, mimetype)
 
 
 class ProjectUpdateView(UpdateView):

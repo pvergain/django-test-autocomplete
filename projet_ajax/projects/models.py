@@ -25,9 +25,12 @@ class Project(models.Model):
     title = models.CharField(max_length=200)
     champion = models.ForeignKey(User)
 
+    def __str__(self):
+        return "{} {}".format(self.title, self.champion)
+
     def get_absolute_url(self):
         """
         https://docs.djangoproject.com/en/dev/ref/class-based-views/generic-editing/
         """
-        return reverse('project:project_detail',
+        return reverse('projects:project_update',
                        kwargs={'pk': self.pk})

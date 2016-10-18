@@ -34,7 +34,7 @@ urlpatterns = [
         name='search_form'),
     url(r'^admin/lookups/', include(ajax_select_urls)),
 
-
+    url(r'^projects/', include('projects.urls', namespace='projects')),
     url(r'^singers/', include('singers.urls', namespace='singers')),
 ]
 
