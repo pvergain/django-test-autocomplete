@@ -32,6 +32,9 @@ ALLOWED_HOSTS = []
 
 # Applications definition
 INSTALLED_APPS = [
+    'dal',
+    'dal_select2',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,7 +51,9 @@ INSTALLED_APPS = [
     'crispy_forms',
 
     # # https://docs.djangoproject.com/en/dev/ref/applications/#django.apps.AppConfig
-    'singers.apps.SingersConfig'
+    'singers.apps.SingersConfig',
+    # http://guiqinqian.blogspot.fr/2012/01/using-jquery-auto-complete-in-django.html
+    'projects.apps.ProjectsConfig'
 ]
 
 MIDDLEWARE = [
