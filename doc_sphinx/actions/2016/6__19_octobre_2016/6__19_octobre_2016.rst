@@ -32,3 +32,15 @@ Modify names
 - champion_auto_complete -> champion_get_json
 
 
+Test champion_get_json : http://127.0.0.1:8004/projects/champion_get_json/?term=a
+===================================================================================
+
+.. seealso:: http://127.0.0.1:8004/projects/champion_get_json/?term=a
+
+.. figure:: test_view_champion_get_json.png
+   :align: center
+   
+   
+   
+
+
