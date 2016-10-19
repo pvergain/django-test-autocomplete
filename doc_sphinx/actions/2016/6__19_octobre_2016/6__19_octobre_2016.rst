@@ -26,3 +26,9 @@ The Javascript code must be in the the body element
    :align: center
    
    
+Modify names
+============
+
+- champion_auto_complete -> champion_get_json
+
+

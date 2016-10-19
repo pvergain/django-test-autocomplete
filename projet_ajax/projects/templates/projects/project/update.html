@@ -23,7 +23,7 @@
 
     $( "#id_champion_term" ).autocomplete({
           {# http://api.jqueryui.com/autocomplete/#option-source #}
-          source: "{% url 'projects:champion_auto_complete' %}",
+          source: "{% url 'projects:champion_get_json' %}",
           {# http://api.jqueryui.com/autocomplete/#option-autoFocus #}
           autoFocus:true,
           {# http://api.jqueryui.com/autocomplete/#option-minLength #}
