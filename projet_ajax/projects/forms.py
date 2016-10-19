@@ -1,5 +1,8 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/python
+# -*- coding: utf8 -*-
+"""The project's forms.
 
+"""
 
 from django import forms
 
@@ -16,5 +19,5 @@ class ProjectChampionForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(ProjectChampionForm, self).__init__(*args, **kwargs)
-        self.fields['champion_display'].label = "Update the Champion"
+        self.fields['champion_display'].label = "Update the champion"
         self.fields['champion'].widget = forms.HiddenInput()
