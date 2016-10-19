@@ -12,6 +12,8 @@ from django.core.urlresolvers import reverse
 # https://docs.djangoproject.com/en/dev/ref/contrib/auth/#user-model
 from django.contrib.auth.models import User
 
+
+
 @python_2_unicode_compatible
 class Project(models.Model):
     """A project with a title and a champion which is the foreign key to the auth user.

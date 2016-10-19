@@ -12,8 +12,12 @@ from django.db.models import Q
 
 from django.views.generic import FormView
 
+from dal import autocomplete
+
+
 from .models import Project
 from .forms import ProjectChampionForm
+
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
@@ -94,3 +98,13 @@ class ProjectUpdateView(UpdateView):
         else:
             return super(ProjectUpdateView, self).post(request, *args, **kwargs)
 
+
+class ProjectAutocompleteView(autocomplete.Select2QuerySetView):
+    def get_queryset(self):
+        # Don't forget to filter out results depending on the visitor !
+        qs = Project.objects.all()
+
+        if self.q:
+            qs = qs.filter(title__istartswith=self.q)
+
+        return qs

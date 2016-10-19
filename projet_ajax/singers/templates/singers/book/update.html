@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% load staticfiles %}
+
+{% block content %}
+
+<h1>Update of the book {{ book.title }} {{ book.author }} </h1>
+
+{# https://docs.djangoproject.com/en/dev/topics/forms/ #}
+<form id="book_update" method="post" action=".">
+    {% csrf_token %}
+    {{ form }}
+
+    {# https://django-ajax-selects.readthedocs.io/en/latest/Outside-of-Admin.html #}
+    <input type="submit" name="btn_update"  value="Update" class="btn btn-success btn-block" />
+</form>
+
+
+{% if messages %}
+    <ul class="messages">
+        {% comment %} https://getbootstrap.com/components/#alerts {% endcomment %}
+        {% for message in messages %}
+        <!--li{% if message.tags %} class="{{ message.tags }}"{% endif %} -->
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                <div class="alert alert-danger" role="alert">{{ message }}</div>
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                <div class="alert alert-success" role="alert">{{ message }}</div>
+            {% else %}
+                <div class="alert alert-info" role="alert">{{ message }}</div>
+            {% endif %}
+        <!-- /li -->
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{{ form.media }}
+
+{% endblock content %}
+

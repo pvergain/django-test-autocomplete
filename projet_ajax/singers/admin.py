@@ -22,6 +22,12 @@ class PersonAdmin(AjaxSelectAdmin):
 admin.site.register(Person, PersonAdmin)
 
 
+class BookAdmin(AjaxSelectAdmin):
+    pass
+
+admin.site.register(Book, BookAdmin)
+
+
 class LabelAdmin(AjaxSelectAdmin):
     """ to get + popup buttons, subclass AjaxSelectAdmin
 

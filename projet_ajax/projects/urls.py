@@ -3,7 +3,8 @@
 from django.conf.urls import url
 
 from .views import (ProjectUpdateView,
-                    ChampionAutoCompleteView)
+                    ChampionAutoCompleteView,
+                    ProjectAutocompleteView)
 
 
 urlpatterns = [
@@ -15,4 +16,10 @@ urlpatterns = [
      url(r'^champion_get_json/$',
          ChampionAutoCompleteView.as_view(),
          name='champion_get_json'),
+
+    url(
+        r'^projet_autocomplete/$',
+        ProjectAutocompleteView.as_view(),
+        name='projet_autocomplete',
+    ),
 ]

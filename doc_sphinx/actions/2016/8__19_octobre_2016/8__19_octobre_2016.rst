@@ -14,3 +14,12 @@
 .. contents::
    :depth: 3
 
+
+Does not work ! Very disapointing.
+
+
+
+.. figure:: nothing_is_displayed.png
+   :align: center
+   
+   

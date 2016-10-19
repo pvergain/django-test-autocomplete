@@ -4,9 +4,12 @@ from __future__ import unicode_literals
 
 from django.forms.models import ModelForm
 from ajax_select import make_ajax_field
+from dal import autocomplete
 
 from .models import (Release,
-                     Song)
+                     Song,
+                     Author,
+                     Book)
 
 class ReleaseForm(ModelForm):
 
@@ -41,3 +44,22 @@ class SongForm(ModelForm):
                             'group', # fieldname on this model
                             'group', # lookup_channel_name
                             help_text="Select the group")
+
+
+class AuthorForm(ModelForm):
+    class Meta:
+        model = Author
+        fields = ('name',)
+        widgets = {
+            'name': autocomplete.Select(url='singers:author_autocomplete')
+        }
+
+class BookForm(ModelForm):
+    class Meta:
+        model = Book
+        fields = ('title', 'author',)
+        widgets = {
+            'author': autocomplete.ModelSelect2(url='singers:author_autocomplete')
+        }
+
+
