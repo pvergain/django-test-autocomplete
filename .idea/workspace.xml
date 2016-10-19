@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bec87bc6-1c5b-407a-b76d-4209ea688555" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/ajax_selects_singers_db" afterPath="$PROJECT_DIR$/projet_ajax/ajax_selects_singers_db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/actions/2016/4__18_octobre_2016/4__18_octobre_2016.rst" afterPath="$PROJECT_DIR$/doc_sphinx/actions/2016/4__18_octobre_2016/4__18_octobre_2016.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/actions/2016/5__18_octobre_2016/5__18_octobre_2016.rst" afterPath="$PROJECT_DIR$/doc_sphinx/actions/2016/5__18_octobre_2016/5__18_octobre_2016.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update.html" afterPath="$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/templates/base.html" afterPath="$PROJECT_DIR$/projet_ajax/templates/base.html" />
     </list>
     <ignored path="django_ajax_select.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -615,7 +610,14 @@
       <option name="project" value="LOCAL" />
       <updated>1476861437095</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Unobstrusive Javascript.">
+      <created>1476864885466</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1476864885466</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -688,7 +690,8 @@
     <MESSAGE value="Add .bat files and django-autocomplete-light." />
     <MESSAGE value="git rm -r --cached .idea + add .idea/ in .gitignore file." />
     <MESSAGE value="Add .bat file and add django-crispy-forms." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add .bat file and add django-crispy-forms." />
+    <MESSAGE value="Unobstrusive Javascript." />
+    <option name="LAST_COMMIT_MESSAGE" value="Unobstrusive Javascript." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
