@@ -4,8 +4,7 @@
     <list default="true" id="bec87bc6-1c5b-407a-b76d-4209ea688555" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/ajax_selects_singers_db" afterPath="$PROJECT_DIR$/projet_ajax/ajax_selects_singers_db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/actions/2016/2016.rst" afterPath="$PROJECT_DIR$/doc_sphinx/actions/2016/2016.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/actions/2016/6__19_octobre_2016/6__19_octobre_2016.rst" afterPath="$PROJECT_DIR$/doc_sphinx/actions/2016/6__19_octobre_2016/6__19_octobre_2016.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/projects/forms.py" afterPath="$PROJECT_DIR$/projet_ajax/projects/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update.html" afterPath="$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update.html" />
     </list>
     <ignored path="django_ajax_select.iws" />
@@ -87,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/projet_ajax/projects/forms.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
               <folding>
                 <element signature="e#71#95#0" expanded="true" />
               </folding>
@@ -122,8 +121,8 @@
       <file leaf-file-name="update.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="30" column="66" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
+            <state relative-caret-position="238">
+              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -163,8 +162,8 @@
         <option value="$PROJECT_DIR$/projet_ajax/projects/models.py" />
         <option value="$PROJECT_DIR$/projet_ajax/projects/views.py" />
         <option value="$PROJECT_DIR$/projet_ajax/projects/urls.py" />
-        <option value="$PROJECT_DIR$/projet_ajax/projects/forms.py" />
         <option value="$PROJECT_DIR$/projet_ajax/templates/base.html" />
+        <option value="$PROJECT_DIR$/projet_ajax/projects/forms.py" />
         <option value="$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update.html" />
       </list>
     </option>
@@ -635,7 +634,14 @@
       <option name="project" value="LOCAL" />
       <updated>1476864987448</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add comments in projects/project/update.html">
+      <created>1476865814676</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1476865814676</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -709,7 +715,8 @@
     <MESSAGE value="git rm -r --cached .idea + add .idea/ in .gitignore file." />
     <MESSAGE value="Add .bat file and add django-crispy-forms." />
     <MESSAGE value="Unobstrusive Javascript." />
-    <option name="LAST_COMMIT_MESSAGE" value="Unobstrusive Javascript." />
+    <MESSAGE value="add comments in projects/project/update.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="add comments in projects/project/update.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1010,32 +1017,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projet_ajax/projects/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-          <folding>
-            <element signature="e#71#110#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projet_ajax/projects/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
           <folding>
             <element signature="e#25#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projet_ajax/projects/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-          <folding>
-            <element signature="e#71#95#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1048,10 +1035,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/projet_ajax/projects/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding>
+            <element signature="e#71#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projet_ajax/projects/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding>
+            <element signature="e#71#95#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="30" column="66" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
+        <state relative-caret-position="238">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
           <folding />
         </state>
       </provider>

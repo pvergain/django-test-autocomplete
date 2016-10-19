@@ -10,14 +10,15 @@ from .models import Project
 
 class ProjectChampionForm(forms.ModelForm):
     """The champion project form"""
-    champion_display = forms.CharField(max_length=100,
+    champion_term = forms.CharField(max_length=100,
                                        help_text='type username or email')
 
     class Meta:
         model = Project
-        fields = ('title', 'champion_display', 'champion',)
+        fields = ('title',
+                  'champion_term', 'champion',)
 
     def __init__(self, *args, **kwargs):
         super(ProjectChampionForm, self).__init__(*args, **kwargs)
-        self.fields['champion_display'].label = "Update the champion"
+        self.fields['champion_term'].label = "Update the champion"
         self.fields['champion'].widget = forms.HiddenInput()
