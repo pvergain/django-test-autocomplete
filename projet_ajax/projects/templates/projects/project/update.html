@@ -33,9 +33,10 @@
           minLength:1,
           {# http://api.jqueryui.com/autocomplete/#event-select #}
           select:function(event,ui) {
-              $("#id_champion").val(ui.item.id)
+              $("#id_champion").val(ui.item.id);
           }
     });
+
 {% endblock %}
 
 
@@ -57,13 +58,12 @@
             <table id="id_table" class="table table-hover table-bordered table-condensed">
                 <tbody>
                         <tr>
-                            <td class="text-right">Title</td>
-                            <td colspan="2">{{ form.title }}</td>
+                            <td class="text-right">Title:</td>
+                            <td>{{ form.title }}</td>
                         </tr>
                         <tr>
-                            <td class="text-right">Champion</td>
-                            <td>{{ form.champion_term }}</td>
-                            <td id="id_champion_display">{{ project.champion }}</td>
+                            <td class="text-right">Champion:</td>
+                            <td> <span id="id_champion_display">{{ project.champion }}</span> {{ form.champion_term }}  </td>
                         </tr>
                 </tbody>
             </table>

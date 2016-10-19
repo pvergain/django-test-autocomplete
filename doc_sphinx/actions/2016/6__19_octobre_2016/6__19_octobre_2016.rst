@@ -7,7 +7,7 @@
 .. _javascript_unobstrusive:
 
 ============================================================================
-2016-10-19 improve the Django templates + unobstrusive Javascript
+2016-10-19 improve the Django templates + unobstrusive Javascript (step1)
 ============================================================================
 
 .. contents::
@@ -121,7 +121,11 @@ First step for a better look
 .. seealso:: http://127.0.0.1:8004/projects/project/1/update/
 
 
-
+.. figure:: step1_improve.png
+   :align: center
+   
+   
+   
 
 
    
