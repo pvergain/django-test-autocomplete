@@ -13,6 +13,7 @@ Actions 2016
 .. toctree::
    :maxdepth: 5
    
+   6__19_octobre_2016/6__19_octobre_2016
    5__18_octobre_2016/5__18_octobre_2016
    4__18_octobre_2016/4__18_octobre_2016
    3__18_octobre_2016/3__18_octobre_2016

@@ -4,10 +4,10 @@
    pair: Django ; Template
    pair: Javascript ; Unobstrusive
 
-.. _autocomplete_5:
+.. _javascript_unobstrusive:
 
 ============================================================================
-2016-10-18 improve the Django templates 
+2016-10-18 improve the Django templates + unobstrusive Javascript
 ============================================================================
 
 .. contents::
@@ -17,6 +17,10 @@
 The Javascript code must be in the the body element
 =====================================================
 
+.. seealso::
+
+   - https://www.amazon.fr/gp/product/1617292079/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1
+   
 
 .. figure:: unobstrutive_javascript.png
    :align: center

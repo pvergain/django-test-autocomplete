@@ -22,9 +22,13 @@
 {% block domready %}
 
     $( "#id_champion_display" ).autocomplete({
+          {# http://api.jqueryui.com/autocomplete/#option-source #}
           source: "{% url 'projects:champion_auto_complete' %}",
-          selectFirst:true,
+          {# http://api.jqueryui.com/autocomplete/#option-autoFocus #}
+          autoFocus:true,
+          {# http://api.jqueryui.com/autocomplete/#option-minLength #}
           minLength:1,
+          {# http://api.jqueryui.com/autocomplete/#event-select #}
           select:function(event,ui) {
             $("#id_champion").val(ui.item.id)
           }
