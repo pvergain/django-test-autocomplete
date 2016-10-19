@@ -69,7 +69,7 @@ class ProjectUpdateView(UpdateView):
 
     Documentation:
 
-    - http://ccbv.co.uk/projects/Django/1.9/django.views.generic.edit/UpdateView/
+    - http://ccbv.co.uk/projects/Django/1.10/django.views.generic.edit/UpdateView/
 
     """
     model = Project
