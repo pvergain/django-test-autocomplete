@@ -20,12 +20,11 @@
 
 {# DOM ready #}
 {% block domready %}
-    {# p.155 Adding AJAX actions with jQuery, Django By Example from Antonio Melé #}
-    {# https://www.amazon.com/Django-Example-Antonio-Mele/dp/1784391913/ #}
+
     $( "#id_champion_display" ).autocomplete({
           source: "{% url 'projects:champion_auto_complete' %}",
           selectFirst:true,
-          minLength:2,
+          minLength:1,
           select:function(event,ui) {
             $("#id_champion").val(ui.item.id)
           }

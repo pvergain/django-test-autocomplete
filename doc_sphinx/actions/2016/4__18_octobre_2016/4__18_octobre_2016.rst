@@ -204,6 +204,7 @@ This template file is used by the ProjectUpdateView.
 
 .. literalinclude:: ../../../../projet_ajax/projects/templates/projects/project/update.html
    :linenos:
+   :language: django
    
    
 Add the jquery-ui javascript code

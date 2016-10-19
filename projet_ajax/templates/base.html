@@ -41,6 +41,21 @@
                 
         {% endblock  %}
 
+
+
+    </head>
+    <body class="{% block bodyclass %} {% endblock %}">  
+          
+                
+        <div id="conteneur" class="container">                  
+            {% block content %} 
+            {% endblock %}
+
+            {% block footer %}
+            {% endblock %}
+                            
+        </div> <!-- id conteneur -->   
+
         {# Javascript #}
         {% block javascript %}
 
@@ -59,7 +74,7 @@
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
 
         {% endblock javascript %}
-        
+
         {# p.155 Adding AJAX actions with jQuery, Django By Example from Antonio Melé #}
         {# https://www.amazon.com/Django-Example-Antonio-Mele/dp/1784391913/ #}
         <script>
@@ -68,20 +83,6 @@
                 {% endblock %}
             });
         </script>
-
-    </head>
-    <body class="{% block bodyclass %} {% endblock %}">  
-          
-                
-        <div id="conteneur" class="container">                  
-            {% block content %} 
-            {% endblock %}
-
-            {% block footer %}
-            {% endblock %}
-                            
-        </div> <!-- id conteneur -->   
-                      
        
     </body>
 </html>

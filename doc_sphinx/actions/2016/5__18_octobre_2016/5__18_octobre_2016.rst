@@ -12,6 +12,7 @@
 
 .. seealso::
 
+   - http://api.jqueryui.com/autocomplete/
    - https://jqueryui.com/autocomplete/
    - https://jqueryui.com/autocomplete/#combobox
 
@@ -28,9 +29,31 @@ Last look
    - http://127.0.0.1:8004/projects/project/1/update/
    
 
+::
+
+    (django_test_autocomplete_35_64) C:\projects_id3\django-test-autocomplete\projet_ajax>python manage.py runserver 127.0.0.1:8004 Performing system checks...
+
+::
+
+    System check identified no issues (0 silenced).
+    October 19, 2016 - 09:08:19
+    Django version 1.10.2, using settings 'projet_ajax.settings'
+    Starting development server at http://127.0.0.1:8004/
+    Quit the server with CTRL-BREAK.
+
 .. figure:: ../4__18_octobre_2016/ok_saisie_champion.png
    :align: center
    
+
+.. literalinclude:: ../../../../projet_ajax/projects/templates/projects/project/update.html
+   :linenos:
+   :language: django
+   
+
+.. literalinclude:: ../../../../projet_ajax/projects/forms.py
+   :linenos:
+   
+      
    
 
 jquery-ui autocomplete options already used
@@ -67,6 +90,7 @@ is used to display some feedback.
         background: white url("images/ui-anim_basic_16x16.gif") right center no-repeat;
       }
       </style>
+      
       <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
       <script>
