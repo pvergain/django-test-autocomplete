@@ -5,6 +5,7 @@ decorator==4.0.10
 Django==1.10.2
 django-ajax-selects==1.5.1
 django-autocomplete-light==3.2.1
+django-crispy-forms==1.6.1
 django-extensions==1.7.4
 docutils==0.12
 imagesize==0.7.1
