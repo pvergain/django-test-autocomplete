@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bec87bc6-1c5b-407a-b76d-4209ea688555" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/django_ajax_select.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/actions/2016/6__19_octobre_2016/6__19_octobre_2016.rst" afterPath="$PROJECT_DIR$/doc_sphinx/actions/2016/6__19_octobre_2016/6__19_octobre_2016.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update.html" afterPath="$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update.html" />
     </list>
     <ignored path="django_ajax_select.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -126,8 +119,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+            <state relative-caret-position="22">
+              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -660,7 +653,14 @@
       <option name="project" value="LOCAL" />
       <updated>1476866264793</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="try to ignore .idea">
+      <created>1476866950257</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1476866950257</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -737,7 +737,8 @@
     <MESSAGE value="add comments in projects/project/update.html" />
     <MESSAGE value="champion_display -&gt; champion_term" />
     <MESSAGE value="champion_auto_complete -&gt; champion_get_json" />
-    <option name="LAST_COMMIT_MESSAGE" value="champion_auto_complete -&gt; champion_get_json" />
+    <MESSAGE value="try to ignore .idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="try to ignore .idea" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1078,8 +1079,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        <state relative-caret-position="22">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
           <folding />
         </state>
       </provider>
