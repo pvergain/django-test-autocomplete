@@ -33,7 +33,7 @@
           minLength:1,
           {# http://api.jqueryui.com/autocomplete/#event-select #}
           select:function(event,ui) {
-            $("#id_champion").val(ui.item.id)
+              $("#id_champion").val(ui.item.id)
           }
     });
 {% endblock %}
@@ -42,14 +42,32 @@
 {% block content %}
 
     <h1>Update of the project '(title:{{ project.title }} champion:{{ project.champion }}) </h1>
-
+    <p></p>
+    <p></p>
     {# https://docs.djangoproject.com/en/dev/topics/forms/ #}
-    <form id="project_update" method="post" action=".">
+    <form id="id_form_project_update" action="{% url 'projects:project_update' project.id %}" method="post">
         {% csrf_token %}
         <div class="forms">
-            {{ form }}
+            {{ form.id }}
+            {{ form.non_field_errors }}
+            {# Include the hidden fields #}
+            {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+            {% endfor %}
+            <table id="id_table" class="table table-hover table-bordered table-condensed">
+                <tbody>
+                        <tr>
+                            <td class="text-right">Title</td>
+                            <td colspan="2">{{ form.title }}</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">Champion</td>
+                            <td>{{ form.champion_term }}</td>
+                            <td id="id_champion_display">{{ project.champion }}</td>
+                        </tr>
+                </tbody>
+            </table>
         </div>
-
         <input type="submit" name="btn_update"  value="Update" class="btn btn-success btn-block" />
     </form>
 

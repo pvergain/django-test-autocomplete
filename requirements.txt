@@ -6,6 +6,7 @@ Django==1.10.2
 django-ajax-selects==1.5.1
 django-autocomplete-light==3.2.1
 django-crispy-forms==1.6.1
+django-debug-toolbar==1.6
 django-extensions==1.7.4
 docutils==0.12
 imagesize==0.7.1
@@ -21,6 +22,7 @@ simplegeneric==0.8.1
 six==1.10.0
 snowballstemmer==1.2.1
 Sphinx==1.4.8
+sqlparse==0.2.1
 traitlets==4.3.1
 wcwidth==0.1.7
 win-unicode-console==0.5

@@ -1,5 +1,6 @@
 
 import json
+import logging
 
 from django.contrib.auth.models import User
 
@@ -13,6 +14,9 @@ from django.views.generic import FormView
 
 from .models import Project
 from .forms import ProjectChampionForm
+
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
 
 
 class ChampionAutoCompleteView(FormView):
@@ -83,6 +87,7 @@ class ProjectUpdateView(UpdateView):
         return self.object
 
     def post(self, request, *args, **kwargs):
+        logger.warning("Hello from ProjectUpdateView !")
         if "cancel" in request.POST:
             url = self.get_success_url()
             return HttpResponseRedirect(url)
