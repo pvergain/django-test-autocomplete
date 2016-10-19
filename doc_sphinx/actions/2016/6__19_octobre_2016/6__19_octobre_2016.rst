@@ -1,0 +1,24 @@
+
+
+.. index::
+   pair: Django ; Template
+   pair: Javascript ; Unobstrusive
+
+.. _autocomplete_5:
+
+============================================================================
+2016-10-18 improve the Django templates 
+============================================================================
+
+.. contents::
+   :depth: 3
+
+
+The Javascript code must be in the the body element
+=====================================================
+
+
+.. figure:: unobstrutive_javascript.png
+   :align: center
+   
+   
