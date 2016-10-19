@@ -12,3 +12,82 @@
    :depth: 3
 
 
+Step2
+=====
+
+.. figure:: step2_improvement.png
+   :align: center
+   
+   
+.. code-block:: django
+
+    {# https://docs.djangoproject.com/en/dev/topics/forms/ #}
+    <form id="id_form_project_update" action="{% url 'projects:project_update' project.id %}" method="post">
+        {% csrf_token %}
+        <div class="forms">
+            {{ form.id }}
+            {{ form.non_field_errors }}
+            {# Include the hidden fields #}
+            {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+            {% endfor %}
+            <table id="id_table" class="table table-hover table-bordered table-condensed">
+                <tbody>
+                        <tr>
+                            <td class="text-right">Title:</td>
+                            <td>{{ form.title }}</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">Champion:</td>
+                            <td> <span id="id_champion_display">{{ project.champion }}</span> {{ form.champion_term }}  </td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+        <input type="submit" name="btn_update"  value="Update" class="btn btn-success btn-block" />
+    </form>
+    
+    {# DOM ready #}
+    {% block domready %}
+
+        $( "#id_champion_term" ).autocomplete({
+              {# http://api.jqueryui.com/autocomplete/#option-source #}
+              source: "{% url 'projects:champion_get_json' %}",
+              {# http://api.jqueryui.com/autocomplete/#option-autoFocus #}
+              autoFocus:true,
+              {# http://api.jqueryui.com/autocomplete/#option-minLength #}
+              minLength:1,
+              {# http://api.jqueryui.com/autocomplete/#event-select #}
+              select:function(event,ui) {
+                  $("#id_champion").val(ui.item.id);
+              }
+        });
+
+    {% endblock %}    
+    
+    
+CSS Problem  ?
+================
+
+I think it's a CSS problem but I don't known how to resolve it.
+
+
+.. figure:: good_demo_javascript.png
+   :align: center
+   
+   
+We clearly see the box around the list of elements, but when I take 
+the source code we have no box.
+
+.. figure:: bad_no_box.png
+   :align: center
+   
+   
+I don't know whet to do
+========================   
+
+
+ 
+
+
+
