@@ -12,7 +12,7 @@ urlpatterns = [
          name='project_update'),
 
      # calls by jquery-ui autocomplete (AJAX calls)
-     url(r'^champion_auto_complete/$',
+     url(r'^champion_get_json/$',
          ChampionAutoCompleteView.as_view(),
-         name='champion_auto_complete'),
+         name='champion_get_json'),
 ]
