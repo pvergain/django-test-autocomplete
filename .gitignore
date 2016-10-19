@@ -8,6 +8,11 @@ __pycache__/
 # User-specific stuff:
 .idea/workspace.xml
 .idea/tasks.xml
+.idea/django_ajax_select.iml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
 # Sensitive or high-churn files:
 .idea/dataSources.ids
 .idea/dataSources.xml

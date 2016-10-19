@@ -2,7 +2,16 @@
 {% load static %}
 {% load staticfiles %}
 
-{# Javascript #}
+
+{# STYLE CSS #}
+{% block stylesheet %}
+    {{ block.super }}
+    {# https://www.bootstrapcdn.com/ #}
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.csss">
+{% endblock  %}
+
+
+{# BEHAVIOR Javascript #}
 {% block javascript %}
     {{ block.super }}
 
@@ -11,12 +20,6 @@
 
 {% endblock javascript %}
 
-{# CSS #}
-{% block stylesheet %}
-    {{ block.super }}
-    {# https://www.bootstrapcdn.com/ #}
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.csss">
-{% endblock  %}
 
 {# DOM ready #}
 {% block domready %}

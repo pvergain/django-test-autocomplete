@@ -7,7 +7,7 @@
 .. _javascript_unobstrusive:
 
 ============================================================================
-2016-10-18 improve the Django templates + unobstrusive Javascript
+2016-10-19 improve the Django templates + unobstrusive Javascript
 ============================================================================
 
 .. contents::
