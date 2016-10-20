@@ -2,31 +2,36 @@
 <html lang="en">
     <head>
         <title>EasyAutocomplete json example</title>
-        <link href="../dist/easy-autocomplete.min.css" rel="stylesheet" type="text/css">
+        
+        <!-- STYLE -> CSS -->        
+            <link href="../dist/easy-autocomplete.min.css" rel="stylesheet" type="text/css">
+        <!-- end STYLE-->        
     </head>
     <body>
 
-        <h1>EasyAutocomplete - json example</h1>
+        <!-- STRUCTURE -> HTML5 elements -->
+            <h1>EasyAutocomplete - json example</h1>
+            <input id="data-json" />
+        <!-- end STRUCTURE-->
+        
+        <!--BEHAVIOR -> Javascript scripts-->        
+            <script src="../lib/jquery-1.11.2.min.js"></script>
+            <script src="../dist/jquery.easy-autocomplete.min.js" type="text/javascript" ></script>
+            <script>
+                var options_easy_autocomplete = {
+                    url: "resources/countries.json",
 
-        <input id="data-json" />
+                    getValue: "name",
 
-        <script src="../lib/jquery-1.11.2.min.js"></script>
-        <script src="../dist/jquery.easy-autocomplete.min.js" type="text/javascript" ></script>
-        <script>
-            var options = {
-                url: "resources/countries.json",
-
-                getValue: "name",
-
-                list: {
-                    match: {
-                        enabled: true
+                    list: {
+                        match: {
+                            enabled: true
+                        }
                     }
-                }
-            };
-            $("#data-json").easyAutocomplete(options);
-        </script>
-
+                };
+                $("#data-json").easyAutocomplete(options_easy_autocomplete);
+            </script>
+        <!-- end BEHAVIOR --> 
     </body>
 
 </html>

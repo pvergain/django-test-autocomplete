@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="bec87bc6-1c5b-407a-b76d-4209ea688555" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/actions/2016/9__20_octobre_2016/9__20_octobre_2016.rst" afterPath="$PROJECT_DIR$/doc_sphinx/actions/2016/9__20_octobre_2016/9__20_octobre_2016.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/annexes/EasyAutocomplete-master/demo/example_json.html" afterPath="$PROJECT_DIR$/doc_sphinx/annexes/EasyAutocomplete-master/demo/example_json.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/annexes/EasyAutocomplete-master/demo/example_categories.html" afterPath="$PROJECT_DIR$/doc_sphinx/annexes/EasyAutocomplete-master/demo/example_categories.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/annexes/EasyAutocomplete-master/demo/example_custom_template.html" afterPath="$PROJECT_DIR$/doc_sphinx/annexes/EasyAutocomplete-master/demo/example_custom_template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/annexes/EasyAutocomplete-master/demo/example_flags.html" afterPath="$PROJECT_DIR$/doc_sphinx/annexes/EasyAutocomplete-master/demo/example_flags.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/annexes/EasyAutocomplete-master/demo/example_remote.html" afterPath="$PROJECT_DIR$/doc_sphinx/annexes/EasyAutocomplete-master/demo/example_remote.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/annexes/EasyAutocomplete-master/demo/example_simple.html" afterPath="$PROJECT_DIR$/doc_sphinx/annexes/EasyAutocomplete-master/demo/example_simple.html" />
     </list>
     <ignored path="django_ajax_select.iws" />
     <ignored path=".idea/workspace.xml" />

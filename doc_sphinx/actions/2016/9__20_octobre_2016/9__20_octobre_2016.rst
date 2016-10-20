@@ -3,6 +3,9 @@
 .. index::
    pair: jQuery ; EasyAutocomplete
    pair: plugin ; jQuery EasyAutocomplete
+   pair: categories ; EasyAutocomplete
+   pair: flags ; EasyAutocomplete
+   pair: JSON ; EasyAutocomplete
 
 
 
@@ -203,6 +206,26 @@ EasyAutocomplete flags example
 .. literalinclude:: ../../../annexes/EasyAutocomplete-master/demo/example_flags.html
    :linenos:
    :language: html
+   
+   
+EasyAutocomplete categories example 
+====================================
+
+
+.. literalinclude:: ../../../annexes/EasyAutocomplete-master/demo/example_categories.html
+   :linenos:
+   :language: html
+   
+
+.. literalinclude:: ../../../annexes/EasyAutocomplete-master/demo/resources/categories.json
+   :linenos:
+   :language: html
+   
+   
+   
+      
+   
+
       
       
    
