@@ -19,3 +19,5 @@ __pycache__/
 .idea/sqlDataSources.xml
 .idea/dynamic.xml
 .idea/uiDesigner.xml
+staticfiles/
+static/

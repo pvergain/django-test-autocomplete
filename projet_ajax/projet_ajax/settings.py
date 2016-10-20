@@ -11,12 +11,24 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+import logging
 
-from os.path import join
+from os.path import (join,
+                     basename,
+                     dirname)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DJANGO_ROOT = BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Site name ('projet_ajax')
+SITE_NAME = basename(DJANGO_ROOT)
+# Absolute filesystem path to the top-level project folder:
+PROJECT_ROOT=dirname(DJANGO_ROOT)
 
+logging.info("DJANGO_ROOT={} SITE_NAME={} PROJECT_ROOT={}".format(
+    DJANGO_ROOT,
+    SITE_NAME,
+    PROJECT_ROOT,
+))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -155,8 +167,18 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
+STATIC_ROOT = join(PROJECT_ROOT, 'staticfiles')
+# STATIC_ROOT="C:/projects_id3/P5N001/XLOG5R372_id3_intranet/trunk/django-www/staticfiles"
+# Static files (CSS, JavaScript, Images)
+# http://www.marinamele.com/taskbuster-django-tutorial/create-home-page-with-tdd-staticfiles-templates-settings
+# https://docs.djangoproject.com/en/dev/howto/static-files/
+# http://whitenoise.evans.io/en/latest/django.html#runserver-nostatic
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+# https://docs.djangoproject.com/en/dev/howto/static-files/
+# les répertoires ou sont sockés les fichiers statiques en developpement
+STATICFILES_DIRS = [
+    join(DJANGO_ROOT, 'static'),
+]
 
 AJAX_LOOKUP_CHANNELS = {
     # simplest way, automatically construct a search channel by passing a dict

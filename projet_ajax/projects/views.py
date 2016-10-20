@@ -83,7 +83,7 @@ class ProjectUpdateView(UpdateView):
     model = Project
     form_class = ProjectChampionForm
     context_object_name = 'project'
-    template_name = 'projects/project/update.html'
+    template_name = 'projects/project/update_easy_simple.html'
 
     def get_object(self, queryset=None):
         """Pour mémoriser self.demande_article"""
@@ -108,3 +108,5 @@ class ProjectAutocompleteView(autocomplete.Select2QuerySetView):
             qs = qs.filter(title__istartswith=self.q)
 
         return qs
+
+

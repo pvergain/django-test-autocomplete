@@ -956,8 +956,177 @@ Integration in our Django test project
             search_form.html
        
 
-Create a simple update_easy.html with 
+Create a simple update_easy_simple.html  
 ========================================  
 
 
+Le fichier projects/templates/pojects/projet/update_easy_simple.html
+----------------------------------------------------------------------
+
+
+::
+
+    {% load static %}
+    {% load staticfiles %}
+
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title>EasyAutocomplete simple example</title>
+
+            <!-- STYLE -> CSS -->
+                <link rel="stylesheet" href="{% static 'css/easy-autocomplete.css' %}" type="text/css">
+                <link rel="stylesheet" href="{% static 'css/easy-autocomplete.themes.css' %}" type="text/css">
+
+            <!-- end STYLE-->
+
+        </head>
+        <body>
+
+            <!-- STRUCTURE -> HTML5 elements -->
+                <h1>EasyAutocomplete - easy example</h1>
+                <input id="simple" />
+            <!-- end STRUCTURE-->
+
+            <!--BEHAVIOR -> Javascript scripts-->
+                <!-- Using jQuery with a CDN -->
+                <script src="//code.jquery.com/jquery-1.11.2.js"></script>
+                <script src="{% static 'js/jquery.easy-autocomplete.js' %}" type="text/javascript"></script>
+
+                <script>
+
+                    var options_easy_autocomplete = {
+                        data: ["blue", "green", "pink", "red", "yellow"],
+
+                    };
+
+                    $("#simple").easyAutocomplete(options_easy_autocomplete);
+
+                </script>
+            <!-- end BEHAVIOR -->
+
+        </body>
+
+    </html>
+
+
+First problem : the libraries are not found
+--------------------------------------------
+
+
+.. figure:: pb_load_libraries.png
+   :align: center
+   
+   
+::
+
+    from os.path import (join,
+                         basename,
+                         dirname)
+
+    # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+    DJANGO_ROOT = BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    # Site name ('projet_ajax')
+    SITE_NAME = basename(DJANGO_ROOT)
+    # Absolute filesystem path to the top-level project folder:
+    PROJECT_ROOT=dirname(DJANGO_ROOT)
+
+    logging.info("DJANGO_ROOT={} SITE_NAME={} PROJECT_ROOT={}".format(
+        DJANGO_ROOT,
+        SITE_NAME,
+        PROJECT_ROOT,
+    ))
+
+
+    # Static files (CSS, JavaScript, Images)
+    # https://docs.djangoproject.com/en/dev/howto/static-files/
+    STATIC_ROOT = join(PROJECT_ROOT, 'staticfiles')
+    # STATIC_ROOT="C:/projects_id3/P5N001/XLOG5R372_id3_intranet/trunk/django-www/staticfiles"
+    # Static files (CSS, JavaScript, Images)
+    # http://www.marinamele.com/taskbuster-django-tutorial/create-home-page-with-tdd-staticfiles-templates-settings
+    # https://docs.djangoproject.com/en/dev/howto/static-files/
+    # http://whitenoise.evans.io/en/latest/django.html#runserver-nostatic
+    STATIC_URL = '/static/'
+    # https://docs.djangoproject.com/en/dev/howto/static-files/
+    # les répertoires ou sont sockés les fichiers statiques en developpement
+    STATICFILES_DIRS = [
+        join(DJANGO_ROOT, 'static'),
+    ]
+
+
+collectstatic
+--------------
+
++::
+
+    python manage.py collectstatic
+    
+    
+
+New tree 
+---------
+
+::
+
+    +---doc_sphinx
+    |   +---actions
+    |   |   \---2016
+
+    +---projet_ajax
+    |   +---projects
+    |   |   +---migrations
+
+    \---staticfiles
+        +---admin
+        |   +---css
+        |   +---fonts
+        |   +---img
+        |   |   \---gis
+        |   \---js
+        |       +---admin
+        |       \---vendor
+        |           +---jquery
+        |           \---xregexp
+        +---ajax_select
+        |   +---css
+        |   +---images
+        |   \---js
+        +---autocomplete_light
+        |   \---vendor
+        |       \---select2
+        |           +---dist
+        |           |   +---css
+        |           |   \---js
+        |           |       \---i18n
+        |           +---src
+        |           |   \---js
+        |           |       \---select2
+        |           |           +---compat
+        |           |           +---data
+        |           |           +---dropdown
+        |           |           +---i18n
+        |           |           \---selection
+        |           +---tests
+        |           |   +---a11y
+        |           |   +---data
+        |           |   +---dropdown
+        |           |   +---integration
+        |           |   +---options
+        |           |   +---selection
+        |           |   +---utils
+        |           |   \---vendor
+        |           \---vendor
+        +---css
+        +---debug_toolbar
+        |   +---css
+        |   +---img
+        |   \---js
+        +---django_extensions
+        |   +---css
+        |   +---img
+        |   \---js
+        \---js
+
+
+    
 
