@@ -179,13 +179,30 @@ EasyAutocomplete files tree
   
   
    
-EasyAutocomplete json example 
+EasyAutocomplete JSON example 
 ==============================
+
+.. seealso:: :term:`JSON`
 
 .. figure:: easyautocomplete_json.png
    :align: center
    
    
+.. literalinclude:: ../../../annexes/EasyAutocomplete-master/demo/example_json.html
+   :linenos:
+   
+   
+EasyAutocomplete flags example 
+==============================
+
+.. figure:: easyautocomplete_flags.png
+   :align: center
+   
+
+.. literalinclude:: ../../../annexes/EasyAutocomplete-master/demo/example_flags.html
+   :linenos:
+      
+      
    
 
 
