@@ -28,7 +28,10 @@
 .. contents::
    :depth: 5
 
-
+.. figure:: ../../../eac_favicon.png
+   :align: center
+   
+   
 
 .. figure:: easyautocomplete_home.png
    :align: center
@@ -49,8 +52,8 @@ plugins available for free.
 .. figure:: why_jquery_easyautocomplete.png
    :align: center
    
-EasyAutocomplete files tree
-===========================
+EasyAutocomplete files tree (Javascript, CSS, JSON, PHP files)
+===============================================================
   
 ::
 
@@ -218,6 +221,22 @@ EasyAutocomplete-master/dist/jquery.easy-autocomplete.js
    :language: javascript
    :caption: EasyAutocomplete-master/dist/jquery.easy-autocomplete.js
    
+
+EasyAutocomplete simple example 
+================================
+
+
+.. figure:: easyautocomplete_simple.png
+   :align: center
+   
+   
+EasyAutocomplete-master/demo/example_simple.html
+-------------------------------------------------   
+   
+.. literalinclude:: ../../../annexes/EasyAutocomplete-master/demo/example_simple.html
+   :linenos:
+   :language: html
+   :caption: EasyAutocomplete-master/demo/example_simple.html
 
    
 EasyAutocomplete JSON example 
@@ -936,4 +955,9 @@ Integration in our Django test project
             base.html
             search_form.html
        
-   
+
+Create a simple update_easy.html with 
+========================================  
+
+
+
