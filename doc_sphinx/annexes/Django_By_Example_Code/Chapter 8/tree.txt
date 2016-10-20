@@ -1,0 +1,190 @@
+Structure du dossier pour le volume OS
+Le num‚ro de s‚rie du volume est 46AD-0A9C
+C:.
+|   tree.txt
+|   
+\---myshop
+    |   manage.py
+    |   
+    +---cart
+    |   |   admin.py
+    |   |   cart.py
+    |   |   context_processors.py
+    |   |   forms.py
+    |   |   models.py
+    |   |   tests.py
+    |   |   urls.py
+    |   |   views.py
+    |   |   __init__.py
+    |   |   
+    |   \---templates
+    |       \---cart
+    |               detail.html
+    |               
+    +---myshop
+    |       celery.py
+    |       db.sqlite3
+    |       settings.py
+    |       urls.py
+    |       wsgi.py
+    |       __init__.py
+    |       
+    +---orders
+    |   |   admin.py
+    |   |   forms.py
+    |   |   models.py
+    |   |   tasks.py
+    |   |   tests.py
+    |   |   urls.py
+    |   |   views.py
+    |   |   __init__.py
+    |   |   
+    |   +---migrations
+    |   |       0001_initial.py
+    |   |       __init__.py
+    |   |       
+    |   +---static
+    |   |   \---css
+    |   |           admin.css
+    |   |           pdf.css
+    |   |           
+    |   \---templates
+    |       +---admin
+    |       |   \---orders
+    |       |       \---order
+    |       |               detail.html
+    |       |               
+    |       \---orders
+    |           \---order
+    |                   create.html
+    |                   created.html
+    |                   pdf.html
+    |                   
+    +---payment
+    |   |   admin.py
+    |   |   apps.py
+    |   |   models.py
+    |   |   signals.py
+    |   |   tests.py
+    |   |   urls.py
+    |   |   views.py
+    |   |   __init__.py
+    |   |   
+    |   +---migrations
+    |   |       __init__.py
+    |   |       
+    |   \---templates
+    |       \---payment
+    |               canceled.html
+    |               done.html
+    |               process.html
+    |               
+    +---shop
+    |   |   admin.py
+    |   |   models.py
+    |   |   tests.py
+    |   |   urls.py
+    |   |   views.py
+    |   |   __init__.py
+    |   |   
+    |   +---migrations
+    |   |       0001_initial.py
+    |   |       __init__.py
+    |   |       
+    |   +---static
+    |   |   +---css
+    |   |   |       base.css
+    |   |   |       
+    |   |   \---img
+    |   |           no_image.png
+    |   |           
+    |   \---templates
+    |       \---shop
+    |           |   base.html
+    |           |   
+    |           \---product
+    |                   detail.html
+    |                   list.html
+    |                   
+    \---static
+        +---admin
+        |   +---css
+        |   |       base.css
+        |   |       changelists.css
+        |   |       dashboard.css
+        |   |       forms.css
+        |   |       ie.css
+        |   |       login.css
+        |   |       rtl.css
+        |   |       widgets.css
+        |   |       
+        |   +---img
+        |   |   |   changelist-bg.gif
+        |   |   |   changelist-bg_rtl.gif
+        |   |   |   default-bg-reverse.gif
+        |   |   |   default-bg.gif
+        |   |   |   deleted-overlay.gif
+        |   |   |   icon-no.gif
+        |   |   |   icon-unknown.gif
+        |   |   |   icon-yes.gif
+        |   |   |   icon_addlink.gif
+        |   |   |   icon_alert.gif
+        |   |   |   icon_calendar.gif
+        |   |   |   icon_changelink.gif
+        |   |   |   icon_clock.gif
+        |   |   |   icon_deletelink.gif
+        |   |   |   icon_error.gif
+        |   |   |   icon_searchbox.png
+        |   |   |   icon_success.gif
+        |   |   |   inline-delete-8bit.png
+        |   |   |   inline-delete.png
+        |   |   |   inline-restore-8bit.png
+        |   |   |   inline-restore.png
+        |   |   |   inline-splitter-bg.gif
+        |   |   |   nav-bg-grabber.gif
+        |   |   |   nav-bg-reverse.gif
+        |   |   |   nav-bg-selected.gif
+        |   |   |   nav-bg.gif
+        |   |   |   selector-icons.gif
+        |   |   |   selector-search.gif
+        |   |   |   sorting-icons.gif
+        |   |   |   tooltag-add.png
+        |   |   |   tooltag-arrowright.png
+        |   |   |   
+        |   |   \---gis
+        |   |           move_vertex_off.png
+        |   |           move_vertex_on.png
+        |   |           
+        |   \---js
+        |       |   actions.js
+        |       |   actions.min.js
+        |       |   calendar.js
+        |       |   collapse.js
+        |       |   collapse.min.js
+        |       |   core.js
+        |       |   inlines.js
+        |       |   inlines.min.js
+        |       |   jquery.init.js
+        |       |   jquery.js
+        |       |   jquery.min.js
+        |       |   LICENSE-JQUERY.txt
+        |       |   prepopulate.js
+        |       |   prepopulate.min.js
+        |       |   related-widget-wrapper.js
+        |       |   SelectBox.js
+        |       |   SelectFilter2.js
+        |       |   timeparse.js
+        |       |   urlify.js
+        |       |   
+        |       \---admin
+        |               DateTimeShortcuts.js
+        |               RelatedObjectLookups.js
+        |               
+        +---css
+        |       admin.css
+        |       base.css
+        |       pdf.css
+        |       
+        \---img
+                no_image.png
+                

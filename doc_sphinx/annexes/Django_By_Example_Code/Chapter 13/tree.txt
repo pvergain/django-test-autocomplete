@@ -1,0 +1,225 @@
+Structure du dossier pour le volume OS
+Le num‚ro de s‚rie du volume est 46AD-0A9C
+C:.
+|   tree.txt
+|   
+\---educa
+    |   db.sqlite3
+    |   manage.py
+    |   
+    +---config
+    |       nginx.conf
+    |       uwsgi.ini
+    |       
+    +---courses
+    |   |   admin.py
+    |   |   fields.py
+    |   |   forms.py
+    |   |   middleware.py
+    |   |   models.py
+    |   |   tests.py
+    |   |   urls.py
+    |   |   views.py
+    |   |   __init__.py
+    |   |   
+    |   +---api
+    |   |       permissions.py
+    |   |       serializers.py
+    |   |       urls.py
+    |   |       views.py
+    |   |       __init__.py
+    |   |       
+    |   +---fixtures
+    |   |       subjects.json
+    |   |       
+    |   +---migrations
+    |   |       0001_initial.py
+    |   |       0002_content_file_image_text_video.py
+    |   |       0003_auto_20150707_1152.py
+    |   |       0004_course_students.py
+    |   |       __init__.py
+    |   |       
+    |   +---static
+    |   |   \---css
+    |   |           base.css
+    |   |           
+    |   +---templates
+    |   |   |   base.html
+    |   |   |   
+    |   |   +---courses
+    |   |   |   +---content
+    |   |   |   |       file.html
+    |   |   |   |       image.html
+    |   |   |   |       text.html
+    |   |   |   |       video.html
+    |   |   |   |       
+    |   |   |   +---course
+    |   |   |   |       detail.html
+    |   |   |   |       list.html
+    |   |   |   |       
+    |   |   |   \---manage
+    |   |   |       +---content
+    |   |   |       |       form.html
+    |   |   |       |       
+    |   |   |       +---course
+    |   |   |       |       delete.html
+    |   |   |       |       form.html
+    |   |   |       |       list.html
+    |   |   |       |       
+    |   |   |       \---module
+    |   |   |               content_list.html
+    |   |   |               formset.html
+    |   |   |               
+    |   |   \---registration
+    |   |           logged_out.html
+    |   |           login.html
+    |   |           
+    |   \---templatetags
+    |           course.py
+    |           __init__.py
+    |           
+    +---educa
+    |   |   db.sqlite3
+    |   |   urls.py
+    |   |   wsgi.py
+    |   |   __init__.py
+    |   |   
+    |   \---settings
+    |           base.py
+    |           local.py
+    |           pro.py
+    |           __init__.py
+    |           
+    +---ssl
+    |       educa.crt
+    |       educa.key
+    |       
+    +---static
+    |   +---admin
+    |   |   +---css
+    |   |   |       base.css
+    |   |   |       changelists.css
+    |   |   |       dashboard.css
+    |   |   |       forms.css
+    |   |   |       ie.css
+    |   |   |       login.css
+    |   |   |       rtl.css
+    |   |   |       widgets.css
+    |   |   |       
+    |   |   +---img
+    |   |   |   |   changelist-bg.gif
+    |   |   |   |   changelist-bg_rtl.gif
+    |   |   |   |   default-bg-reverse.gif
+    |   |   |   |   default-bg.gif
+    |   |   |   |   deleted-overlay.gif
+    |   |   |   |   icon-no.gif
+    |   |   |   |   icon-unknown.gif
+    |   |   |   |   icon-yes.gif
+    |   |   |   |   icon_addlink.gif
+    |   |   |   |   icon_alert.gif
+    |   |   |   |   icon_calendar.gif
+    |   |   |   |   icon_changelink.gif
+    |   |   |   |   icon_clock.gif
+    |   |   |   |   icon_deletelink.gif
+    |   |   |   |   icon_error.gif
+    |   |   |   |   icon_searchbox.png
+    |   |   |   |   icon_success.gif
+    |   |   |   |   inline-delete-8bit.png
+    |   |   |   |   inline-delete.png
+    |   |   |   |   inline-restore-8bit.png
+    |   |   |   |   inline-restore.png
+    |   |   |   |   inline-splitter-bg.gif
+    |   |   |   |   nav-bg-grabber.gif
+    |   |   |   |   nav-bg-reverse.gif
+    |   |   |   |   nav-bg-selected.gif
+    |   |   |   |   nav-bg.gif
+    |   |   |   |   selector-icons.gif
+    |   |   |   |   selector-search.gif
+    |   |   |   |   sorting-icons.gif
+    |   |   |   |   tooltag-add.png
+    |   |   |   |   tooltag-arrowright.png
+    |   |   |   |   
+    |   |   |   \---gis
+    |   |   |           move_vertex_off.png
+    |   |   |           move_vertex_on.png
+    |   |   |           
+    |   |   \---js
+    |   |       |   actions.js
+    |   |       |   actions.min.js
+    |   |       |   calendar.js
+    |   |       |   collapse.js
+    |   |       |   collapse.min.js
+    |   |       |   core.js
+    |   |       |   inlines.js
+    |   |       |   inlines.min.js
+    |   |       |   jquery.init.js
+    |   |       |   jquery.js
+    |   |       |   jquery.min.js
+    |   |       |   LICENSE-JQUERY.txt
+    |   |       |   prepopulate.js
+    |   |       |   prepopulate.min.js
+    |   |       |   related-widget-wrapper.js
+    |   |       |   SelectBox.js
+    |   |       |   SelectFilter2.js
+    |   |       |   timeparse.js
+    |   |       |   urlify.js
+    |   |       |   
+    |   |       \---admin
+    |   |               DateTimeShortcuts.js
+    |   |               RelatedObjectLookups.js
+    |   |               
+    |   +---css
+    |   |       base.css
+    |   |       
+    |   \---rest_framework
+    |       +---css
+    |       |       bootstrap-tweaks.css
+    |       |       bootstrap.min.css
+    |       |       default.css
+    |       |       prettify.css
+    |       |       
+    |       +---fonts
+    |       |       glyphicons-halflings-regular.eot
+    |       |       glyphicons-halflings-regular.svg
+    |       |       glyphicons-halflings-regular.ttf
+    |       |       glyphicons-halflings-regular.woff
+    |       |       
+    |       +---img
+    |       |       glyphicons-halflings-white.png
+    |       |       glyphicons-halflings.png
+    |       |       grid.png
+    |       |       
+    |       \---js
+    |               bootstrap.min.js
+    |               default.js
+    |               jquery-1.8.1-min.js
+    |               prettify-min.js
+    |               
+    \---students
+        |   admin.py
+        |   forms.py
+        |   models.py
+        |   tests.py
+        |   urls.py
+        |   views.py
+        |   __init__.py
+        |   
+        +---management
+        |   |   __init__.py
+        |   |   
+        |   \---commands
+        |           enroll_reminder.py
+        |           __init__.py
+        |           
+        +---migrations
+        |       __init__.py
+        |       
+        \---templates
+            \---students
+                +---course
+                |       detail.html
+                |       list.html
+                |       
+                \---student
+                        registration.html
+                        

@@ -3,18 +3,40 @@ Le num‚ro de s‚rie du volume est 46AD-0A9C
 C:.
 |   ajax_selects_singers_db
 |   manage.py
+|   run_local_dev_server.bat
 |   tree.txt
 |   
 +---projects
 |   |   admin.py
 |   |   apps.py
+|   |   forms.py
 |   |   models.py
 |   |   tests.py
+|   |   urls.py
 |   |   views.py
 |   |   __init__.py
 |   |   
-|   \---migrations
-|           __init__.py
+|   +---migrations
+|   |   |   0001_initial.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           0001_initial.cpython-35.pyc
+|   |           __init__.cpython-35.pyc
+|   |           
+|   +---templates
+|   |   \---projects
+|   |       \---project
+|   |               update.html
+|   |               
+|   \---__pycache__
+|           admin.cpython-35.pyc
+|           apps.cpython-35.pyc
+|           forms.cpython-35.pyc
+|           models.cpython-35.pyc
+|           urls.cpython-35.pyc
+|           views.cpython-35.pyc
+|           __init__.cpython-35.pyc
 |           
 +---projet_ajax
 |   |   settings.py
@@ -48,12 +70,17 @@ C:.
 |   |   \---__pycache__
 |   |           0001_initial.cpython-35.pyc
 |   |           0002_auto_20161017_1612.cpython-35.pyc
-|   |           0003_auto_20161017_1621.cpython-35.pyc
 |   |           0003_auto_20161017_1632.cpython-35.pyc
 |   |           __init__.cpython-35.pyc
 |   |           
 |   +---templates
 |   |   \---singers
+|   |       +---author
+|   |       |       update.html
+|   |       |       
+|   |       +---book
+|   |       |       update.html
+|   |       |       
 |   |       \---song
 |   |               update.html
 |   |               
@@ -66,6 +93,14 @@ C:.
 |           urls.cpython-35.pyc
 |           views.cpython-35.pyc
 |           __init__.cpython-35.pyc
+|           
++---static
+|   +---css
+|   |       easy-autocomplete.min.css
+|   |       easy-autocomplete.themes.min.css
+|   |       
+|   \---js
+|           jquery.easy-autocomplete.min.js
 |           
 \---templates
         base.html

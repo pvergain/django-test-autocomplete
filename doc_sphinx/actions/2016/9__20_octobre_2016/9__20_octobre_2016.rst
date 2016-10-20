@@ -26,7 +26,7 @@
    - https://github.com/pawelczak/EasyAutocomplete
 
 .. contents::
-   :depth: 3
+   :depth: 5
 
 
 
@@ -491,11 +491,11 @@ The Django contrib module
                     
 
 
-Antonio Melé Django by example 
--------------------------------
 
-DJANGO-BY-EXAMPLE-BOOK-MASTER\CHAP_1_BLOG\MYSITE\BLOG
-++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Django_By_Example_Code/Chapter 1/mysite/blog
+---------------------------------------------
+
+The static directory is in the blog **application directory**.
 
 ::
 
@@ -529,27 +529,411 @@ DJANGO-BY-EXAMPLE-BOOK-MASTER\CHAP_1_BLOG\MYSITE\BLOG
                     pagination.html
                     
                     
-                    
+  
+Django_By_Example_Code/Chapter 8
+----------------------------------
 
-                        
+There are static directories  in: 
+
+- the courses and shop **applications directory**
+- the **project directory**.                        
+
+::
+
+    \---myshop
+        |   manage.py
+        |   
+        +---cart
+        |   |   admin.py
+        |   |   cart.py
+
+        |               
+        +---myshop
+        |       celery.py
+        |       db.sqlite3
+        |       settings.py
+        |       urls.py
+        |       wsgi.py
+        |       __init__.py
+        |       
+        +---orders
+        |   |   admin.py
+        |   |   forms.py
+        |   |   models.py
+
+        |   |       
+        |   +---static
+        |   |   \---css
+        |   |           admin.css
+        |   |           pdf.css
+        |   |           
+
+        |               
+        +---shop
+        |   |   admin.py
+        |   |   models.py
+        |   |   tests.py
+        |   |   urls.py
+
+        |   |       
+        |   +---static
+        |   |   +---css
+        |   |   |       base.css
+        |   |   |       
+        |   |   \---img
+        |   |           no_image.png
+        |   |           
+
+        |                   
+        \---static
+            +---admin
+            |   +---css
+            |   |       base.css
+            |   |       changelists.css
+            |   |       dashboard.css
+            |   |       forms.css
+            |   |       ie.css
+            |   |       login.css
+            |   |       rtl.css
+            |   |       widgets.css
+            |   |       
+            |   +---img
+            |   |   |   changelist-bg.gif
+            |   |   |   changelist-bg_rtl.gif
+            |   |   |   default-bg-reverse.gif
+            |   |   |   default-bg.gif
+            |   |   |   deleted-overlay.gif
+            |   |   |   icon-no.gif
+            |   |   |   icon-unknown.gif
+            |   |   |   icon-yes.gif
+            |   |   |   icon_addlink.gif
+            |   |   |   icon_alert.gif
+            |   |   |   icon_calendar.gif
+            |   |   |   icon_changelink.gif
+            |   |   |   icon_clock.gif
+            |   |   |   icon_deletelink.gif
+            |   |   |   icon_error.gif
+            |   |   |   icon_searchbox.png
+            |   |   |   icon_success.gif
+            |   |   |   inline-delete-8bit.png
+            |   |   |   inline-delete.png
+            |   |   |   inline-restore-8bit.png
+            |   |   |   inline-restore.png
+            |   |   |   inline-splitter-bg.gif
+            |   |   |   nav-bg-grabber.gif
+            |   |   |   nav-bg-reverse.gif
+            |   |   |   nav-bg-selected.gif
+            |   |   |   nav-bg.gif
+            |   |   |   selector-icons.gif
+            |   |   |   selector-search.gif
+            |   |   |   sorting-icons.gif
+            |   |   |   tooltag-add.png
+            |   |   |   tooltag-arrowright.png
+            |   |   |   
+            |   |   \---gis
+            |   |           move_vertex_off.png
+            |   |           move_vertex_on.png
+            |   |           
+            |   \---js
+            |       |   actions.js
+            |       |   actions.min.js
+            |       |   calendar.js
+            |       |   collapse.js
+            |       |   collapse.min.js
+            |       |   core.js
+            |       |   inlines.js
+            |       |   inlines.min.js
+            |       |   jquery.init.js
+            |       |   jquery.js
+            |       |   jquery.min.js
+            |       |   LICENSE-JQUERY.txt
+            |       |   prepopulate.js
+            |       |   prepopulate.min.js
+            |       |   related-widget-wrapper.js
+            |       |   SelectBox.js
+            |       |   SelectFilter2.js
+            |       |   timeparse.js
+            |       |   urlify.js
+            |       |   
+            |       \---admin
+            |               DateTimeShortcuts.js
+            |               RelatedObjectLookups.js
+            |               
+            +---css
+            |       admin.css
+            |       base.css
+            |       pdf.css
+            |       
+            \---img
+                    no_image.png
+                
+   
+   
+Django_By_Example_Code/Chapter 13
+----------------------------------
+
+There are static directories  in: 
+
+- the courses **application directory**
+- the **project directory**.
+
+                    
+::
+
+
+    \---educa
+        |   db.sqlite3
+        |   manage.py
+        |   
+        +---config
+        |       nginx.conf
+        |       uwsgi.ini
+        |       
+        +---courses
+        |   |   admin.py
+        |   |   fields.py
+        |   |   forms.py
+
+        |   |       
+        |   +---static
+        |   |   \---css
+        |   |           base.css
+        |   |           
+
+
+        |           
+        +---educa
+        |   |   db.sqlite3
+        |   |   urls.py
+        |   |   wsgi.py
+        |   |   __init__.py
+        |   |   
+        |   \---settings
+        |           base.py
+        |           local.py
+        |           pro.py
+        |           __init__.py
+        |           
+        +---ssl
+        |       educa.crt
+        |       educa.key
+        |       
+        +---static
+        |   +---admin
+        |   |   +---css
+        |   |   |       base.css
+        |   |   |       changelists.css
+        |   |   |       dashboard.css
+        |   |   |       forms.css
+        |   |   |       ie.css
+        |   |   |       login.css
+        |   |   |       rtl.css
+        |   |   |       widgets.css
+        |   |   |       
+        |   |   +---img
+        |   |   |   |   changelist-bg.gif
+        |   |   |   |   changelist-bg_rtl.gif
+        |   |   |   |   default-bg-reverse.gif
+        |   |   |   |   default-bg.gif
+        |   |   |   |   deleted-overlay.gif
+        |   |   |   |   icon-no.gif
+        |   |   |   |   icon-unknown.gif
+        |   |   |   |   icon-yes.gif
+        |   |   |   |   icon_addlink.gif
+        |   |   |   |   icon_alert.gif
+        |   |   |   |   icon_calendar.gif
+        |   |   |   |   icon_changelink.gif
+        |   |   |   |   icon_clock.gif
+        |   |   |   |   icon_deletelink.gif
+        |   |   |   |   icon_error.gif
+        |   |   |   |   icon_searchbox.png
+        |   |   |   |   icon_success.gif
+        |   |   |   |   inline-delete-8bit.png
+        |   |   |   |   inline-delete.png
+        |   |   |   |   inline-restore-8bit.png
+        |   |   |   |   inline-restore.png
+        |   |   |   |   inline-splitter-bg.gif
+        |   |   |   |   nav-bg-grabber.gif
+        |   |   |   |   nav-bg-reverse.gif
+        |   |   |   |   nav-bg-selected.gif
+        |   |   |   |   nav-bg.gif
+        |   |   |   |   selector-icons.gif
+        |   |   |   |   selector-search.gif
+        |   |   |   |   sorting-icons.gif
+        |   |   |   |   tooltag-add.png
+        |   |   |   |   tooltag-arrowright.png
+        |   |   |   |   
+        |   |   |   \---gis
+        |   |   |           move_vertex_off.png
+        |   |   |           move_vertex_on.png
+        |   |   |           
+        |   |   \---js
+        |   |       |   actions.js
+        |   |       |   actions.min.js
+        |   |       |   calendar.js
+        |   |       |   collapse.js
+        |   |       |   collapse.min.js
+        |   |       |   core.js
+        |   |       |   inlines.js
+        |   |       |   inlines.min.js
+        |   |       |   jquery.init.js
+        |   |       |   jquery.js
+        |   |       |   jquery.min.js
+        |   |       |   LICENSE-JQUERY.txt
+        |   |       |   prepopulate.js
+        |   |       |   prepopulate.min.js
+        |   |       |   related-widget-wrapper.js
+        |   |       |   SelectBox.js
+        |   |       |   SelectFilter2.js
+        |   |       |   timeparse.js
+        |   |       |   urlify.js
+        |   |       |   
+        |   |       \---admin
+        |   |               DateTimeShortcuts.js
+        |   |               RelatedObjectLookups.js
+        |   |               
+        |   +---css
+        |   |       base.css
+        |   |       
+        |   \---rest_framework
+        |       +---css
+        |       |       bootstrap-tweaks.css
+        |       |       bootstrap.min.css
+        |       |       default.css
+        |       |       prettify.css
+        |       |       
+        |       +---fonts
+        |       |       glyphicons-halflings-regular.eot
+        |       |       glyphicons-halflings-regular.svg
+        |       |       glyphicons-halflings-regular.ttf
+        |       |       glyphicons-halflings-regular.woff
+        |       |       
+        |       +---img
+        |       |       glyphicons-halflings-white.png
+        |       |       glyphicons-halflings.png
+        |       |       grid.png
+        |       |       
+        |       \---js
+        |               bootstrap.min.js
+        |               default.js
+        |               jquery-1.8.1-min.js
+        |               prettify-min.js
+        |               
+
+
 
 Django settings example
 ========================
+
+.. seealso::
+
+   - https://docs.djangoproject.com/en/dev/ref/settings/#settings-staticfiles
+   
+   
+::   
 
     # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
     # https://docs.djangoproject.com/en/dev/howto/static-files/
-    STATIC_ROOT = 'staticfiles'
     STATIC_URL = '/static/'
-
-    STATICFILES_DIRS = (
-                os.path.join(BASE_DIR, 'static'),
-                )
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 
 
+Integration in our Django test project
+=======================================
 
 
-   
+::
+
+    +---static
+    |   +---css
+    |   |       easy-autocomplete.min.css
+    |   |       easy-autocomplete.themes.min.css
+    |   |       
+    |   \---js
+    |           jquery.easy-autocomplete.min.js
+
+
+
+::
+
+    |   ajax_selects_singers_db
+    |   manage.py
+    |   run_local_dev_server.bat
+    |   
+    +---projects
+    |   |   admin.py
+    |   |   apps.py
+    |   |   forms.py
+    |   |   models.py
+    |   |   tests.py
+    |   |   urls.py
+    |   |   views.py
+    |   |   __init__.py
+    |   |   
+    |   +---migrations
+    |   |   |   0001_initial.py
+    |   |   |   __init__.py
+    |   |   |   
+
+    |   +---templates
+    |   |   \---projects
+    |   |       \---project
+    |   |               update.html
+    |   |               
+
+    |           
+    +---projet_ajax
+    |   |   settings.py
+    |   |   urls.py
+    |   |   wsgi.py
+    |   |   __init__.py
+    |   |   
+    |           
+    +---singers
+    |   |   admin.py
+    |   |   apps.py
+    |   |   forms.py
+    |   |   lookups.py
+    |   |   models.py
+    |   |   tests.py
+    |   |   urls.py
+    |   |   views.py
+    |   |   __init__.py
+    |   |   
+    |   +---migrations
+    |   |   |   0001_initial.py
+    |   |   |   0002_auto_20161017_1612.py
+    |   |   |   0003_auto_20161017_1632.py
+    |   |   |   __init__.py
+    |   |   |   
+
+    |   |           
+    |   +---templates
+    |   |   \---singers
+    |   |       +---author
+    |   |       |       update.html
+    |   |       |       
+    |   |       +---book
+    |   |       |       update.html
+    |   |       |       
+    |   |       \---song
+    |   |               update.html
+    |   |               
+
+    |           
+    +---static
+    |   +---css
+    |   |       easy-autocomplete.min.css
+    |   |       easy-autocomplete.themes.min.css
+    |   |       
+    |   \---js
+    |           jquery.easy-autocomplete.min.js
+    |           
+    \---templates
+            base.html
+            search_form.html
+       
    
