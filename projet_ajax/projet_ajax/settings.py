@@ -154,9 +154,12 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.10/howto/static-files/
-
+# https://docs.djangoproject.com/en/dev/howto/static-files/
 STATIC_URL = '/static/'
+STATIC_ROOT = 'staticfiles'
+STATICFILES_DIRS = (
+            os.path.join(BASE_DIR, 'static'),
+            )
 
 AJAX_LOOKUP_CHANNELS = {
     # simplest way, automatically construct a search channel by passing a dict

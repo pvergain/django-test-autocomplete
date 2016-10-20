@@ -6,6 +6,9 @@
    pair: categories ; EasyAutocomplete
    pair: flags ; EasyAutocomplete
    pair: JSON ; EasyAutocomplete
+   pair: Javascript ; EasyAutocomplete
+   pair: CSS ; EasyAutocomplete
+   pair: SCSS ; EasyAutocomplete
 
 
 
@@ -18,6 +21,8 @@
 .. seealso::
 
    - http://easyautocomplete.com/
+   - http://easyautocomplete.com/guide
+   - http://easyautocomplete.com/guide#sec-data-providers
    - https://github.com/pawelczak/EasyAutocomplete
 
 .. contents::
@@ -181,6 +186,39 @@ EasyAutocomplete files tree
                 
   
   
+Javascript SCSS and CSS EasyAutocomplete files
+===============================================
+
+
+EasyAutocomplete-master/src/sass/easy-autocomplete.scss
+-------------------------------------------------------------------
+
+.. literalinclude:: ../../../annexes/EasyAutocomplete-master/src/sass/easy-autocomplete.scss
+   :linenos:
+   :caption: EasyAutocomplete-master/src/sass/easy-autocomplete.scss
+   
+      
+
+
+EasyAutocomplete-master/dist/easy-autocomplete.css
+--------------------------------------------------------------
+
+.. literalinclude:: ../../../annexes/EasyAutocomplete-master/dist/easy-autocomplete.css
+   :linenos:
+   :language: css
+   :caption: EasyAutocomplete-master/dist/easy-autocomplete.css
+
+   
+   
+EasyAutocomplete-master/dist/jquery.easy-autocomplete.js
+-------------------------------------------------------------------
+
+.. literalinclude:: ../../../annexes/EasyAutocomplete-master/dist/jquery.easy-autocomplete.js
+   :linenos:
+   :language: javascript
+   :caption: EasyAutocomplete-master/dist/jquery.easy-autocomplete.js
+   
+
    
 EasyAutocomplete JSON example 
 ==============================
@@ -191,10 +229,25 @@ EasyAutocomplete JSON example
    :align: center
    
    
+EasyAutocomplete-master/demo/example_json.html
+----------------------------------------------   
+   
 .. literalinclude:: ../../../annexes/EasyAutocomplete-master/demo/example_json.html
    :linenos:
    :language: html
+   :caption: EasyAutocomplete-master/demo/example_json.html
    
+   
+EasyAutocomplete-master/demo/resources/countries.json
+-----------------------------------------------------   
+   
+.. literalinclude:: ../../../annexes/EasyAutocomplete-master/demo/resources/countries.json
+   :linenos:
+   :lines: 1-100
+   :language: json
+   :caption: EasyAutocomplete-master/demo/resources/countries.json
+            
+      
    
 EasyAutocomplete flags example 
 ==============================
@@ -203,32 +256,296 @@ EasyAutocomplete flags example
    :align: center
    
 
+EasyAutocomplete-master/demo/example_flags.html
+------------------------------------------------
+
 .. literalinclude:: ../../../annexes/EasyAutocomplete-master/demo/example_flags.html
    :linenos:
-   :language: html
+   :language: html   
+   :caption: EasyAutocomplete-master/demo/example_flags.html
+  
+  
+EasyAutocomplete-master/demo/resources/flags.css
+-------------------------------------------------
+  
+.. literalinclude:: ../../../annexes/EasyAutocomplete-master/demo/resources/flags.css
+   :linenos:
+   :language: css
+   :caption: EasyAutocomplete-master/demo/resources/flags.css
+    
+    
+EasyAutocomplete-master/demo/resources/flags.png
+-------------------------------------------------            
+        
+.. figure:: ../../../annexes/EasyAutocomplete-master/demo/resources/flags.png
+   :align: center
+         
+   EasyAutocomplete-master/demo/resources/flags.png
    
+         
    
 EasyAutocomplete categories example 
 ====================================
 
+.. figure:: easyautocomplete_categories.png
+   :align: center
+   
+
+EasyAutocomplete-master/demo/example_categories.html
+-----------------------------------------------------
 
 .. literalinclude:: ../../../annexes/EasyAutocomplete-master/demo/example_categories.html
    :linenos:
    :language: html
+   :caption: EasyAutocomplete-master/demo/example_categories.html
    
+
+EasyAutocomplete-master/demo/resources/categories.json
+------------------------------------------------------
 
 .. literalinclude:: ../../../annexes/EasyAutocomplete-master/demo/resources/categories.json
    :linenos:
    :language: html
+   :caption: EasyAutocomplete-master/demo/resources/categories.json
    
    
    
-      
+EasyAutocomplete static_link example 
+======================================
+  
+
+.. figure:: easyautocomplete_static_links.png
+   :align: center
+   
+   
+   
+EasyAutocomplete-master/demo/example_static_link.html
+------------------------------------------------------   
+
+.. literalinclude:: ../../../annexes/EasyAutocomplete-master/demo/example_static_link.html
+   :linenos:
+   :language: html
+   :caption: EasyAutocomplete-master/demo/example_static_link.html
    
 
+EasyAutocomplete-master/demo/resources/site.json
+------------------------------------------------
+
+.. literalinclude:: ../../../annexes/EasyAutocomplete-master/demo/resources/site.json
+   :linenos:
+   :language: json
+   :caption: EasyAutocomplete-master/demo/resources/site.json
+   
+   
+EasyAutocomplete email example 
+======================================
+  
+
+.. figure:: easyautocomplete_email.png
+   :align: center
+   
+   
+   
+EasyAutocomplete-master/demo/example_email.html
+------------------------------------------------------   
+
+.. literalinclude:: ../../../annexes/EasyAutocomplete-master/demo/example_email.html
+   :linenos:
+   :language: html
+   :caption: EasyAutocomplete-master/demo/example_email.html
+   
+
+EasyAutocomplete-master/demo/resources/people.json
+----------------------------------------------------
+
+.. literalinclude:: ../../../annexes/EasyAutocomplete-master/demo/resources/people.json
+   :linenos:
+   :language: json
+   :lines: 1-200 
+   :caption: EasyAutocomplete-master/demo/resources/people.json            
+   
+
+EasyAutocomplete Django integration
+====================================      
+   
+.. seealso::
+
+   - http://easyautocomplete.com/guide   
+         
       
+Include JS and CSS files from the distribution (static files)
+---------------------------------------------------------------
+
+.. seealso:: 
+
+   - http://easyautocomplete.com/download
+   - https://docs.djangoproject.com/en/dev/howto/static-files/
+
+
+.. figure:: easyautocomplete_distribution.png
+   :align: center
+   
+
+First thing you need to do, is to download EasyAutocomplete plugin files.
+ 
+More information about it can be found in the `Download section`_. 
+
+Javascript and css files(in the actual version) are located in *dist folder* of 
+the project. 
+
+.. note:: If you want to make any changes, uncompiled javascript files and 
+   unprocessed sass files can be found in the src folder. 
+
+
+.. _`Download section`:  http://easyautocomplete.com/download
       
    
+Exemples of static files in the Django World
+=============================================
+
+   
+The Django contrib module
+--------------------------
+
+::
+
+    C:\PROJECT\PYTHON_ENVS\DJANGO_TEST_AUTOCOMPLETE_35_64\LIB\SITE-PACKAGES\DJANGO\CONTRIB\ADMIN\STATIC
+    \---admin
+        +---css
+        |       base.css
+        |       changelists.css
+        |       dashboard.css
+        |       fonts.css
+        |       forms.css
+        |       login.css
+        |       rtl.css
+        |       widgets.css
+        |       
+        +---fonts
+        |       LICENSE.txt
+        |       README.txt
+        |       Roboto-Bold-webfont.woff
+        |       Roboto-Light-webfont.woff
+        |       Roboto-Regular-webfont.woff
+        |       
+        +---img
+        |   |   calendar-icons.svg
+        |   |   icon-addlink.svg
+        |   |   icon-alert.svg
+        |   |   icon-calendar.svg
+        |   |   icon-changelink.svg
+        |   |   icon-clock.svg
+        |   |   icon-deletelink.svg
+        |   |   icon-no.svg
+        |   |   icon-unknown-alt.svg
+        |   |   icon-unknown.svg
+        |   |   icon-yes.svg
+        |   |   inline-delete.svg
+        |   |   LICENSE
+        |   |   README.txt
+        |   |   search.svg
+        |   |   selector-icons.svg
+        |   |   sorting-icons.svg
+        |   |   tooltag-add.svg
+        |   |   tooltag-arrowright.svg
+        |   |   
+        |   \---gis
+        |           move_vertex_off.svg
+        |           move_vertex_on.svg
+        |           
+        \---js
+            |   actions.js
+            |   actions.min.js
+            |   calendar.js
+            |   cancel.js
+            |   change_form.js
+            |   collapse.js
+            |   collapse.min.js
+            |   core.js
+            |   inlines.js
+            |   inlines.min.js
+            |   jquery.init.js
+            |   popup_response.js
+            |   prepopulate.js
+            |   prepopulate.min.js
+            |   prepopulate_init.js
+            |   SelectBox.js
+            |   SelectFilter2.js
+            |   timeparse.js
+            |   urlify.js
+            |   
+            +---admin
+            |       DateTimeShortcuts.js
+            |       RelatedObjectLookups.js
+            |       
+            \---vendor
+                +---jquery
+                |       jquery.js
+                |       jquery.min.js
+                |       LICENSE-JQUERY.txt
+                |       
+                \---xregexp
+                        LICENSE-XREGEXP.txt
+                        xregexp.js
+                        xregexp.min.js
+                    
+
+
+Antonio Melé Django by example 
+-------------------------------
+
+DJANGO-BY-EXAMPLE-BOOK-MASTER\CHAP_1_BLOG\MYSITE\BLOG
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+::
+
+    C:\TMP\DJANGO-BY-EXAMPLE-BOOK-MASTER\CHAP_1_BLOG\MYSITE\BLOG
+    |   admin.py
+    |   apps.py
+    |   models.py
+    |   tests.py
+    |   urls.py
+    |   views.py
+    |   __init__.py
+    |   
+    +---migrations
+    |       0001_initial.py
+    |       __init__.py
+    |       
+    +---static
+    |   \---css
+    |           blog.css
+    |           
+    \---templates
+        |   pagination.html
+        |   
+        \---blog
+            |   base.html
+            |   pagination.html
+            |   
+            \---post
+                    detail.html
+                    list.html
+                    pagination.html
+                    
+                    
+                    
+
+                        
+
+Django settings example
+========================
+
+    # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+    # https://docs.djangoproject.com/en/dev/howto/static-files/
+    STATIC_ROOT = 'staticfiles'
+    STATIC_URL = '/static/'
+
+    STATICFILES_DIRS = (
+                os.path.join(BASE_DIR, 'static'),
+                )
 
 
 
