@@ -1,0 +1,381 @@
+Structure du dossier pour le volume OS
+Le num‚ro de s‚rie du volume est 46AD-0A9C
+C:\PROJECTS_ID3\DJANGO-TEST-AUTOCOMPLETE\STATICFILES
++---admin
+|   +---css
+|   |       base.css
+|   |       changelists.css
+|   |       dashboard.css
+|   |       fonts.css
+|   |       forms.css
+|   |       login.css
+|   |       rtl.css
+|   |       widgets.css
+|   |       
+|   +---fonts
+|   |       LICENSE.txt
+|   |       README.txt
+|   |       Roboto-Bold-webfont.woff
+|   |       Roboto-Light-webfont.woff
+|   |       Roboto-Regular-webfont.woff
+|   |       
+|   +---img
+|   |   |   calendar-icons.svg
+|   |   |   icon-addlink.svg
+|   |   |   icon-alert.svg
+|   |   |   icon-calendar.svg
+|   |   |   icon-changelink.svg
+|   |   |   icon-clock.svg
+|   |   |   icon-deletelink.svg
+|   |   |   icon-no.svg
+|   |   |   icon-unknown-alt.svg
+|   |   |   icon-unknown.svg
+|   |   |   icon-yes.svg
+|   |   |   inline-delete.svg
+|   |   |   LICENSE
+|   |   |   README.txt
+|   |   |   search.svg
+|   |   |   selector-icons.svg
+|   |   |   sorting-icons.svg
+|   |   |   tooltag-add.svg
+|   |   |   tooltag-arrowright.svg
+|   |   |   
+|   |   \---gis
+|   |           move_vertex_off.svg
+|   |           move_vertex_on.svg
+|   |           
+|   \---js
+|       |   actions.js
+|       |   actions.min.js
+|       |   calendar.js
+|       |   cancel.js
+|       |   change_form.js
+|       |   collapse.js
+|       |   collapse.min.js
+|       |   core.js
+|       |   inlines.js
+|       |   inlines.min.js
+|       |   jquery.init.js
+|       |   popup_response.js
+|       |   prepopulate.js
+|       |   prepopulate.min.js
+|       |   prepopulate_init.js
+|       |   SelectBox.js
+|       |   SelectFilter2.js
+|       |   timeparse.js
+|       |   urlify.js
+|       |   
+|       +---admin
+|       |       DateTimeShortcuts.js
+|       |       RelatedObjectLookups.js
+|       |       
+|       \---vendor
+|           +---jquery
+|           |       jquery.js
+|           |       jquery.min.js
+|           |       LICENSE-JQUERY.txt
+|           |       
+|           \---xregexp
+|                   LICENSE-XREGEXP.txt
+|                   xregexp.js
+|                   xregexp.min.js
+|                   
++---ajax_select
+|   +---css
+|   |       ajax_select.css
+|   |       
+|   +---images
+|   |       loading-indicator.gif
+|   |       
+|   \---js
+|           ajax_select.js
+|           bootstrap.js
+|           
++---autocomplete_light
+|   |   autocomplete.init.js
+|   |   forward.js
+|   |   jquery.init.js
+|   |   select2.css
+|   |   select2.js
+|   |   
+|   \---vendor
+|       \---select2
+|           |   bower.json
+|           |   component.json
+|           |   composer.json
+|           |   Gruntfile.js
+|           |   package.json
+|           |   select2.jquery.json
+|           |   
+|           +---dist
+|           |   +---css
+|           |   |       select2.css
+|           |   |       select2.min.css
+|           |   |       
+|           |   \---js
+|           |       |   select2.full.js
+|           |       |   select2.full.min.js
+|           |       |   select2.js
+|           |       |   select2.min.js
+|           |       |   
+|           |       \---i18n
+|           |               ar.js
+|           |               az.js
+|           |               bg.js
+|           |               ca.js
+|           |               cs.js
+|           |               da.js
+|           |               de.js
+|           |               en.js
+|           |               es.js
+|           |               et.js
+|           |               eu.js
+|           |               fa.js
+|           |               fi.js
+|           |               fr.js
+|           |               gl.js
+|           |               he.js
+|           |               hi.js
+|           |               hr.js
+|           |               hu.js
+|           |               id.js
+|           |               is.js
+|           |               it.js
+|           |               ja.js
+|           |               ko.js
+|           |               lt.js
+|           |               lv.js
+|           |               mk.js
+|           |               ms.js
+|           |               nb.js
+|           |               nl.js
+|           |               pl.js
+|           |               pt-BR.js
+|           |               pt.js
+|           |               ro.js
+|           |               ru.js
+|           |               sk.js
+|           |               sr-Cyrl.js
+|           |               sr.js
+|           |               sv.js
+|           |               th.js
+|           |               tr.js
+|           |               uk.js
+|           |               vi.js
+|           |               zh-CN.js
+|           |               zh-TW.js
+|           |               
+|           +---src
+|           |   \---js
+|           |       |   banner.end.js
+|           |       |   banner.start.js
+|           |       |   jquery.mousewheel.shim.js
+|           |       |   jquery.select2.js
+|           |       |   jquery.shim.js
+|           |       |   wrapper.end.js
+|           |       |   wrapper.start.js
+|           |       |   
+|           |       \---select2
+|           |           |   core.js
+|           |           |   defaults.js
+|           |           |   diacritics.js
+|           |           |   dropdown.js
+|           |           |   keys.js
+|           |           |   options.js
+|           |           |   results.js
+|           |           |   translation.js
+|           |           |   utils.js
+|           |           |   
+|           |           +---compat
+|           |           |       containerCss.js
+|           |           |       dropdownCss.js
+|           |           |       initSelection.js
+|           |           |       inputData.js
+|           |           |       matcher.js
+|           |           |       query.js
+|           |           |       utils.js
+|           |           |       
+|           |           +---data
+|           |           |       ajax.js
+|           |           |       array.js
+|           |           |       base.js
+|           |           |       maximumInputLength.js
+|           |           |       maximumSelectionLength.js
+|           |           |       minimumInputLength.js
+|           |           |       select.js
+|           |           |       tags.js
+|           |           |       tokenizer.js
+|           |           |       
+|           |           +---dropdown
+|           |           |       attachBody.js
+|           |           |       attachContainer.js
+|           |           |       closeOnSelect.js
+|           |           |       hidePlaceholder.js
+|           |           |       infiniteScroll.js
+|           |           |       minimumResultsForSearch.js
+|           |           |       search.js
+|           |           |       selectOnClose.js
+|           |           |       stopPropagation.js
+|           |           |       
+|           |           +---i18n
+|           |           |       ar.js
+|           |           |       az.js
+|           |           |       bg.js
+|           |           |       ca.js
+|           |           |       cs.js
+|           |           |       da.js
+|           |           |       de.js
+|           |           |       en.js
+|           |           |       es.js
+|           |           |       et.js
+|           |           |       eu.js
+|           |           |       fa.js
+|           |           |       fi.js
+|           |           |       fr.js
+|           |           |       gl.js
+|           |           |       he.js
+|           |           |       hi.js
+|           |           |       hr.js
+|           |           |       hu.js
+|           |           |       id.js
+|           |           |       is.js
+|           |           |       it.js
+|           |           |       ja.js
+|           |           |       ko.js
+|           |           |       lt.js
+|           |           |       lv.js
+|           |           |       mk.js
+|           |           |       ms.js
+|           |           |       nb.js
+|           |           |       nl.js
+|           |           |       pl.js
+|           |           |       pt-BR.js
+|           |           |       pt.js
+|           |           |       ro.js
+|           |           |       ru.js
+|           |           |       sk.js
+|           |           |       sr-Cyrl.js
+|           |           |       sr.js
+|           |           |       sv.js
+|           |           |       th.js
+|           |           |       tr.js
+|           |           |       uk.js
+|           |           |       vi.js
+|           |           |       zh-CN.js
+|           |           |       zh-TW.js
+|           |           |       
+|           |           \---selection
+|           |                   allowClear.js
+|           |                   base.js
+|           |                   clickMask.js
+|           |                   eventRelay.js
+|           |                   multiple.js
+|           |                   placeholder.js
+|           |                   search.js
+|           |                   single.js
+|           |                   stopPropagation.js
+|           |                   
+|           +---tests
+|           |   |   helpers.js
+|           |   |   integration.html
+|           |   |   unit.html
+|           |   |   
+|           |   +---a11y
+|           |   |       search-tests.js
+|           |   |       selection-tests.js
+|           |   |       
+|           |   +---data
+|           |   |       array-tests.js
+|           |   |       base-tests.js
+|           |   |       inputData-tests.js
+|           |   |       maximumInputLength-tests.js
+|           |   |       maximumSelectionLength-tests.js
+|           |   |       minimumInputLength-tests.js
+|           |   |       select-tests.js
+|           |   |       tags-tests.js
+|           |   |       tokenizer-tests.js
+|           |   |       
+|           |   +---dropdown
+|           |   |       dropdownCss-tests.js
+|           |   |       positioning-tests.js
+|           |   |       selectOnClose-tests.js
+|           |   |       stopPropagation-tests.js
+|           |   |       
+|           |   +---integration
+|           |   |       select2-methods.js
+|           |   |       
+|           |   +---options
+|           |   |       ajax-tests.js
+|           |   |       data-tests.js
+|           |   |       deprecated-tests.js
+|           |   |       translation-tests.js
+|           |   |       width-tests.js
+|           |   |       
+|           |   +---selection
+|           |   |       allowClear-tests.js
+|           |   |       containerCss-tests.js
+|           |   |       multiple-tests.js
+|           |   |       placeholder-tests.js
+|           |   |       search-tests.js
+|           |   |       single-tests.js
+|           |   |       stopPropagation-tests.js
+|           |   |       
+|           |   +---utils
+|           |   |       decorator-tests.js
+|           |   |       escapeMarkup-tests.js
+|           |   |       
+|           |   \---vendor
+|           |           jquery-1.7.2.js
+|           |           qunit-1.14.0.css
+|           |           qunit-1.14.0.js
+|           |           
+|           \---vendor
+|                   jquery-2.1.0.js
+|                   
++---debug_toolbar
+|   +---css
+|   |       print.css
+|   |       toolbar.css
+|   |       
+|   +---img
+|   |       ajax-loader.gif
+|   |       back.png
+|   |       back_hover.png
+|   |       close.png
+|   |       close_hover.png
+|   |       djdt_vertical.png
+|   |       indicator.png
+|   |       
+|   \---js
+|           jquery_existing.js
+|           jquery_post.js
+|           jquery_pre.js
+|           toolbar.js
+|           toolbar.profiling.js
+|           toolbar.sql.js
+|           toolbar.template.js
+|           toolbar.timer.js
+|           
++---django_extensions
+|   +---css
+|   |       jquery.autocomplete.css
+|   |       
+|   +---img
+|   |       indicator.gif
+|   |       
+|   \---js
+|           jquery.ajaxQueue.js
+|           jquery.autocomplete.js
+|           jquery.bgiframe.js
+|           
+\---easyautocomplete
+    +---css
+    |       easy-autocomplete.css
+    |       easy-autocomplete.min.css
+    |       easy-autocomplete.themes.css
+    |       easy-autocomplete.themes.min.css
+    |       
+    \---js
+            jquery.easy-autocomplete.js
+            jquery.easy-autocomplete.min.js
+            
