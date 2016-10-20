@@ -1,3 +1,4 @@
+
 {% load static %}
 {% load staticfiles %}
 
@@ -9,15 +10,15 @@
         <!-- STYLE -> CSS -->
             <link rel="stylesheet" href="{% static 'easyautocomplete/css/easy-autocomplete.css' %}" type="text/css">
             <link rel="stylesheet" href="{% static 'easyautocomplete/css/easy-autocomplete.themes.css' %}" type="text/css">
-
         <!-- end STYLE-->
 
     </head>
     <body>
 
         <!-- STRUCTURE -> HTML5 elements -->
-            <h1>EasyAutocomplete - easy example</h1>
+            <h1>EasyAutocomplete examples</h1>
             <input id="simple" />
+            <input id="data-json" />
         <!-- end STRUCTURE-->
 
         <!--BEHAVIOR -> Javascript scripts-->
@@ -26,14 +27,25 @@
             <script src="{% static 'easyautocomplete/js/jquery.easy-autocomplete.js' %}" type="text/javascript"></script>
 
             <script>
-
-                var options_easy_autocomplete = {
+                var options_easy_autocomplete_simple = {
                     data: ["blue", "green", "pink", "red", "yellow"],
 
                 };
+                $("#simple").easyAutocomplete(options_easy_autocomplete_simple);
+            </script>
+            <script>
+                var options_easy_autocomplete_json = {
+                    url: "{% static 'easyautocomplete/data/countries.json' %}",
 
-                $("#simple").easyAutocomplete(options_easy_autocomplete);
+                    getValue: "name",
 
+                    list: {
+                        match: {
+                            enabled: true
+                        }
+                    }
+                };
+                $("#data-json").easyAutocomplete(options_easy_autocomplete_json);
             </script>
         <!-- end BEHAVIOR -->
 

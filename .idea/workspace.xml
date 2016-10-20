@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bec87bc6-1c5b-407a-b76d-4209ea688555" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/projet_ajax/static/css/easy-autocomplete.min.css" afterPath="$PROJECT_DIR$/projet_ajax/static/easyautocomplete/css/easy-autocomplete.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/projet_ajax/static/css/easy-autocomplete.themes.min.css" afterPath="$PROJECT_DIR$/projet_ajax/static/easyautocomplete/css/easy-autocomplete.themes.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/projet_ajax/static/js/jquery.easy-autocomplete.min.js" afterPath="$PROJECT_DIR$/projet_ajax/static/easyautocomplete/js/jquery.easy-autocomplete.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tree.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/actions/2016/9__20_octobre_2016/9__20_octobre_2016.rst" afterPath="$PROJECT_DIR$/doc_sphinx/actions/2016/9__20_octobre_2016/9__20_octobre_2016.rst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update_easy_simple.html" afterPath="$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update_easy_simple.html" />
     </list>
@@ -67,8 +64,8 @@
       <file leaf-file-name="update.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="22" selection-end-column="12" />
+            <state relative-caret-position="-357">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -77,8 +74,8 @@
       <file leaf-file-name="update_easy_simple.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update_easy_simple.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="42" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="37" column="78" selection-start-line="37" selection-start-column="78" selection-end-line="37" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -1051,14 +1048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="22" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projet_ajax/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-731">
@@ -1095,10 +1084,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update_easy_simple.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="42" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="221">
+          <caret line="37" column="78" selection-start-line="37" selection-start-column="78" selection-end-line="37" selection-end-column="78" />
           <folding />
         </state>
       </provider>

@@ -1208,6 +1208,16 @@ Update the Django template file
     </html>
 
 OK it works !
+--------------
+
+Add JSON files
+----------------
+
+.. figure:: add_json_files.png
+   :align: center
+   
+   
+
 
 
 
