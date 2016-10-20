@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>EasyAutocomplete remote example</title>
+        <title>EasyAutocomplete remote Django test AJAX</title>
         
         <!-- STYLE -> CSS -->         
             <link href="../dist/easy-autocomplete.min.css" rel="stylesheet" type="text/css">
@@ -20,14 +20,14 @@
         <script src="../lib/jquery-1.11.2.min.js"></script>
         <script src="../dist/jquery.easy-autocomplete.min.js" type="text/javascript" ></script>               
         <script>
-            var options = {
-                url: function(phrase) {
-                    return "api/countrySearch.php?phrase=" + phrase + "&format=json";
+            var options_easy_autocomplete = {
+                url: function(term) {
+                    return "http://127.0.0.1:8004/projects/champion_get_json?term=" + term;
                 },
 
-                getValue: "name",
+                getValue: "id",
             };
-            $("#data-remote").easyAutocomplete(options);
+            $("#data-remote").easyAutocomplete(options_easy_autocomplete);
             </script>
         <!-- end BEHAVIOR --> 
     </body>
