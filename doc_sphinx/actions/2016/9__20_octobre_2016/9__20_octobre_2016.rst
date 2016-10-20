@@ -190,6 +190,7 @@ EasyAutocomplete JSON example
    
 .. literalinclude:: ../../../annexes/EasyAutocomplete-master/demo/example_json.html
    :linenos:
+   :language: html
    
    
 EasyAutocomplete flags example 
@@ -201,6 +202,7 @@ EasyAutocomplete flags example
 
 .. literalinclude:: ../../../annexes/EasyAutocomplete-master/demo/example_flags.html
    :linenos:
+   :language: html
       
       
    
