@@ -1,32 +1,42 @@
 
 .. index::
-   pair: Project ; singers 
+   pair: Project ; Django AJAX autocomplete 
 
 
-.. _singers_project:
+.. _django_test_ajax_autocomplete:
 
 =======================================================================
-Singers's Dango project for testing the jQuery-ui autocomplete widget 
+Dango project for testing AJAX autocomplete plugins 
 =======================================================================
-
 
 .. seealso::
 
-   - http://blog.appliedinformaticsinc.com/autocomplete-input-field-in-django-template-with-jquery-ui/
-   - http://guiqinqian.blogspot.fr/2012/01/using-jquery-auto-complete-in-django.html
+   - https://en.wikipedia.org/wiki/Ajax_(programming)
+   - https://en.wikipedia.org/wiki/JSON
 
+.. sidebar:: Dango test AJAX autocomplete
 
-
-.. sidebar:: Singers's Dango project
-
-    :Projet: Singers's Dango project
+    :Projet: Dango test AJAX autocomplete
     :Release: |release|
     :Date: |today|
     :Authors: **pvergain**
     
     - :ref:`genindex`
     - :ref:`search` 
+    - :ref:`glossary`
  
+
+.. figure:: _static/Ajax-vergleich-en.svg.png
+   :align: center
+   
+   :term:`AJAX` source: https://en.wikipedia.org/wiki/Ajax_(programming)
+
+  
+.. figure:: _static/JSON_vector_logo.svg.png
+   :align: center  
+   
+   :term:`JSON` logo (https://en.wikipedia.org/wiki/JSON)
+   
 
 
 .. toctree::
@@ -35,6 +45,7 @@ Singers's Dango project for testing the jQuery-ui autocomplete widget
    introduction/introduction
    actions/actions
    dev/dev
+   glossary/glossary
 
 
 

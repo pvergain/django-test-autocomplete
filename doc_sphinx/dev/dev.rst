@@ -1,12 +1,12 @@
 
 .. index::
-   pair: Development ; singers 
+   pair: Development ; Django test AJAX autocomplete 
 
 
-.. _singers_development:
+.. _development:
 
 ===================================================
-Singers's development
+Django test AJAX autocomplete development
 ===================================================
 
 

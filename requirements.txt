@@ -3,7 +3,7 @@ Babel==2.3.4
 colorama==0.3.7
 decorator==4.0.10
 Django==1.10.2
-django-ajax-selects==1.5.1
+django-ajax-selects==1.5.2
 django-autocomplete-light==3.2.1
 django-crispy-forms==1.6.1
 django-debug-toolbar==1.6
