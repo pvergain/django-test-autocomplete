@@ -2,8 +2,8 @@
 Django test autocomplete
 ========================
 
-The goal of this project (in progress) is to test and document the jquery plugins 
-which can be used with Django_ in autocomplete fields.
+The purpose of this project (in progress) is to test and document the jquery 
+plugins which can be used with Django_ in autocomplete fields.
 
 
 - Docs: https://django-test-autocomplete.readthedocs.io/en/latest/

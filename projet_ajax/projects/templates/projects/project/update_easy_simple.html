@@ -16,9 +16,9 @@
     <body>
 
         <!-- STRUCTURE -> HTML5 elements -->
-            <h1>EasyAutocomplete examples</h1>
+            <h1>EasyAutocomplete</h1>
 
-            <p>Input AJAX</p><input id="data-ajax" />
+            <p>Choose project</p><input id="data-ajax" />
         <!-- end STRUCTURE-->
 
         <!--BEHAVIOR -> Javascript scripts-->
@@ -27,54 +27,13 @@
             <script src="{% static 'easyautocomplete/js/jquery.easy-autocomplete.js' %}" type="text/javascript"></script>
 
             <script>
-               {# simple data (basics) #}
-               {# http://easyautocomplete.com/guide#sec-data-providers #}
-                var options_easy_autocomplete_simple = {
-                    data: ["blue", "green", "pink", "red", "yellow"],
-
-                };
-                $("#simple").easyAutocomplete(options_easy_autocomplete_simple);
-
-                {# simple data-json #}
-                var options_easy_autocomplete_json = {
-                    url: "{% static 'easyautocomplete/data/countries.json' %}",
-
-                    getValue: "name",
-
-                    list: {
-                        match: {
-                            enabled: true
-                        }
-                    }
-                };
-                $("#data-json").easyAutocomplete(options_easy_autocomplete_json);
-
-                {# --------------------------------------------------------------------------------------------#}
-                {# simple AJAX call #}
-                {# http://easyautocomplete.com/guide#sec-data-providers #}
-                {# --------------------------------------------------------------------------------------------#}
-                {% comment %}
-                (django_test_autocomplete_35_64) C:\projects_id3\django-test-autocomplete>http http://127.0.0.1:8004/projects/api_get_champions/?term=z
-                HTTP/1.0 200 OK
-                Content-Type: application/json
-                Date: Fri, 21 Oct 2016 07:51:46 GMT
-                Server: WSGIServer/0.2 CPython/3.5.2
-                X-Frame-Options: SAMEORIGIN
-
-                [
-                    {
-                        "id": 9,
-                        "label": "zoya",
-                        "value": "zoya"
-                    }
-                ]
-                {% endcomment %}
                 var options_easy_autocomplete_ajax = {
-                    {# we have to build this URL: http://127.0.0.1:8004/projects/api_get_champions/?term=a #}
+                    {# we have to build this URL: http://127.0.0.1:8004/projects/api_get_projects/?term=a #}
                     url: function(term) {
-                        return "{% url 'projects:api_get_champions' %}" + "?term=" + term;
+                        return "{% url 'projects:api_get_projects' %}" + "?term=" + term;
                     },
                     getValue: "value",
+
                 };
                 $("#data-ajax").easyAutocomplete(options_easy_autocomplete_ajax);
 
