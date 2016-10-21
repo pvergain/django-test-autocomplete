@@ -17,8 +17,8 @@
 
         <!-- STRUCTURE -> HTML5 elements -->
             <h1>EasyAutocomplete examples</h1>
-            <input id="simple" />
-            <input id="data-json" />
+            <p>Input simple</p><input id="simple" />
+            <p>Input data-json</p><input id="data-json" />
         <!-- end STRUCTURE-->
 
         <!--BEHAVIOR -> Javascript scripts-->
@@ -32,8 +32,7 @@
 
                 };
                 $("#simple").easyAutocomplete(options_easy_autocomplete_simple);
-            </script>
-            <script>
+
                 var options_easy_autocomplete_json = {
                     url: "{% static 'easyautocomplete/data/countries.json' %}",
 
