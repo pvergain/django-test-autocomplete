@@ -51,6 +51,7 @@ Dango project for testing AJAX autocomplete plugins
    introduction/introduction
    actions/actions
    dev/dev
+   versions/versions
    glossary/glossary
 
 

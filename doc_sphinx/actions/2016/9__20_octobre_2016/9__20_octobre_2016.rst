@@ -1219,8 +1219,10 @@ Add JSON files
    
    
 
-Add the AJAX call
-===================
+.. _adding_ajax_call:
+
+Adding the AJAX call in the Django template
+=============================================
 
 .. seealso:: http://easyautocomplete.com/guide#sec-data-providers
 

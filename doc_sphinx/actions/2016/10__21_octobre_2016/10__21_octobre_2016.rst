@@ -1,0 +1,14 @@
+
+
+
+.. _second_step:
+
+======================================================================================
+2016-10-21 Second step: renaming + readthedocs + options 
+======================================================================================
+
+.. seealso::
+
+   - http://easyautocomplete.com/
+   - http://easyautocomplete.com/guide
+
