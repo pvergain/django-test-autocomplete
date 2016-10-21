@@ -56,8 +56,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Django test AJAX autocomplete'
-copyright = '2016, pvergain@gmail.com'
+project = 'Django test autocomplete'
+copyright = '2016-, pvergain@gmail.com'
 author = 'pvergain@gmail.com'
 
 # The version info for the project you're documenting, acts as replacement for
