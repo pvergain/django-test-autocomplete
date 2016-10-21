@@ -13,6 +13,7 @@
    - https://readthedocs.org/
    - https://readthedocs.org/accounts/login/
    - https://django-test-autocomplete.readthedocs.io/en/latest/
+   - https://readthedocs.org/projects/django-test-autocomplete/
 
 
 .. figure:: read_the_docs.png

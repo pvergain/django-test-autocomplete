@@ -1,0 +1,19 @@
+
+
+.. _eac_ajax_options:
+
+======================================================================================
+2016-10-21 testing the jquery EasyAutocomplete (EAC) options for an AJAX call
+======================================================================================
+
+.. contents::
+   :depth: 
+
+Renaming views
+==============
+
+Rename champion_get_json into api_get_champions
+
+
+Test only AJAX functions
+=========================

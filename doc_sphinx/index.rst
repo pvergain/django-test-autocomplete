@@ -1,6 +1,7 @@
 
 .. index::
    pair: Project ; Django AJAX autocomplete 
+   pair: Read the docs; Documentation
 
 
 .. _django_test_ajax_autocomplete:
@@ -12,9 +13,9 @@ Dango project for testing AJAX autocomplete plugins
 .. seealso::
 
    - https://django-test-autocomplete.readthedocs.io/en/latest/
+   - https://github.com/pvergain/django-test-autocomplete.git
    - https://en.wikipedia.org/wiki/Ajax_(programming)
    - https://en.wikipedia.org/wiki/JSON
-   - https://github.com/pvergain/django-test-autocomplete.git
 
 .. sidebar:: Dango test AJAX autocomplete
 
@@ -27,7 +28,10 @@ Dango project for testing AJAX autocomplete plugins
     - :ref:`search` 
     - :ref:`glossary`
  
-
+    Thanks https://readthedocs.org/
+    
+    - https://readthedocs.org/accounts/login/
+    - https://readthedocs.org/projects/django-test-autocomplete/
 
 
 

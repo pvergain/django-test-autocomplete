@@ -3,7 +3,7 @@
 from django.conf.urls import url
 
 from .views import (ProjectUpdateView,
-                    ChampionAutoCompleteView,
+                    ApiGetchampionsView,
                     ProjectAutocompleteView)
 
 
@@ -13,10 +13,10 @@ urlpatterns = [
          name='project_update'),
 
      # calls by jquery-ui autocomplete (AJAX calls)
-     # http://127.0.0.1:8004/projects/champion_get_json/?term=a
-     url(r'^champion_get_json/$',
-         ChampionAutoCompleteView.as_view(),
-         name='champion_get_json'),
+     # http://127.0.0.1:8004/projects/api_get_champions/?term=a
+     url(r'^api_get_champions/$',
+         ApiGetchampionsView.as_view(),
+         name='api_get_champions'),
 
      # calling example:
      # http://127.0.0.1:8004/projects/project_autocomplete/?q=a

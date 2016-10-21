@@ -23,7 +23,7 @@ from .forms import ProjectChampionForm
 logger = logging.getLogger(__name__)
 
 
-class ChampionAutoCompleteView(FormView):
+class ApiGetchampionsView(FormView):
     """
     Documentation
     =============

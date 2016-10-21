@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bec87bc6-1c5b-407a-b76d-4209ea688555" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/actions/2016/9__20_octobre_2016/9__20_octobre_2016.rst" afterPath="$PROJECT_DIR$/doc_sphinx/actions/2016/9__20_octobre_2016/9__20_octobre_2016.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/actions/2016/10__21_octobre_2016/10__21_octobre_2016.rst" afterPath="$PROJECT_DIR$/doc_sphinx/actions/2016/10__21_octobre_2016/10__21_octobre_2016.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc_sphinx/index.rst" afterPath="$PROJECT_DIR$/doc_sphinx/index.rst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update_easy_simple.html" afterPath="$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update_easy_simple.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/projects/urls.py" afterPath="$PROJECT_DIR$/projet_ajax/projects/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projet_ajax/projects/views.py" afterPath="$PROJECT_DIR$/projet_ajax/projects/views.py" />
     </list>
     <ignored path="django_ajax_select.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,30 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projet_ajax/singers/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-              <folding>
-                <element signature="e#25#64#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projet_ajax/projet_ajax/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2533">
-              <caret line="154" column="53" selection-start-line="154" selection-start-column="53" selection-end-line="154" selection-end-column="53" />
-              <folding>
-                <element signature="e#315#324#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="update.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -61,8 +40,8 @@
       <file leaf-file-name="update_easy_simple.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update_easy_simple.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="80" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <state relative-caret-position="459">
+              <caret line="67" column="39" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -71,9 +50,11 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projet_ajax/projects/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="18" selection-end-column="35" />
-              <folding />
+            <state relative-caret-position="306">
+              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+              <folding>
+                <element signature="e#25#57#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,21 +62,11 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projet_ajax/projects/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="71" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+            <state relative-caret-position="196">
+              <caret line="25" column="25" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="25" />
               <folding>
                 <element signature="e#1#12#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projet_ajax/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -145,11 +116,11 @@
         <option value="$PROJECT_DIR$/projet_ajax/singers/admin.py" />
         <option value="$PROJECT_DIR$/projet_ajax/singers/templates/singers/book/update.html" />
         <option value="$PROJECT_DIR$/projet_ajax/singers/forms.py" />
-        <option value="$PROJECT_DIR$/projet_ajax/projects/views.py" />
         <option value="$PROJECT_DIR$/projet_ajax/projet_ajax/settings.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/projet_ajax/projects/urls.py" />
         <option value="$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update_easy_simple.html" />
+        <option value="$PROJECT_DIR$/projet_ajax/projects/views.py" />
+        <option value="$PROJECT_DIR$/projet_ajax/projects/urls.py" />
       </list>
     </option>
   </component>
@@ -1020,16 +991,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projet_ajax/singers/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="e#25#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projet_ajax/projects/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1049,20 +1010,30 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update_easy.html" />
-    <entry file="file://$PROJECT_DIR$/projet_ajax/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        <state relative-caret-position="340">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projet_ajax/projet_ajax/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2533">
+        <state relative-caret-position="68">
           <caret line="154" column="53" selection-start-line="154" selection-start-column="53" selection-end-line="154" selection-end-column="53" />
           <folding>
             <element signature="e#315#324#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projet_ajax/singers/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="e#25#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1075,26 +1046,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/projet_ajax/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        <state relative-caret-position="-595">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projet_ajax/projects/templates/projects/project/update_easy_simple.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="80" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        <state relative-caret-position="459">
+          <caret line="67" column="39" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projet_ajax/projects/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="71" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        <state relative-caret-position="196">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="25" />
           <folding>
             <element signature="e#1#12#0" expanded="true" />
           </folding>
@@ -1103,9 +1074,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projet_ajax/projects/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="18" selection-end-column="35" />
-          <folding />
+        <state relative-caret-position="306">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding>
+            <element signature="e#25#57#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

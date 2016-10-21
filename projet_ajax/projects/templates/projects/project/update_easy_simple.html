@@ -17,9 +17,8 @@
 
         <!-- STRUCTURE -> HTML5 elements -->
             <h1>EasyAutocomplete examples</h1>
-            <p>Input simple</p><input id="simple" />
-            <p>Input data-json</p><input id="data-json" />
-            <p>Input AJAX</p><input id="data-ajax" /><p>{% url 'projects:champion_get_json' %}?term="</p>
+
+            <p>Input AJAX</p><input id="data-ajax" />
         <!-- end STRUCTURE-->
 
         <!--BEHAVIOR -> Javascript scripts-->
@@ -55,7 +54,7 @@
                 {# http://easyautocomplete.com/guide#sec-data-providers #}
                 {# --------------------------------------------------------------------------------------------#}
                 {% comment %}
-                (django_test_autocomplete_35_64) C:\projects_id3\django-test-autocomplete>http http://127.0.0.1:8004/projects/champion_get_json/?term=z
+                (django_test_autocomplete_35_64) C:\projects_id3\django-test-autocomplete>http http://127.0.0.1:8004/projects/api_get_champions/?term=z
                 HTTP/1.0 200 OK
                 Content-Type: application/json
                 Date: Fri, 21 Oct 2016 07:51:46 GMT
@@ -71,9 +70,9 @@
                 ]
                 {% endcomment %}
                 var options_easy_autocomplete_ajax = {
-                    {# we have to build this URL: http://127.0.0.1:8004/projects/champion_get_json/?term=a #}
+                    {# we have to build this URL: http://127.0.0.1:8004/projects/api_get_champions/?term=a #}
                     url: function(term) {
-                        return "{% url 'projects:champion_get_json' %}" + "?term=" + term;
+                        return "{% url 'projects:api_get_champions' %}" + "?term=" + term;
                     },
                     getValue: "value",
                 };
