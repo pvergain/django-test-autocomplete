@@ -19,7 +19,7 @@
             <h1>EasyAutocomplete examples</h1>
             <p>Input simple</p><input id="simple" />
             <p>Input data-json</p><input id="data-json" />
-            <p>Input AJAX</p><input id="data-ajax" />
+            <p>Input AJAX</p><input id="data-ajax" /><p>{% url 'projects:champion_get_json' %}?term="</p>
         <!-- end STRUCTURE-->
 
         <!--BEHAVIOR -> Javascript scripts-->
@@ -50,18 +50,32 @@
                 };
                 $("#data-json").easyAutocomplete(options_easy_autocomplete_json);
 
+                {# --------------------------------------------------------------------------------------------#}
                 {# simple AJAX call #}
                 {# http://easyautocomplete.com/guide#sec-data-providers #}
-                var options_easy_autocomplete_ajax = {
-                    url: "{% url 'projects:projet_autocomplete' %}",
+                {# --------------------------------------------------------------------------------------------#}
+                {% comment %}
+                (django_test_autocomplete_35_64) C:\projects_id3\django-test-autocomplete>http http://127.0.0.1:8004/projects/champion_get_json/?term=z
+                HTTP/1.0 200 OK
+                Content-Type: application/json
+                Date: Fri, 21 Oct 2016 07:51:46 GMT
+                Server: WSGIServer/0.2 CPython/3.5.2
+                X-Frame-Options: SAMEORIGIN
 
-                    getValue: "name",
-
-                    list: {
-                        match: {
-                            enabled: true
-                        }
+                [
+                    {
+                        "id": 9,
+                        "label": "zoya",
+                        "value": "zoya"
                     }
+                ]
+                {% endcomment %}
+                var options_easy_autocomplete_ajax = {
+                    {# we have to build this URL: http://127.0.0.1:8004/projects/champion_get_json/?term=a #}
+                    url: function(term) {
+                        return "{% url 'projects:champion_get_json' %}" + "?term=" + term;
+                    },
+                    getValue: "value",
                 };
                 $("#data-ajax").easyAutocomplete(options_easy_autocomplete_ajax);
 

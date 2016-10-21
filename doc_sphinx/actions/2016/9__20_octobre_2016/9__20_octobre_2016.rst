@@ -9,6 +9,7 @@
    pair: Javascript ; EasyAutocomplete
    pair: CSS ; EasyAutocomplete
    pair: SCSS ; EasyAutocomplete
+   pair: Python ; httpie
 
 
 
@@ -1230,12 +1231,21 @@ URL : http://127.0.0.1:8004/projects/champion_get_json/?term=a
    :align: center
    
 
-httpie (clihttp)
------------------
+pip install httpie (clihttp)
+-----------------------------
 
 .. seealso::
 
+   - https://httpie.org/
+   - https://twitter.com/jkbrzt
    - https://twitter.com/clihttp
+
+
+
+HTTPie—aitch-tee-tee-pie—is an open source CLI HTTP client that will make you 
+smile: a user-friendly curl alternative that provides a simple http command 
+designed for painless debugging and interaction with HTTP servers, RESTful APIs, 
+and web services. 
 
 
 ::
@@ -1243,12 +1253,51 @@ httpie (clihttp)
     pip install httpie
     
   
-http  http://127.0.0.1:8004/projects/champion_get_json/?term=a
+http http://127.0.0.1:8004/projects/champion_get_json/?term=a
 ---------------------------------------------------------------
 
 .. figure:: httpie_get_champion_term_a.png
    :align: center
    
+::
+
+    [
+        {
+            "id": 6,
+            "label": "aaaa",
+            "value": "aaaa"
+        },
+        {
+            "id": 1,
+            "label": "admin",
+            "value": "admin"
+        },
+        {
+            "id": 8,
+            "label": "albert",
+            "value": "albert"
+        },
+        {
+            "id": 2,
+            "label": "champion_0001",
+            "value": "champion_0001"
+        },
+        {
+            "id": 7,
+            "label": "john",
+            "value": "john"
+        },
+        {
+            "id": 10,
+            "label": "nigel",
+            "value": "nigel"
+        },
+        {
+            "id": 9,
+            "label": "zoya",
+            "value": "zoya"
+        }
+    ]   
    
 http http://easyautocomplete.com/api/countrySearch.php?phrase=co
 -----------------------------------------------------------------   
@@ -1256,11 +1305,179 @@ http http://easyautocomplete.com/api/countrySearch.php?phrase=co
 .. figure:: http_country_search_co.png
    :align: center
    
+::
+
+    [
+        {
+            "name": "COCOS (KEELING) ISLANDS"
+        },
+        {
+            "name": "COLOMBIA"
+        },
+        {
+            "name": "COMOROS"
+        },
+        {
+            "name": "CONGO"
+        },
+        {
+            "name": "CONGO, THE DEMOCRATIC REPUBLIC OF THE"
+        },
+        {
+            "name": "COOK ISLANDS"
+        },
+        {
+            "name": "COSTA RICA"
+        },
+        {
+            "name": "COTE D IVOIRE"
+        },
+        {
+            "name": "MEXICO"
+        },
+        {
+            "name": "MONACO"
+        },
+        {
+            "name": "MOROCCO"
+        },
+        {
+            "name": "PUERTO RICO"
+        },
+        {
+            "name": "TURKS AND CAICOS ISLANDS"
+        }
+    ]   
+
+Avec countrySearch.php
+-----------------------
+
+
+.. code-block:: html
+ 
+   <input id="provider-remote" />
+
+.. code-block:: javascript
+
+    var options = {
+        url: function(phrase) {
+            return "api/countrySearch.php?phrase=" + phrase + "&format=json";
+        },
+
+        getValue: "value"
+    };
+
+    $("#provider-remote").easyAutocomplete(options);    
     
-    
-       
+
+Avec Python/Django OK the first step is DONE
+---------------------------------------------
+
+.. seealso::
+
+   - http://127.0.0.1:8004/projects/project/1/update/
+   - http://127.0.0.1:8004/projects/champion_get_json/?term=a
+   
+
+.. figure:: calling_ajax_ok.png
+   :align: center
    
    
+   
+The Template
++++++++++++++
+   
+
+.. code-block:: django
+
+    {# --------------------------------------------------------------------------------------------#}
+    {# simple AJAX call #}
+    {# http://easyautocomplete.com/guide#sec-data-providers #}
+    {# --------------------------------------------------------------------------------------------#}
+    {% comment %}
+    (django_test_autocomplete_35_64) C:\projects_id3\django-test-autocomplete>http http://127.0.0.1:8004/projects/champion_get_json/?term=z
+    HTTP/1.0 200 OK
+    Content-Type: application/json
+    Date: Fri, 21 Oct 2016 07:51:46 GMT
+    Server: WSGIServer/0.2 CPython/3.5.2
+    X-Frame-Options: SAMEORIGIN
+
+    [
+        {
+            "id": 9,
+            "label": "zoya",
+            "value": "zoya"
+        }
+    ]
+    {% endcomment %}
+    var options_easy_autocomplete_ajax = {
+        {# we have to build this URL: http://127.0.0.1:8004/projects/champion_get_json/?term=a #}
+        url: function(term) {
+            return "{% url 'projects:champion_get_json' %}" + "?term=" + term;
+        },
+        getValue: "value",
+    };
+    $("#data-ajax").easyAutocomplete(options_easy_autocomplete_ajax);
+
+   
+The View ChampionAutoCompleteView
+++++++++++++++++++++++++++++++++++
+
+
+.. code-block:: python
+
+
+    class ChampionAutoCompleteView(FormView):
+        """
+        Documentation
+        =============
+
+        - https://ccbv.co.uk/projects/Django/1.9/django.views.generic.edit/FormView/
+
+        """
+        def get(self, request, *args, **kwargs):
+            """term is sent by the jquery-ui autocomplete widget.
+
+            The filter is on the username and the user email.
+
+            """
+            term = request.GET.get("term")
+            if term:
+                users = User.objects.filter(Q(username__icontains=term)
+                                            | Q(email__icontains=term)).order_by('username')
+            else:
+                users = User.objects.all()[:50]
+
+            results = []
+            for user in users:
+                user_json = {}
+                user_json['id'] = user.id
+                user_json['label'] = user.username
+                user_json['value'] = user.username
+                results.append(user_json)
+
+            data = json.dumps(results)
+            mimetype = 'application/json'
+            return HttpResponse(data, mimetype)
+
+   
+The projects urls.py 
++++++++++++++++++++++
+   
+   
+.. code-block:: python
+
+     # calls by jquery-ui autocomplete (AJAX calls)
+     # http://127.0.0.1:8004/projects/champion_get_json/?term=a
+     url(r'^champion_get_json/$',
+         ChampionAutoCompleteView.as_view(),
+         name='champion_get_json'),   
+   
+   
+This is the happy end of the first step 
+========================================   
+
+
 
 
 
