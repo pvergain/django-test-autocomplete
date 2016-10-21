@@ -15,6 +15,7 @@ Versions
 
    - http://keepachangelog.com
    - http://semver.org/
+   - https://github.com/pvergain/django-test-autocomplete.git
 
 
 Creating tags from the command line
@@ -39,5 +40,6 @@ Versions
 .. toctree::
    :maxdepth: 3
    
+   0.2.0/0.2.0
    0.1.0/0.1.0
    

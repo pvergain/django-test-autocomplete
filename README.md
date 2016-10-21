@@ -1,6 +1,20 @@
-Auto-complete feature is used to provide auto suggestion for users while entering input. 
 
-We can create auto-complete using an AJAX call to make a list and display the list using 
-javascript. 
+Django test autocomplete
+========================
 
-Creating auto-complete with jquery and jquery-ui is the most efficient way of creating it.
+The goal of this project (in progress) is to test and document the jquery plugins 
+which can be used with Django_ in autocomplete fields.
+
+
+- Docs: https://django-test-autocomplete.readthedocs.io/en/latest/
+- Source: https://github.com/pvergain/django-test-autocomplete
+
+Curently these modules have been partiallly tested:
+
+- http://easyautocomplete.com/ (jquery plugin) 
+- https://jqueryui.com/autocomplete/ (jquery ui plugin)
+- https://github.com/crucialfelix/django-ajax-selects (good for the admin interface admin)
+- https://github.com/yourlabs/django-autocomplete-light (good for the admin interface admin)
+
+
+.. _Django:  https://www.djangoproject.com/

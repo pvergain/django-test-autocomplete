@@ -11,8 +11,10 @@ Dango project for testing AJAX autocomplete plugins
 
 .. seealso::
 
+   - https://django-test-autocomplete.readthedocs.io/en/latest/
    - https://en.wikipedia.org/wiki/Ajax_(programming)
    - https://en.wikipedia.org/wiki/JSON
+   - https://github.com/pvergain/django-test-autocomplete.git
 
 .. sidebar:: Dango test AJAX autocomplete
 
@@ -25,6 +27,9 @@ Dango project for testing AJAX autocomplete plugins
     - :ref:`search` 
     - :ref:`glossary`
  
+
+
+
 
 .. figure:: _static/Ajax-vergleich-en.svg.png
    :align: center

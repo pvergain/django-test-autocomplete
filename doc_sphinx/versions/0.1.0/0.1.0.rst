@@ -13,6 +13,7 @@ Version 0.1.0 (2016-10-21)
 .. seealso::
 
    - http://keepachangelog.com
+   - https://github.com/pvergain/django-test-autocomplete/tree/0.1.0
 
 
 .. figure:: ../../actions/2016/9__20_octobre_2016/calling_ajax_ok.png
@@ -22,7 +23,19 @@ Version 0.1.0 (2016-10-21)
 ::
 
     git tag 0.1.0
-    git push origin --tags   
+
+    (django_test_autocomplete_35_64) C:\projects_id3\django-test-autocomplete>git tag 0.1.0
+
+    (django_test_autocomplete_35_64) C:\projects_id3\django-test-autocomplete>git push origin --tags
+    Fatal: ArgumentException encountered.
+    "C:/Program Files (x86)/GitExtensions/GitCredentialWinStore/git-credential-winstore.exe" get: C:/Program Files (x86)/GitExtensions/GitCredentialWinStore/git-credential-winstore.exe: No such file or directory
+    Username for 'https://github.com': pvergain
+    Password for 'https://pvergain@github.com':
+    Fatal: ArgumentException encountered.
+    "C:/Program Files (x86)/GitExtensions/GitCredentialWinStore/git-credential-winstore.exe" store: C:/Program Files (x86)/GitExtensions/GitCredentialWinStore/git-credential-winstore.exe: No such file or directory
+    Total 0 (delta 0), reused 0 (delta 0)
+    To https://github.com/pvergain/django-test-autocomplete.git
+     * [new tag]         0.1.0 -> 0.1.0
 
 
 Added
