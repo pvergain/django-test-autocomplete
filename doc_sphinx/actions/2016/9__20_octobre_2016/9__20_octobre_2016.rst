@@ -15,9 +15,9 @@
 
 .. _jquery_easyautocomplete:
 
-============================================================================
-2016-10-20 2016-10-21 and use jquery EasyAutocomplete plugin
-============================================================================
+======================================================================================
+2016-10-20 2016-10-21 First step: using the jquery EasyAutocomplete plugin with Django
+======================================================================================
 
 .. seealso::
 
@@ -48,8 +48,8 @@ Why ? EasyAutocomplete can easily become one of the best autocomplete plugins av
 
 
 
-Because jquery Easyautocomplete can easily become one of the best autocomplete 
-plugins available for free.
+**Because jquery Easyautocomplete can easily become one of the best autocomplete 
+plugins available for free.**.
 
 
 .. figure:: why_jquery_easyautocomplete.png
@@ -1239,8 +1239,12 @@ pip install httpie (clihttp)
    - https://httpie.org/
    - https://twitter.com/jkbrzt
    - https://twitter.com/clihttp
+   - https://github.com/eliangcs/http-prompt
 
 
+.. figure:: ../../../_static/httpie_logo.jpg
+   :align: center
+   
 
 HTTPie—aitch-tee-tee-pie—is an open source CLI HTTP client that will make you 
 smile: a user-friendly curl alternative that provides a simple http command 

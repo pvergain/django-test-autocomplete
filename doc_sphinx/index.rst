@@ -38,6 +38,12 @@ Dango project for testing AJAX autocomplete plugins
    :term:`JSON` logo (https://en.wikipedia.org/wiki/JSON)
    
 
+.. figure:: _static/httpie_logo.jpg
+   :align: center  
+   
+   httpie logo (https://httpie.org/)
+   
+
 
 .. toctree::
    :maxdepth: 5
