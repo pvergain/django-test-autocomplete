@@ -241,6 +241,12 @@ list['showAnimation']
 
 
 
+TODO : tester categories
+=========================
+
+
+
+
 
 
 
