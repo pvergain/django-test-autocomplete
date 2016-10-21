@@ -107,16 +107,7 @@ class ApiEACGetProjectsView(FormView):
 
     """
     def get(self, request, *args, **kwargs):
-        """term is sent by the jquery-ui autocomplete widget.
-
-        For the jquery-ui autocomplete widget we have to return 3 fields:
-
-        - id
-        - label
-        - value
-
-        For the jquery EasyAutocomplete we can return what we want.
-
+        """Return JSON records.
 
         """
         term = request.GET.get("term")
@@ -129,8 +120,7 @@ class ApiEACGetProjectsView(FormView):
         for project in projects:
             project_json = {}
             project_json['id'] = project.id
-            project_json['label'] = project.title
-            project_json['value'] = project.title
+            project_json['title'] = project.title
             results.append(project_json)
 
         data = json.dumps(results)

@@ -18,7 +18,8 @@
         <!-- STRUCTURE -> HTML5 elements -->
             <h1>EasyAutocomplete</h1>
 
-            <input id="data-ajax" placeholder="Choose the project" size="50" />
+            <input id="project_choice_list" size="50" />
+            <input id="projet_holder" type="text" value="" size="50">
         <!-- end STRUCTURE-->
 
         <!--BEHAVIOR -> Javascript scripts-->
@@ -32,17 +33,22 @@
                     url: function(term) {
                         return "{% url 'projects:api_get_projects' %}" + "?term=" + term;
                     },
-                    getValue: "value",
+                    getValue: "title",
                     list: {
                         maxNumberOfElements: 200,
+                        onSelectItemEvent: function() {
+                            var project_id = $("#project_choice_list").getSelectedItemData().id;
+
+                            {# put the project.id in the projet_holder field #}
+                            $("#projet_holder").val(project_id).trigger("change");
+                        },
                         match: {
                             enabled: true
-                        }
-                    }
-
+                        },
+                    },
+                    placeholder: "Choose your projects"
                 };
-                $("#data-ajax").easyAutocomplete(options_easy_autocomplete_ajax);
-
+                $("#project_choice_list").easyAutocomplete(options_easy_autocomplete_ajax);
             </script>
         <!-- end BEHAVIOR -->
 
