@@ -15,7 +15,7 @@
 .. _jquery_easyautocomplete:
 
 ============================================================================
-2016-10-20 trying to use jquery EasyAutocomplete plugin
+2016-10-20 2016-10-21 and use jquery EasyAutocomplete plugin
 ============================================================================
 
 .. seealso::
@@ -1218,6 +1218,49 @@ Add JSON files
    
    
 
+Add the AJAX call
+===================
+
+.. seealso:: http://easyautocomplete.com/guide#sec-data-providers
+
+URL : http://127.0.0.1:8004/projects/champion_get_json/?term=a
+-----------------------------------------------------------------
+
+.. figure:: get_champion_term_a.png
+   :align: center
+   
+
+httpie (clihttp)
+-----------------
+
+.. seealso::
+
+   - https://twitter.com/clihttp
+
+
+::
+
+    pip install httpie
+    
+  
+http  http://127.0.0.1:8004/projects/champion_get_json/?term=a
+---------------------------------------------------------------
+
+.. figure:: httpie_get_champion_term_a.png
+   :align: center
+   
+   
+http http://easyautocomplete.com/api/countrySearch.php?phrase=co
+-----------------------------------------------------------------   
+
+.. figure:: http_country_search_co.png
+   :align: center
+   
+    
+    
+       
+   
+   
 
 
 
