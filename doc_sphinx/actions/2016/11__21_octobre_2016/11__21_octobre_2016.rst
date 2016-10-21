@@ -1,4 +1,7 @@
 
+.. index::
+   pair: placeholder ; HTML5
+   
 
 .. _eac_ajax_options:
 
@@ -7,7 +10,7 @@
 ======================================================================================
 
 .. contents::
-   :depth: 
+   :depth: 3
 
 Renaming views
 ==============
@@ -18,6 +21,12 @@ Rename champion_get_json into api_get_champions
 
 Add a great number of projects into the 'project' table
 ========================================================
+
+.. seealso::
+
+   - https://github.com/fcurella/django-fakery
+   - http://blog.districtdatalabs.com/a-practical-guide-to-anonymizing-datasets-with-python-faker
+
 
 We can create a Django command or a simple loop in the command line interface.
 
@@ -145,3 +154,39 @@ Update the Django template file in order to call this view
 
     </script>
 
+
+.. figure:: liste_6_elements.png
+   :align: center
+   
+   
+6 elements is not enough
+=========================
+
+OK, no slider 
+
+.. figure:: no_slider.png
+   :align: center
+   
+   
+   
+Ajout placeholder
+==================
+
+::
+
+    <!-- STRUCTURE -> HTML5 elements -->
+        <h1>EasyAutocomplete</h1>
+
+        <input id="data-ajax" placeholder="Choose the project" size="50" />
+    <!-- end STRUCTURE-->
+    
+
+
+.. figure:: ajout_placeholder.png
+   :align: center
+   
+   
+
+
+
+   

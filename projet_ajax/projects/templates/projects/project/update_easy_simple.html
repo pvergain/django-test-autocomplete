@@ -18,7 +18,7 @@
         <!-- STRUCTURE -> HTML5 elements -->
             <h1>EasyAutocomplete</h1>
 
-            <p>Choose project</p><input id="data-ajax" />
+            <input id="data-ajax" placeholder="Choose the project" size="50" />
         <!-- end STRUCTURE-->
 
         <!--BEHAVIOR -> Javascript scripts-->
@@ -33,6 +33,12 @@
                         return "{% url 'projects:api_get_projects' %}" + "?term=" + term;
                     },
                     getValue: "value",
+                    list: {
+                        maxNumberOfElements: 200,
+                        match: {
+                            enabled: true
+                        }
+                    }
 
                 };
                 $("#data-ajax").easyAutocomplete(options_easy_autocomplete_ajax);
