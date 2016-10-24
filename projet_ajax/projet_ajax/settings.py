@@ -81,7 +81,7 @@ INSTALLED_APPS = [
     # http://django-crispy-forms.readthedocs.io/en/latest/install.html#installing-django-crispy-forms
     'crispy_forms',
     # https://github.com/jazzband/django-debug-toolbar
-    'debug_toolbar',
+    # 'debug_toolbar',
 
     # # https://docs.djangoproject.com/en/dev/ref/applications/#django.apps.AppConfig
     'singers.apps.SingersConfig',
@@ -98,7 +98,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'debug_toolbar.middleware.DebugToolbarMiddleware'
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware'
 ]
 
 

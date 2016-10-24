@@ -1,0 +1,18 @@
+
+.. index::
+   pair: jQuery ; 101
+   
+
+.. _jquery_101:
+
+=================================
+2016-10-24 Learning jQuery 101
+=================================
+
+
+.. contents::
+   :depth: 3
+
+
+Fetching attribute values
+==========================

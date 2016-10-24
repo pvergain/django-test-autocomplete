@@ -1,19 +1,13 @@
 
-import json
+
 import logging
 
-from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
 
 from django.views.generic.edit import UpdateView
-from django.http import (HttpResponseRedirect,
-                         HttpResponse)
-
-from django.db.models import Q
-
-from django.views.generic import FormView
+from django.http import HttpResponseRedirect
 
 from dal import autocomplete
-
 
 from .models import Project
 from .forms import ProjectChampionForm
@@ -83,7 +77,7 @@ class ProjectUpdateViewEasyAutoComplete(UpdateView):
     def post(self, request, *args, **kwargs):
         logger.warning("Hello from ProjectUpdateViewEasyAutoComplete !")
         if "cancel" in request.POST:
-            url = self.get_success_url()
+            url = reverse('projects:project_update_easy', kwargs={'pk': self.pk})
             return HttpResponseRedirect(url)
         else:
             return super(ProjectUpdateViewEasyAutoComplete, self).post(request, *args, **kwargs)

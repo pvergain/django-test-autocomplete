@@ -183,12 +183,78 @@ The HTML and JavaScript part
 
 
 
-Step2 : how to initialize the list with the value of champion ?
-===============================================================
+Step2 : initialize the easyAutocomplete placeholder with the value of champion
+==============================================================================
+
+.. figure:: test_phase_2.png
+   :align: center
 
 
+Add these jQuery lines::
+
+    {# build the autocomplete list for the champions_choice_list #}
+    $("#id_champions_choice_list").easyAutocomplete(options_easy_autocomplete_champions);
+    {# Get the value of the former champion (from database) #}
+    {# Thanks http://stackoverflow.com/questions/1643227/get-selected-text-from-a-drop-down-list-select-box-using-jquery #}
+    var champion_name = $("#id_champion option:selected").text();
+    {# replace the placeholder by the value coming from database #}
+    $("#id_champions_choice_list").attr('placeholder', champion_name);
+    
+    
+
+Step3 : hide the select champion form field
+============================================
+   
+Before the update   
+-------------------
+   
+in the HTML file::
+
+    <td class="text-right">Champion value:</td>
+    <td> <select id="id_champion" name="champion" required>
+    <option value="">---------</option>
+    <option value="1">admin</option>
+    <option value="2">champion_0001</option>
+    <option value="3">user_0002</option>
+    <option value="4">user_0003</option>
+    <option value="5">user_0004</option>
+    <option value="6">aaaa</option>
+    <option value="7">john</option>
+    <option value="8">albert</option>
+    <option value="9" selected="selected">zoya</option>
+    <option value="10">nigel</option>
+    </select>  
+  
+    
+in the projects/forms.py file::
+    
+    
+    def __init__(self, *args, **kwargs):
+        super(ProjectChampionForm, self).__init__(*args, **kwargs)
+        self.fields['champions_choice_list'].label = "Update the champion"
+        # self.fields['champion'].widget = forms.HiddenInput()    
+    
+
+After the update   
+----------------
+
+in the projects/forms.py file::
 
 
+    def __init__(self, *args, **kwargs):
+        super(ProjectChampionForm, self).__init__(*args, **kwargs)
+        self.fields['champions_choice_list'].label = "Update the champion"
+        self.fields['champion'].widget = forms.HiddenInput()    
+    
+    
+New jQuery lines::    
+
+    {# build the autocomplete list for the champions_choice_list #}
+    $("#id_champions_choice_list").easyAutocomplete(options_easy_autocomplete_champions);
+
+    var champion_name = "{{ project.champion.username }}"
+    $("#id_champions_choice_list").attr('placeholder', champion_name);
 
 
-
+.. figure:: test_phase_3.png
+   :align: center

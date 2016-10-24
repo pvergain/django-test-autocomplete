@@ -42,6 +42,17 @@ jQuery in Action (third edition)
    
    Aurelio De Rosa (https://twitter.com/AurelioDeRosa)
 
+
+clone
+-----
+
+::
+
+    git clone https://github.com/AurelioDeRosa/jquery-in-action
+    
+    
+
+
 jQuery UI in Action
 ====================
 

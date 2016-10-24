@@ -9,24 +9,16 @@ import logging
 
 from django.contrib.auth.models import User
 
-from django.views.generic.edit import UpdateView
-from django.http import (HttpResponseRedirect,
-                         HttpResponse)
+from django.http import HttpResponse
 
 from django.db.models import Q
 
 from django.views.generic import FormView
 
-from dal import autocomplete
-
-
 from .models import Project
-from .forms import ProjectChampionForm
-
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
-
 
 class ApiEACGetchampionsJSONView(FormView):
     """

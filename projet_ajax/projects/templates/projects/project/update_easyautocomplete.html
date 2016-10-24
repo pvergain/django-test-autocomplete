@@ -17,7 +17,7 @@
 
         <!-- STRUCTURE -> HTML5 elements -->
             <h1>Test jquery EasyAutocomplete</h1>
-            <h1>Update of the project '(title:{{ project.title }} champion:{{ project.champion }}) </h1>
+            <h1>Update of the project '(title:{{ project.title }} champion:{{ project.champion.username }}) </h1>
             <p></p>
             <p></p>
             {# https://docs.djangoproject.com/en/dev/topics/forms/ #}
@@ -57,13 +57,14 @@
                 var options_easy_autocomplete_champions = {
                     {# we have to build this URL: http://127.0.0.1:8004/projects/api_get_champions/?term=a #}
                     url: function(term) {
-                       {# calling the JSON view (AJAX calling) #}
+                       {# calling the JSON view (this is the very famous AJAX call) #}
                         return "{% url 'projects:api_get_champions' %}" + "?term=" + term;
                     },
                     getValue: "value",
                     list: {
                         maxNumberOfElements: 200,
                         onSelectItemEvent: function() {
+                            {# http://easyautocomplete.com/example/select-event #}
                             var champion_id = $("#id_champions_choice_list").getSelectedItemData().id;
 
                             {# put the id in the champion field #}
@@ -80,6 +81,9 @@
 
                 {# build the autocomplete list for the champions_choice_list #}
                 $("#id_champions_choice_list").easyAutocomplete(options_easy_autocomplete_champions);
+
+                var champion_name = "{{ project.champion.username }}"
+                $("#id_champions_choice_list").attr('placeholder', champion_name);
 
             </script>
         <!-- end BEHAVIOR -->

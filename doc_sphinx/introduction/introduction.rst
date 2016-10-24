@@ -54,6 +54,13 @@ the `source option`_.
    
    
 
+Arguments
+==========
+
+When using *<select>* you need to retrieve *all* values from the database
+before displaying the form. This is a potentially expensive operation
+on the server and delays the time when the user see the form.
+
     
 
 
