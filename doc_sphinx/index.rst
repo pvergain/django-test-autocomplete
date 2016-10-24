@@ -58,6 +58,7 @@ Dango project for testing AJAX autocomplete plugins
    :maxdepth: 5
    
    introduction/introduction
+   tests/tests
    actions/actions
    dev/dev
    versions/versions

@@ -16,7 +16,8 @@ from django.contrib.auth.models import User
 
 @python_2_unicode_compatible
 class Project(models.Model):
-    """A project with a title and a champion which is the foreign key to the auth user.
+    """A project with a title and a champion which is the foreign key to the 
+       auth user.
 
     Documentation
     =============

@@ -62,67 +62,31 @@ class ProjectAutocompleteView(autocomplete.Select2QuerySetView):
         return qs
 
 
+class ProjectUpdateViewEasyAutoComplete(UpdateView):
+    """Update thye view with the jQuery EasyAutocomplete plugin.
 
-class ApiEACGetchampionsView(FormView):
+    Documentation:
+
+    - http://ccbv.co.uk/projects/Django/1.10/django.views.generic.edit/UpdateView/
+
     """
-    Documentation
-    =============
+    model = Project
+    form_class = ProjectChampionForm
+    context_object_name = 'project'
+    template_name = 'projects/project/update_easyautocomplete.html'
 
-    - https://ccbv.co.uk/projects/Django/1.9/django.views.generic.edit/FormView/
+    def get_object(self, queryset=None):
+        """Pour mémoriser self.demande_article"""
+        self.object = super(ProjectUpdateViewEasyAutoComplete, self).get_object(queryset)
+        return self.object
 
-    """
-    def get(self, request, *args, **kwargs):
-        """term is sent by the jquery-ui autocomplete widget.
-
-        The filter is on the username and the user email.
-
-        """
-        term = request.GET.get("term")
-        if term:
-            users = User.objects.filter(Q(username__icontains=term)
-                                        | Q(email__icontains=term)).order_by('username')
+    def post(self, request, *args, **kwargs):
+        logger.warning("Hello from ProjectUpdateViewEasyAutoComplete !")
+        if "cancel" in request.POST:
+            url = self.get_success_url()
+            return HttpResponseRedirect(url)
         else:
-            users = User.objects.all()[:50]
-
-        results = []
-        for user in users:
-            user_json = {}
-            user_json['id'] = user.id
-            user_json['label'] = user.username
-            user_json['value'] = user.username
-            results.append(user_json)
-
-        data = json.dumps(results)
-        mimetype = 'application/json'
-        return HttpResponse(data, mimetype)
+            return super(ProjectUpdateViewEasyAutoComplete, self).post(request, *args, **kwargs)
 
 
 
-class ApiEACGetProjectsView(FormView):
-    """
-    Documentation
-    =============
-
-    - https://ccbv.co.uk/projects/Django/1.10/django.views.generic.edit/FormView/
-
-    """
-    def get(self, request, *args, **kwargs):
-        """Return JSON records.
-
-        """
-        term = request.GET.get("term")
-        if term:
-            projects = Project.objects.filter(title__icontains=term)
-        else:
-            projects = Project.objects.all()[:50]
-
-        results = []
-        for project in projects:
-            project_json = {}
-            project_json['id'] = project.id
-            project_json['title'] = project.title
-            results.append(project_json)
-
-        data = json.dumps(results)
-        mimetype = 'application/json'
-        return HttpResponse(data, mimetype)

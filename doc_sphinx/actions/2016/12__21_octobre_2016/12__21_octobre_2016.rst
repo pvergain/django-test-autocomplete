@@ -3,6 +3,7 @@
    pair: jQuery ; TJ VanToll
    pair: jQuery ; Aurelio De Rosa
    
+   
 
 .. _jquery_in_action:
 
@@ -14,6 +15,8 @@
 
    - https://twitter.com/tjvantoll
    - https://twitter.com/AurelioDeRosa
+   - http://developer.telerik.com/featured/is-jquery-still-relevant/
+   - https://trends.builtwith.com/javascript/jQuery
    
 
 .. contents::
@@ -33,6 +36,11 @@ jQuery in Action (third edition)
 .. figure:: jQuery_3e_edition.png
    :align: center
    
+   
+.. figure:: aurelio_de_rosa.png
+   :align: center   
+   
+   Aurelio De Rosa (https://twitter.com/AurelioDeRosa)
 
 jQuery UI in Action
 ====================
@@ -41,12 +49,19 @@ jQuery UI in Action
 
    - https://github.com/tjvantoll/jquery-ui-in-action-demos
    - https://twitter.com/tjvantoll
+   - https://twitter.com/jenlooper   
    - https://www.manning.com/books/jquery-ui-in-action
+   
    
 
 .. figure:: jquery_ui_in_action.png
    :align: center
    
+
+.. figure:: TJVanToll.jpeg
+   :align: center   
+   
+   TJ Vantoll (https://twitter.com/tjvantoll)
 
 
 
