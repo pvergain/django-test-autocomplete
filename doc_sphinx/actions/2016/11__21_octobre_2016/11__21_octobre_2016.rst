@@ -195,6 +195,9 @@ list['onSelectItemEvent']
 HTML5
 ------
 
+::
+
+
         <!-- STRUCTURE -> HTML5 elements -->
             <h1>EasyAutocomplete</h1>
 
@@ -207,33 +210,29 @@ Javascript
 -----------
 
 
-.. code-block:: javascript
+.. code-block:: html
 
-    <script>
-        var options_easy_autocomplete_ajax = {
-            {# we have to build this URL: http://127.0.0.1:8004/projects/api_get_projects/?term=a #}
-            url: function(term) {
-                return "{% url 'projects:api_get_projects' %}" + "?term=" + term;
-            },
-            getValue: "title",
-            list: {
-                maxNumberOfElements: 200,
-                onSelectItemEvent: function() {
-                    var project_id = $("#project_choice_list").getSelectedItemData().id;
+    var options_easy_autocomplete_ajax = {
+        {# we have to build this URL: http://127.0.0.1:8004/projects/api_get_projects/?term=a #}
+        url: function(term) {
+            return "{% url 'projects:api_get_projects' %}" + "?term=" + term;
+        },
+        getValue: "title",
+        list: {
+            maxNumberOfElements: 200,
+            onSelectItemEvent: function() {
+                var project_id = $("#project_choice_list").getSelectedItemData().id;
 
-                    {# put the project.id in the projet_holder field #}
-                    $("#projet_holder").val(project_id).trigger("change");
-                },
-                match: {
-                    enabled: true
-                },
+                {# put the project.id in the projet_holder field #}
+                $("#projet_holder").val(project_id).trigger("change");
             },
-        };
-        $("#project_choice_list").easyAutocomplete(options_easy_autocomplete_ajax);
-    </script>oject_choice_list").easyAutocomplete(options_easy_autocomplete_ajax);
-            
-            
-    </script>
+            match: {
+                enabled: true
+            },
+        },
+    };
+    $("#project_choice_list").easyAutocomplete(options_easy_autocomplete_ajax);
+        
     
 
 list['showAnimation']
@@ -244,7 +243,11 @@ list['showAnimation']
 TODO : tester categories
 =========================
 
+.. seealso::
 
+   - http://easyautocomplete.com/guide#sec-categories
+   
+   
 
 
 
