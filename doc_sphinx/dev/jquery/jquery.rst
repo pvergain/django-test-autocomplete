@@ -27,6 +27,8 @@
 
 .. figure:: jquery_stats_2016_10.png
    :align: center
+   
+   https://trends.builtwith.com/javascript/jQuery
 
 
 If you were starting a new web app tomorrow, would you use jQuery ?
@@ -71,7 +73,7 @@ jQuery in Action (third edition)
 
    - https://github.com/AurelioDeRosa/jquery-in-action
    - https://twitter.com/AurelioDeRosa
-   - hhttps://www.manning.com/books/jquery-in-action-third-edition
+   - https://www.manning.com/books/jquery-in-action-third-edition
    
 
 .. figure:: jQuery_3e_edition.png

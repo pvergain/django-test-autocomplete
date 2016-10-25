@@ -16,6 +16,7 @@ Django test AJAX autocomplete development
    github/github
    virtualenv/virtualenv
    django/django
+   python/python
    jquery/jquery
 
 

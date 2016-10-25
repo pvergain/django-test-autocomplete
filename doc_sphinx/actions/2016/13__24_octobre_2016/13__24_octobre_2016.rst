@@ -9,10 +9,7 @@
 2016-10-24 Learning jQuery 101
 =================================
 
+.. seealso::
 
-.. contents::
-   :depth: 3
-
-
-Fetching attribute values
-==========================
+   - :ref:`learn_placeholder`
+   - :ref:`jquery_in_action`   

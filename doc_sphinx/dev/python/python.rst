@@ -1,16 +1,19 @@
 
 .. index::
-   pair: Packages ; Django 
+   pair: Faker ; Python 
 
 
-.. _django_packages:
+.. _python_modules:
 
 ===================================================
-Django packages
+Python modules 
 ===================================================
 
 
 .. toctree::
    :maxdepth: 5
    
+   faker/faker
+
+
 

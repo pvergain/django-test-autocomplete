@@ -9,12 +9,10 @@
 jQuery EasyAutocomplete test
 =============================
 
-
 .. contents::
    :depth: 3
    
- 
- 
+
 
 Running the local Django web server
 ====================================
@@ -182,6 +180,8 @@ The HTML and JavaScript part
         </body>
 
 
+
+.. _learn_placeholder:
 
 Step2 : initialize the easyAutocomplete placeholder with the value of champion
 ==============================================================================
