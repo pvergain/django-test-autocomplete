@@ -35,10 +35,6 @@ in doc_sphinx/conf.py::
 Added
 ======
 
-.. seealso::
-
-   - :ref:`doc_read_the_docs`
-
 - the documentation is on read the docs
   (https://django-test-autocomplete.readthedocs.io/en/latest/)
 
