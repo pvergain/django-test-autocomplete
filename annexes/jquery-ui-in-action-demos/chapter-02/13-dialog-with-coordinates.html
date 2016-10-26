@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dialog with Coordinates in Title Bar</title>
+	<link href="../css/jquery-ui.css" rel="stylesheet">
+</head>
+<body>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery-ui.js"></script>
+
+<script>
+	$( "<div>" ).dialog({
+		drag: function( event, ui ) {
+			$( this ).dialog( "option", "title",
+				ui.offset.top + " x " + ui.offset.left );
+		},
+		title: "Drag Me"
+	});
+</script>
+
+</body>
+</html>

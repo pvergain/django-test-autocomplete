@@ -34,3 +34,6 @@ Test the different jQuery plugings
    
    
    easyautocomplete/easyautocomplete
+   jquery_ui_autocomplete/jquery_ui_autocomplete
+   
+   

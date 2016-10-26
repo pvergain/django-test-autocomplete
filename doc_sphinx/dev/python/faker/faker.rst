@@ -13,6 +13,7 @@ Python faker module
 
    - https://github.com/joke2k/faker
    - https://faker.readthedocs.io/en/master/
+   - http://blog.districtdatalabs.com/a-practical-guide-to-anonymizing-datasets-with-python-faker
 
 
 .. figure:: faker.png
@@ -177,3 +178,22 @@ Les attributs principaux de l’utilisateur par défaut sont :
 
     In [27]: User.objects.count()
     Out[27]: 251
+
+
+::
+
+    from faker import Factory 
+    for lang in ['nl_NL', 'cs_CZ', 'el_GR', 'fi_FI', 'sv_SE']:
+        fake=Factory.create(lang)
+        for _ in range(20):
+            first_name = fake.first_name_female()
+            last_name = fake.last_name()
+            username = '{}_{}'.format(first_name, last_name)
+            email =  '{}_{}@{}'.format(first_name, 
+                                       last_name,
+                                       fake.free_email_domain())
+            female=User.objects.get_or_create(username=username,
+                                              first_name=first_name,
+                                              last_name=last_name,
+                                              email=email,
+                                              password='1234')

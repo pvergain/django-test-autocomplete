@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dialog With position Option Set</title>
+	<link href="../css/jquery-ui.css" rel="stylesheet">
+</head>
+<body>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery-ui.js"></script>
+
+<script>
+	$( "<div>Your files have been successfully uploaded.</div>" ).dialog({
+		buttons: {
+			OK: function() {}
+		},
+		title: "Success",
+		position: {
+			my: "left bottom",
+			at: "left bottom"
+		}
+	});
+</script>
+
+</body>
+</html>

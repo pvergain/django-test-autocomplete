@@ -5,11 +5,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>EasyAutocomplete simple example</title>
+        <title>jQuery UI complete simple example</title>
 
         <!-- STYLE -> CSS -->
-            {# https://jqueryui.com/autocomplete/ #}
-            <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" type="text/css">
+        {# https://jqueryui.com/autocomplete/ #}
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" type="text/css">
         <!-- end STYLE-->
 
     </head>
@@ -52,36 +52,28 @@
             <!-- Using jQuery with a CDN -->
             <script src="//code.jquery.com/jquery-1.11.2.js"></script>
             <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
-
+            {# https://github.com/anseki/jquery-ui-autocomplete-scroll #}
+            <script src="{% static 'jquery_ui/js/jquery.ui.autocomplete.scroll.min.js' %}" type="text/javascript"></script>
 
             <script>
                 var options_jquery_ui_autocomplete_champions = {
                     {# we have to build this URL: http://127.0.0.1:8004/projects/api_get_champions/?term=a #}
-                    autocomplete: function(term) {
-                       {# calling the JSON view (this is the very famous AJAX call) #}
-                        return "{% url 'projects:api_get_champions' %}" + "?term=" + term;
-                    },
-                    getValue: "value",
-                    list: {
-                        maxNumberOfElements: 200,
-                        onSelectItemEvent: function() {
-                            {# http://easyautocomplete.com/example/select-event #}
-                            var champion_id = $("#id_champions_choice_list").getSelectedItemData().id;
-
-                            {# put the id in the champion field #}
-                            $("#id_champion")
-                                .val(champion_id)
-                                .trigger("change");
-                        },
-                        match: {
-                            enabled: true
-                        },
-                    },
-                    placeholder: "Choose your champion"
+                    {# calling the JSON view (this is the very famous AJAX call) the + "?term=" + term; is added by autocomplete #}
+                    maxShowItems: 10,
+                    source: "{% url 'projects:api_get_champions' %}",
+                    minLength: 1,
+                    select: function( event, ui ) {
+                        {# put the id in the champion field #}
+                        let champion_id = ui.item.id;
+                        $("#id_champion")
+                            .val(champion_id)
+                            .trigger("change");
+                        console.log( "Selected: " + ui.item.value + " aka " + ui.item.id );
+                    }
                 };
 
                 {# build the autocomplete list for the champions_choice_list #}
-                $("#id_champions_choice_list").easyAutocomplete(options_jquery_ui_autocomplete_champions);
+                $("#id_champions_choice_list").autocomplete(options_jquery_ui_autocomplete_champions);
 
                 var champion_name = "{{ project.champion.username }}"
                 $("#id_champions_choice_list").attr('placeholder', champion_name);

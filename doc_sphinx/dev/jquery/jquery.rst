@@ -119,4 +119,16 @@ jQuery UI in Action
 
 
 
+jquery plugins
+===============
+
+
+.. toctree::
+   :maxdepth: 3
+   
+   plugins/plugins
+   
+   
+   
+
    

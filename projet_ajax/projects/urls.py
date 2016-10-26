@@ -21,9 +21,9 @@ urlpatterns = [
         ProjectUpdateViewEasyAutoComplete.as_view(),
         name='project_update_easy'),
 
-    url(r'^project/(?P<pk>\d+)/update_juery_ui/$',
+    url(r'^project/(?P<pk>\d+)/update_jquery_ui/$',
         ProjectUpdateViewJQueryUIAutoComplete.as_view(),
-        name='project_update_easy'),
+        name='project_update_jquery_ui'),
 
      # calls by jquery EasyAutocomplete
      # http://127.0.0.1:8004/projects/api_get_champions/?term=a

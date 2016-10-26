@@ -11,7 +11,6 @@
             <link rel="stylesheet" href="{% static 'easyautocomplete/css/easy-autocomplete.css' %}" type="text/css">
             <link rel="stylesheet" href="{% static 'easyautocomplete/css/easy-autocomplete.themes.css' %}" type="text/css">
         <!-- end STYLE-->
-
     </head>
     <body>
 
@@ -39,7 +38,7 @@
                                 </tr>
                                 <tr>
                                     <td class="text-right">Champion:</td>
-                                    <td> {{ form.champions_choice_list }}  </td>
+                                    <td class="easy-autocomplete"> {{ form.champions_choice_list }}  </td>
                                 </tr>
                         </tbody>
                     </table>
@@ -54,7 +53,36 @@
             <script src="{% static 'easyautocomplete/js/jquery.easy-autocomplete.js' %}" type="text/javascript"></script>
 
             <script>
+                 {# https://www.npmjs.com/package/jquery-ui.autocomplete.scroll #}
+                  $.widget('easy-autocomplete', $.easy-autocomplete, {
+                      _resizeMenu: function() {
+                        var ul, lis, ulW, barW;
+                        if (isNaN(this.options.maxShowItems)) { return; }
+                        ul = this.menu.element
+                          .scrollLeft(0).scrollTop(0) // Reset scroll position
+                          .css({overflowX: '', overflowY: '', width: '', maxHeight: ''}); // Restore
+                        lis = ul.children('li').css('whiteSpace', 'nowrap');
+
+                        if (lis.length > this.options.maxShowItems) {
+                          ulW = ul.prop('clientWidth');
+                          ul.css({overflowX: 'hidden', overflowY: 'auto',
+                            maxHeight: lis.eq(0).outerHeight() * this.options.maxShowItems + 1}); // 1px for Firefox
+                          barW = ulW - ul.prop('clientWidth');
+                          ul.width('+=' + barW);
+                        }
+
+                        // Original code from jquery.ui.autocomplete.js _resizeMenu()
+                        ul.outerWidth(Math.max(
+                          ul.outerWidth() + 1,
+                          this.element.outerWidth()
+                        ));
+                      }
+                });
+            </script>
+
+            <script>
                 var options_easy_autocomplete_champions = {
+                    maxShowItems: 10,
                     {# we have to build this URL: http://127.0.0.1:8004/projects/api_get_champions/?term=a #}
                     url: function(term) {
                        {# calling the JSON view (this is the very famous AJAX call) #}

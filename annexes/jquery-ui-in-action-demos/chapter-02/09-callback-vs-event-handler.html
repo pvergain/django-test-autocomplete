@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Callbacks vs. Event Handlers</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="../css/jquery-ui.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="dialog-1">jQuery UI Rocks!</div>
+<div id="dialog-2">jQuery UI Rocks!</div>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery-ui.js"></script>
+
+<script>
+	// The two ways of handling events in jQuery UI. These example are
+	// equivalent.
+
+	// Callback
+	$( "#dialog-1" ).dialog({
+		create: function() {
+			$( this ).css( "color", "red" );
+		}
+	});
+
+	// Event handler
+	$( "#dialog-2" ).on( "dialogcreate", function() {
+		$( this ).css( "color", "red" );
+	}).dialog();
+</script>
+
+</body>
+</html>
