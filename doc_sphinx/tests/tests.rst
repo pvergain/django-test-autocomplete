@@ -33,8 +33,8 @@ Test the different jQuery plugings
    :maxdepth: 3
    
    
+   django_autocomplete_light/django_autocomplete_light
    easyautocomplete/easyautocomplete
    jquery_ui_autocomplete/jquery_ui_autocomplete
-   django_autocomplete_light/django_autocomplete_light
    
    

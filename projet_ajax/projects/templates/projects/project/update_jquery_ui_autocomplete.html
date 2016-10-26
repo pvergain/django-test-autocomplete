@@ -16,12 +16,12 @@
     <body>
 
         <!-- STRUCTURE -> HTML5 elements -->
-            <h1>Test jquery EasyAutocomplete</h1>
+            <h1>Test jquery UI Autocomplete</h1>
             <h1>Update of the project '(title:{{ project.title }} champion:{{ project.champion.username }}) </h1>
             <p></p>
             <p></p>
             {# https://docs.djangoproject.com/en/dev/topics/forms/ #}
-            <form id="id_form_project_update_easy" action="{% url 'projects:project_update' project.id %}" method="post">
+            <form id="id_form_project_update_easy" action="{% url 'projects:project_update_jquery_ui' project.id %}" method="post">
                 {% csrf_token %}
                 <div class="forms">
                     {{ form.id }}

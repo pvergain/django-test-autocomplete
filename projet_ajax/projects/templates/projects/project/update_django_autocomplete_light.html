@@ -1,0 +1,48 @@
+{# inherit from the django admin base.html file #}
+{################################################}
+{% extends "admin/base_site.html" %}
+{% load static %}
+{% load staticfiles %}
+
+{% block branding %}
+        <title>Django autocomplete  example</title>
+{% endblock %}
+
+
+{% block content %}
+<!-- STRUCTURE -> HTML5 elements -->
+    <h1>Test Django autocomplete</h1>
+    <h1>Update of the project '(title:{{ project.title }} champion:{{ project.champion.username }}) </h1>
+    <p></p>
+    <p></p>
+    {# https://docs.djangoproject.com/en/dev/topics/forms/ #}
+    <form id="id_form_project" action="{% url 'projects:project_update_django_autocomplete' project.id %}" method="post">
+        {% csrf_token %}
+        <div class="forms">
+            {{ form.id }}
+            {{ form.non_field_errors }}
+            <table id="id_table" class="table table-hover table-bordered table-condensed">
+                <tbody>
+                        <tr>
+                            <td class="text-right">Title:</td>
+                            <td>{{ form.title }}</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">Champion:</td>
+                            <td> {{ form.champion }}  </td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+        <input type="submit" name="btn_update"  value="Update" class="btn btn-success btn-block" />
+    </form>
+<!-- end STRUCTURE-->
+{% endblock content %}
+
+{% block footer %}
+{# https://github.com/yourlabs/django-autocomplete-light/blob/master/test_project/select2_outside_admin/templates/select2_outside_admin.html #}
+<script type="text/javascript" src="{% static 'admin/js/vendor/jquery/jquery.js' %}"></script>
+
+{{ form.media }}
+{% endblock footer %}
+

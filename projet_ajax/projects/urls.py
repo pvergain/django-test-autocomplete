@@ -7,6 +7,7 @@ from .views_json import (ApiEACGetProjectsJSONView,
                         ApiEACGetchampionsJSONView)
 
 from .views_django_autocomplete_light import (ApiUserDjangoAutocompleteLight,
+                                              ProjectDjangoAutoCompleteUpdateView,
                                               ProjectAutocompleteView)
 
 from .views import (ProjectUpdateView,
@@ -26,6 +27,10 @@ urlpatterns = [
     url(r'^project/(?P<pk>\d+)/update_jquery_ui/$',
         ProjectUpdateViewJQueryUIAutoComplete.as_view(),
         name='project_update_jquery_ui'),
+
+    url(r'^project/(?P<pk>\d+)/update_django_autocomplete/$',
+        ProjectDjangoAutoCompleteUpdateView.as_view(),
+        name='project_update_django_autocomplete'),
 
      # calls by jquery EasyAutocomplete
      # http://127.0.0.1:8004/projects/api_get_champions/?term=a

@@ -30,7 +30,6 @@ Dango project for testing AJAX autocomplete plugins
  
     Thanks https://readthedocs.org/
     
-    - https://readthedocs.org/accounts/login/
     - https://readthedocs.org/projects/django-test-autocomplete/
 
 

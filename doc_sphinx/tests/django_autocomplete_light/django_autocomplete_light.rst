@@ -13,6 +13,7 @@ django-autocomplete-light test
 
    - https://github.com/yourlabs/django-autocomplete-light.git
    - https://github.com/select2/select2.git
+   - https://github.com/django/django/blob/master/django/contrib/admin/templates/admin/base.html
 
 
 .. contents::
@@ -27,6 +28,18 @@ install
 
     pip install django-autocomplete-light   
 
+
+
+update the settings.py module
+-----------------------------
+
+Add the 2 following applications:
+
+- dal
+- dal-select2
+
+
+::
 
 
     # Applications definition
@@ -469,11 +482,187 @@ Using autocompletes in the admin : nice !
 .. figure:: django_admin_project_ok.png
    :align: center
    
+
+
+Using autocompletes outside the admin 
+======================================  
+   
+ 
+ 
+projects/views_django_autocomplete_light.py
+---------------------------------------------
+
+
+::
+
+       
+    from django.contrib.auth.models import User
+
+    from django.db.models import Q
+    from django.views.generic.edit import UpdateView
+
+    from dal import autocomplete
+
+    from .models import Project
+
+    from .forms_django_autocomplete_light import ProjectFormDjangoAutocomplete
+
+    # Get an instance of a logger
+    logger = logging.getLogger(__name__)
+
+
+    class ApiUserDjangoAutocompleteLight(autocomplete.Select2QuerySetView):
+        """https://django-autocomplete-light.readthedocs.io/en/master/tutorial.html"""
+        def get_queryset(self):
+            # Don't forget to filter out results depending on the visitor !
+            users = User.objects.all()
+            if self.q:
+                users = User.objects.filter(Q(username__icontains=self.q)
+                                            | Q(email__icontains=self.q)).order_by('username')
+
+            return users
+
+
+    class ProjectDjangoAutoCompleteUpdateView(UpdateView):
+        """Update the view with the jQuery UI Autocomplete plugin.
+
+        Documentation:
+
+        - http://ccbv.co.uk/projects/Django/1.10/django.views.generic.edit/UpdateView/
+
+        """
+        model = Project
+        form_class = ProjectFormDjangoAutocomplete
+        context_object_name = 'project'
+        template_name = 'projects/project/update_django_autocomplete_light.html'
+
+        def get_object(self, queryset=None):
+            """Pour mémoriser self.demande_article"""
+            self.object = super(ProjectDjangoAutoCompleteUpdateView, self).get_object(queryset)
+            return self.object
+
+        def post(self, request, *args, **kwargs):
+            logger.warning("Hello from ProjectDjangoAutoCompleteUpdateView !")
+            return super(ProjectDjangoAutoCompleteUpdateView, self).post(request, *args, **kwargs)
+
+
+Django template
+-----------------
+
+.. seealso::
+
+   - https://github.com/django/django/blob/master/django/contrib/admin/templates/admin/base.html
+   
+
+.. figure:: base_html_django_admin.png
+   :align: center
+
+
+.. figure:: base_html_django_admin_2.png
+   :align: center
+
+
+.. figure:: contrib_admin_base_html.png
+   :align: center
+   
+   
+.. figure:: choose_django_admin.png
+   :align: center
    
    
 
+.. code-block:: django
+
+    {# inherit from the django admin base.html file #}
+    {################################################}
+    {% extends "admin/base_site.html" %}
+    {% load static %}
+    {% load staticfiles %}
+
+    {% block branding %}
+            <title>Django autocomplete  example</title>
+    {% endblock %}
+
+
+    {% block content %}
+    <!-- STRUCTURE -> HTML5 elements -->
+        <h1>Test Django autocomplete</h1>
+        <h1>Update of the project '(title:{{ project.title }} champion:{{ project.champion.username }}) </h1>
+        <p></p>
+        <p></p>
+        {# https://docs.djangoproject.com/en/dev/topics/forms/ #}
+        <form id="id_form_project" action="{% url 'projects:project_update' project.id %}" method="post">
+            {% csrf_token %}
+            <div class="forms">
+                {{ form.id }}
+                {{ form.non_field_errors }}
+                {# Include the hidden fields #}
+                {% for hidden in form.hidden_fields %}
+                    {# here we will have the champion filed (which is hidden) #}
+                    {{ hidden }}
+                {% endfor %}
+                <table id="id_table" class="table table-hover table-bordered table-condensed">
+                    <tbody>
+                            <tr>
+                                <td class="text-right">Title:</td>
+                                <td>{{ form.title }}</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">Champion:</td>
+                                <td> {{ form.champion }}  </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="submit" name="btn_update"  value="Update" class="btn btn-success btn-block" />
+        </form>
+    <!-- end STRUCTURE-->
+
+
+    {% block footer %}
+    {# https://github.com/yourlabs/django-autocomplete-light/blob/master/test_project/select2_outside_admin/templates/select2_outside_admin.html #}
+    <script type="text/javascript" src="{% static 'admin/js/vendor/jquery/jquery.js' %}"></script>
+
+    {{ form.media }}
+    {% endblock footer %}
+
+
+
+Test URL http://127.0.0.1:8004/projects/project/1/update_django_autocomplete
+==============================================================================
+
+.. figure:: hors_admin_ok.png
+   :align: center
+   
+   
+   
+   
+Passing options to select2
+============================
+
+Select2 supports a bunch of options. These options may be set in data-* attributes. 
+
+For example::
+
+    # Instanciate a widget with a bunch of options for select2:
+    autocomplete.ModelSelect2(
+        url='select2_fk',
+        attrs={
+            # Set some placeholder
+            'data-placeholder': 'Autocomplete ...',
+            # Only trigger autocompletion after 3 characters have been typed
+            'data-minimum-input-length': 3,
+        },
+    )
 
 
 
 
+   
+
+
+         
+   
+   
+   
 
