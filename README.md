@@ -13,8 +13,8 @@ Curently these modules have been partiallly tested:
 
 - http://easyautocomplete.com/ (jquery plugin) 
 - https://jqueryui.com/autocomplete/ (jquery ui plugin)
-- https://github.com/crucialfelix/django-ajax-selects (good for the admin interface admin)
 - https://github.com/yourlabs/django-autocomplete-light (good for the admin interface admin)
+- https://github.com/crucialfelix/django-ajax-selects (good for the admin interface admin)
 
 
 .. _Django:  https://www.djangoproject.com/

@@ -18,8 +18,6 @@ jquery plugins
    :maxdepth: 3
    
    jquery_ui_autocomplete_scroll/jquery_ui_autocomplete_scroll
-   
-   
+   select2/select2
    
 
-   

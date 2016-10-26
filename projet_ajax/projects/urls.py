@@ -6,8 +6,10 @@ from django.conf.urls import url
 from .views_json import (ApiEACGetProjectsJSONView,
                         ApiEACGetchampionsJSONView)
 
+from .views_django_autocomplete_light import (ApiUserDjangoAutocompleteLight,
+                                              ProjectAutocompleteView)
+
 from .views import (ProjectUpdateView,
-                    ProjectAutocompleteView,
                     ProjectUpdateViewEasyAutoComplete,
                     ProjectUpdateViewJQueryUIAutoComplete)
 
@@ -33,7 +35,7 @@ urlpatterns = [
 
     # calls by jquery EasyAutocomplete (EAC)
     # http://127.0.0.1:8004/projects/api_get_projects/?term=a
-    url(r'^api_get_projects/$',
+    url(r'^apis_get_projects/$',
         ApiEACGetProjectsJSONView.as_view(),
         name='api_get_projects'),
 
@@ -44,4 +46,8 @@ urlpatterns = [
         ProjectAutocompleteView.as_view(),
         name='project_autocomplete',
      ),
+
+    url(r'^api/get_users/$',
+        ApiUserDjangoAutocompleteLight.as_view(),
+        name='api_get_users'),
 ]

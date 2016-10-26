@@ -35,5 +35,6 @@ Test the different jQuery plugings
    
    easyautocomplete/easyautocomplete
    jquery_ui_autocomplete/jquery_ui_autocomplete
+   django_autocomplete_light/django_autocomplete_light
    
    

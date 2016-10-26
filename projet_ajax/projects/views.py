@@ -7,7 +7,6 @@ from django.core.urlresolvers import reverse
 from django.views.generic.edit import UpdateView
 from django.http import HttpResponseRedirect
 
-from dal import autocomplete
 
 from .models import Project
 from .forms import ProjectChampionForm
@@ -45,15 +44,6 @@ class ProjectUpdateView(UpdateView):
             return super(ProjectUpdateView, self).post(request, *args, **kwargs)
 
 
-class ProjectAutocompleteView(autocomplete.Select2QuerySetView):
-    def get_queryset(self):
-        # Don't forget to filter out results depending on the visitor !
-        qs = Project.objects.all()
-
-        if self.q:
-            qs = qs.filter(title__istartswith=self.q)
-
-        return qs
 
 
 class ProjectUpdateViewEasyAutoComplete(UpdateView):
