@@ -8,7 +8,8 @@ from .views_json import (ApiEACGetProjectsJSONView,
 
 from .views import (ProjectUpdateView,
                     ProjectAutocompleteView,
-                    ProjectUpdateViewEasyAutoComplete)
+                    ProjectUpdateViewEasyAutoComplete,
+                    ProjectUpdateViewJQueryUIAutoComplete)
 
 
 urlpatterns = [
@@ -20,6 +21,9 @@ urlpatterns = [
         ProjectUpdateViewEasyAutoComplete.as_view(),
         name='project_update_easy'),
 
+    url(r'^project/(?P<pk>\d+)/update_juery_ui/$',
+        ProjectUpdateViewJQueryUIAutoComplete.as_view(),
+        name='project_update_easy'),
 
      # calls by jquery EasyAutocomplete
      # http://127.0.0.1:8004/projects/api_get_champions/?term=a

@@ -83,4 +83,28 @@ class ProjectUpdateViewEasyAutoComplete(UpdateView):
             return super(ProjectUpdateViewEasyAutoComplete, self).post(request, *args, **kwargs)
 
 
+class ProjectUpdateViewJQueryUIAutoComplete(UpdateView):
+    """Update the view with the jQuery UI Autocomplete plugin.
+
+    Documentation:
+
+    - http://ccbv.co.uk/projects/Django/1.10/django.views.generic.edit/UpdateView/
+
+    """
+    model = Project
+    form_class = ProjectChampionForm
+    context_object_name = 'project'
+    template_name = 'projects/project/update_jquery_ui_autocomplete.html'
+
+    def get_object(self, queryset=None):
+        """Pour mémoriser self.demande_article"""
+        self.object = super(ProjectUpdateViewJQueryUIAutoComplete, self).get_object(queryset)
+        return self.object
+
+    def post(self, request, *args, **kwargs):
+        logger.warning("Hello from ProjectUpdateViewJQueryUIAutoComplete !")
+        return super(ProjectUpdateViewJQueryUIAutoComplete, self).post(request, *args, **kwargs)
+
+
+
 
