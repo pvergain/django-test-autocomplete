@@ -1,13 +1,13 @@
 
 
 .. index::
-   pair: Version ; 0.2.0 (NOT RELEASED)
+   pair: Version ; 0.2.0 (2016-10-27)
 
 
 .. _version_0_2_0:
 
 =============================
-Version 0.2.0 (NOT RELEASED)
+Version 0.2.0 (2016-10-27)
 =============================
 
 .. seealso::
@@ -41,6 +41,9 @@ Added
 
 Changed
 ========
+ 
+The django-autocomplete-light is adopted.
+ 
   
 
 Miscellaneous 

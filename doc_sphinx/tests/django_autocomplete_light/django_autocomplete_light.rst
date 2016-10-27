@@ -20,6 +20,10 @@ django-autocomplete-light test
    :depth: 3
    
    
+.. figure:: hors_admin_ok.png
+   :align: center
+   
+      
 
 install
 ========
