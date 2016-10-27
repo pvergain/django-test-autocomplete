@@ -17,5 +17,13 @@ class ProjectFormDjangoAutocomplete(forms.ModelForm):
         model = Project
         fields = ('__all__')
         widgets = {
-            'champion': autocomplete.ModelSelect2(url='projects:api_get_users')
+            'champion': autocomplete.ModelSelect2(
+                url='projects:api_get_users',
+                attrs={
+                    # Set some placeholder
+                    'data-placeholder': 'Choose your champion',
+                    # Only trigger autocompletion after 3 characters have been typed
+                    'data-minimum-input-length': 1,
+                }
+            )
         }
