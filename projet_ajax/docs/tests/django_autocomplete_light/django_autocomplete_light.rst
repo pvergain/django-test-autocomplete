@@ -484,6 +484,10 @@ projects/forms_django_autocomplete_light.py
 projects/admin.py
 ==================
 
+.. code-block:: python
+   :linenos:
+   
+
     #!/usr/bin/python
     # -*- coding: UTF-8 -*-
     """Project Administration.
