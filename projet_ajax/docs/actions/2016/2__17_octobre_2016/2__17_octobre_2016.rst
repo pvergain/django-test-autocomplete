@@ -1,0 +1,48 @@
+
+
+.. index::
+   pair: Actions ; 2016-10-17
+   pair: Django ; normal Django Views
+
+.. _normal_django_view:
+
+============================================================================
+2016-10-17 create a normal Django view
+============================================================================
+
+
+.. contents::
+   :depth: 3
+
+
+Le fichier singers/models.py
+=============================
+
+.. literalinclude:: ../../../../projet_ajax/singers/models.py
+   :linenos:
+   
+   
+Le fichier singers/forms.py
+============================   
+
+.. literalinclude:: ../../../../projet_ajax/singers/forms.py
+   :linenos:
+   
+    
+Le fichier singers/views.py
+============================   
+
+.. literalinclude:: ../../../../projet_ajax/singers/views.py
+   :linenos:
+   
+Le fichier singers/urls.py
+============================   
+
+.. literalinclude:: ../../../../projet_ajax/singers/urls.py
+   :linenos:     
+   
+   
+     
+     
+            
+
