@@ -199,7 +199,7 @@ Javascript SCSS and CSS EasyAutocomplete files
 EasyAutocomplete-master/src/sass/easy-autocomplete.scss
 -------------------------------------------------------------------
 
-.. literalinclude:: ../../../../annexes/EasyAutocomplete-master/src/sass/easy-autocomplete.scss
+.. literalinclude:: ../../../../../annexes/EasyAutocomplete-master/src/sass/easy-autocomplete.scss
    :linenos:
    :caption: EasyAutocomplete-master/src/sass/easy-autocomplete.scss
    
@@ -209,7 +209,7 @@ EasyAutocomplete-master/src/sass/easy-autocomplete.scss
 EasyAutocomplete-master/dist/easy-autocomplete.css
 --------------------------------------------------------------
 
-.. literalinclude:: ../../../../annexes/EasyAutocomplete-master/dist/easy-autocomplete.css
+.. literalinclude:: ../../../../../annexes/EasyAutocomplete-master/dist/easy-autocomplete.css
    :linenos:
    :language: css
    :caption: EasyAutocomplete-master/dist/easy-autocomplete.css
@@ -219,7 +219,7 @@ EasyAutocomplete-master/dist/easy-autocomplete.css
 EasyAutocomplete-master/dist/jquery.easy-autocomplete.js
 -------------------------------------------------------------------
 
-.. literalinclude:: ../../../../annexes/EasyAutocomplete-master/dist/jquery.easy-autocomplete.js
+.. literalinclude:: ../../../../../annexes/EasyAutocomplete-master/dist/jquery.easy-autocomplete.js
    :linenos:
    :language: javascript
    :caption: EasyAutocomplete-master/dist/jquery.easy-autocomplete.js
@@ -236,7 +236,7 @@ EasyAutocomplete simple example
 EasyAutocomplete-master/demo/example_simple.html
 -------------------------------------------------   
    
-.. literalinclude:: ../../../../annexes/EasyAutocomplete-master/demo/example_simple.html
+.. literalinclude:: ../../../../../annexes/EasyAutocomplete-master/demo/example_simple.html
    :linenos:
    :language: html
    :caption: EasyAutocomplete-master/demo/example_simple.html
@@ -254,7 +254,7 @@ EasyAutocomplete JSON example
 EasyAutocomplete-master/demo/example_json.html
 ----------------------------------------------   
    
-.. literalinclude:: ../../../../annexes/EasyAutocomplete-master/demo/example_json.html
+.. literalinclude:: ../../../../../annexes/EasyAutocomplete-master/demo/example_json.html
    :linenos:
    :language: html
    :caption: EasyAutocomplete-master/demo/example_json.html
@@ -263,7 +263,7 @@ EasyAutocomplete-master/demo/example_json.html
 EasyAutocomplete-master/demo/resources/countries.json
 -----------------------------------------------------   
    
-.. literalinclude:: ../../../../annexes/EasyAutocomplete-master/demo/resources/countries.json
+.. literalinclude:: ../../../../../annexes/EasyAutocomplete-master/demo/resources/countries.json
    :linenos:
    :lines: 1-100
    :language: json
@@ -281,7 +281,7 @@ EasyAutocomplete flags example
 EasyAutocomplete-master/demo/example_flags.html
 ------------------------------------------------
 
-.. literalinclude:: ../../../../annexes/EasyAutocomplete-master/demo/example_flags.html
+.. literalinclude:: ../../../../../annexes/EasyAutocomplete-master/demo/example_flags.html
    :linenos:
    :language: html   
    :caption: EasyAutocomplete-master/demo/example_flags.html
@@ -290,7 +290,7 @@ EasyAutocomplete-master/demo/example_flags.html
 EasyAutocomplete-master/demo/resources/flags.css
 -------------------------------------------------
   
-.. literalinclude:: ../../../../annexes/EasyAutocomplete-master/demo/resources/flags.css
+.. literalinclude:: ../../../../../annexes/EasyAutocomplete-master/demo/resources/flags.css
    :linenos:
    :language: css
    :caption: EasyAutocomplete-master/demo/resources/flags.css
@@ -299,7 +299,7 @@ EasyAutocomplete-master/demo/resources/flags.css
 EasyAutocomplete-master/demo/resources/flags.png
 -------------------------------------------------            
         
-.. figure:: ../../../../annexes/EasyAutocomplete-master/demo/resources/flags.png
+.. figure:: ../../../../../annexes/EasyAutocomplete-master/demo/resources/flags.png
    :align: center
          
    EasyAutocomplete-master/demo/resources/flags.png
@@ -316,7 +316,7 @@ EasyAutocomplete categories example
 EasyAutocomplete-master/demo/example_categories.html
 -----------------------------------------------------
 
-.. literalinclude:: ../../../../annexes/EasyAutocomplete-master/demo/example_categories.html
+.. literalinclude:: ../../../../../annexes/EasyAutocomplete-master/demo/example_categories.html
    :linenos:
    :language: html
    :caption: EasyAutocomplete-master/demo/example_categories.html
@@ -325,7 +325,7 @@ EasyAutocomplete-master/demo/example_categories.html
 EasyAutocomplete-master/demo/resources/categories.json
 ------------------------------------------------------
 
-.. literalinclude:: ../../../../annexes/EasyAutocomplete-master/demo/resources/categories.json
+.. literalinclude:: ../../../../../annexes/EasyAutocomplete-master/demo/resources/categories.json
    :linenos:
    :language: html
    :caption: EasyAutocomplete-master/demo/resources/categories.json
@@ -344,7 +344,7 @@ EasyAutocomplete static_link example
 EasyAutocomplete-master/demo/example_static_link.html
 ------------------------------------------------------   
 
-.. literalinclude:: ../../../../annexes/EasyAutocomplete-master/demo/example_static_link.html
+.. literalinclude:: ../../../../../annexes/EasyAutocomplete-master/demo/example_static_link.html
    :linenos:
    :language: html
    :caption: EasyAutocomplete-master/demo/example_static_link.html
@@ -353,7 +353,7 @@ EasyAutocomplete-master/demo/example_static_link.html
 EasyAutocomplete-master/demo/resources/site.json
 ------------------------------------------------
 
-.. literalinclude:: ../../../../annexes/EasyAutocomplete-master/demo/resources/site.json
+.. literalinclude:: ../../../../../annexes/EasyAutocomplete-master/demo/resources/site.json
    :linenos:
    :language: json
    :caption: EasyAutocomplete-master/demo/resources/site.json
@@ -371,7 +371,7 @@ EasyAutocomplete email example
 EasyAutocomplete-master/demo/example_email.html
 ------------------------------------------------------   
 
-.. literalinclude:: ../../../../annexes/EasyAutocomplete-master/demo/example_email.html
+.. literalinclude:: ../../../../../annexes/EasyAutocomplete-master/demo/example_email.html
    :linenos:
    :language: html
    :caption: EasyAutocomplete-master/demo/example_email.html
@@ -380,7 +380,7 @@ EasyAutocomplete-master/demo/example_email.html
 EasyAutocomplete-master/demo/resources/people.json
 ----------------------------------------------------
 
-.. literalinclude:: ../../../../annexes/EasyAutocomplete-master/demo/resources/people.json
+.. literalinclude:: ../../../../../annexes/EasyAutocomplete-master/demo/resources/people.json
    :linenos:
    :language: json
    :lines: 1-200 

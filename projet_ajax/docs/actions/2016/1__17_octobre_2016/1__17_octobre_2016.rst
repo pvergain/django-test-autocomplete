@@ -24,7 +24,7 @@ makemigrations singers
 
 ::
 
-    (ajax_django_35) C:\projects_id3\django_ajax_select\projet_ajax>python manage.py makemigrations singers
+    (ajax_django_35) projet_ajax>python manage.py makemigrations singers
     
 ::
     

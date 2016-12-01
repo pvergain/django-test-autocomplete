@@ -45,12 +45,12 @@ Last look
    :align: center
    
 
-.. literalinclude:: ../../../../projet_ajax/projects/templates/projects/project/update.html
+.. literalinclude:: ../../../../../projet_ajax/projects/templates/projects/project/update.html
    :linenos:
    :language: django
    
 
-.. literalinclude:: ../../../../projet_ajax/projects/forms.py
+.. literalinclude:: ../../../../../projet_ajax/projects/forms.py
    :linenos:
    
       

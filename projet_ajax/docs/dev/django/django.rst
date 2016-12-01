@@ -14,6 +14,7 @@ Django
    :maxdepth: 5
    
    packages/packages
+   tips/tips
 
 
 

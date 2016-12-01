@@ -69,7 +69,7 @@ Create a ``projects`` application
 Add the Django model ``Project``
 ================================
 
-.. literalinclude:: ../../../../projet_ajax/projects/models.py
+.. literalinclude:: ../../../../../projet_ajax/projects/models.py
    :linenos:
 
 
@@ -85,7 +85,7 @@ Add the ``project`` in the INSTALLED_APPS
     ]
 
 
-.. literalinclude:: ../../../../projet_ajax/projet_ajax/settings.py
+.. literalinclude:: ../../../../../projet_ajax/projet_ajax/settings.py
    :linenos:
 
 
@@ -102,7 +102,7 @@ makemigrations
       projects\migrations\0001_initial.py:
         - Create model Project    
         
-.. literalinclude:: ../../../../projet_ajax/projects/migrations/0001_initial.py
+.. literalinclude:: ../../../../../projet_ajax/projects/migrations/0001_initial.py
    :linenos:
 
     
@@ -152,7 +152,7 @@ Create the projects/forms.py file and add 2 forms
 =================================================
 
 
-.. literalinclude:: ../../../../projet_ajax/projects/forms.py
+.. literalinclude:: ../../../../../projet_ajax/projects/forms.py
    :linenos:
 
 
@@ -160,7 +160,7 @@ Create the projects/urls.py file and add the champion auto complete URL
 ========================================================================
 
 
-.. literalinclude:: ../../../../projet_ajax/projects/urls.py
+.. literalinclude:: ../../../../../projet_ajax/projects/urls.py
    :linenos:
 
 
@@ -173,7 +173,7 @@ Add the projects.urls file to the root urls.py
     url(r'^projects/', include('projects.urls', namespace='projects')),
 
 
-.. literalinclude:: ../../../../projet_ajax/projet_ajax/urls.py
+.. literalinclude:: ../../../../../projet_ajax/projet_ajax/urls.py
    :linenos:
 
 
@@ -183,7 +183,7 @@ Add the ProjectUpdateView
 ==========================
 
 
-.. literalinclude:: ../../../../projet_ajax/projects/views.py
+.. literalinclude:: ../../../../../projet_ajax/projects/views.py
    :linenos:
    
    
@@ -202,7 +202,7 @@ This template file is used by the ProjectUpdateView.
    :align: center
    
 
-.. literalinclude:: ../../../../projet_ajax/projects/templates/projects/project/update.html
+.. literalinclude:: ../../../../../projet_ajax/projects/templates/projects/project/update.html
    :linenos:
    :language: django
    
@@ -235,7 +235,7 @@ Add the admin interface
 =======================
 
 
-.. literalinclude:: ../../../../projet_ajax/projects/admin.py
+.. literalinclude:: ../../../../../projet_ajax/projects/admin.py
    :linenos:
 
 

@@ -1,3 +1,0 @@
-
-
-workon sphinx_35

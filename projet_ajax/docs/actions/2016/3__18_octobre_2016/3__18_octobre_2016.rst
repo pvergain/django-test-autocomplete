@@ -24,7 +24,7 @@
 The Django Template templates/base.html
 ========================================
 
-.. literalinclude:: ../../../../projet_ajax/templates/base.html
+.. literalinclude:: ../../../../../projet_ajax/templates/base.html
    :linenos:
    :language: django
   
@@ -74,7 +74,7 @@ The Django Template singers/templates/song/update.html
 The template :file:`templates/singers/song/update.html` extends the :file:`templates\base.html` **base template**.
 
 
-.. literalinclude:: ../../../../projet_ajax/singers/templates/singers/song/update.html
+.. literalinclude:: ../../../../../projet_ajax/singers/templates/singers/song/update.html
    :linenos:
    :language: django
    
