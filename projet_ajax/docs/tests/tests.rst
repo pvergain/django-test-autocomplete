@@ -20,11 +20,11 @@ Specification
 Write a form for selecting 'champion' for a project.
 
 
-.. literalinclude:: ../../projet_ajax/projects/models.py
+.. literalinclude:: ../../projects/models.py
    :linenos:
 
 
-Test the different jQuery plugings
+Test the different jQuery plugins
 ===================================
 
 
