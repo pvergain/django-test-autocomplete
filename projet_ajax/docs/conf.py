@@ -36,7 +36,6 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.viewcode',
-    'sphinx.ext.githubpages',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -57,7 +56,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Django test autocomplete'
-copyright = '2016-, pvergain@gmail.com'
+copyright = '2016-2017, pvergain@gmail.com'
 author = 'pvergain@gmail.com'
 
 # The version info for the project you're documenting, acts as replacement for
